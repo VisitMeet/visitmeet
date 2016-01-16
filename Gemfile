@@ -7,13 +7,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-group :development, :test do
-  gem 'byebug'
-end
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
+
+# Custom added Gems
+# ---- START ----
+
 gem 'administrate'
 gem 'bootstrap-sass'
 gem 'devise'
@@ -25,8 +22,14 @@ gem 'puma'
 gem 'pundit'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'mandrill-api'
+
+# ---- END ----
+
 
 group :development do
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
   gem 'better_errors'
   gem 'hub', :require=>nil
   gem 'quiet_assets'
@@ -41,10 +44,7 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'rspec-rails'
   gem 'rubocop'
-end
-
-group :production do
-  gem 'rails_12factor'
+  gem 'byebug'
 end
 
 group :test do
@@ -52,4 +52,8 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
