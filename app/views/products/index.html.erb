@@ -1,0 +1,48 @@
+<div class="container">
+<div class="container-fluid">
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <th>
+          Title
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Show
+        </th>
+        <th>
+          Edit
+        </th>
+        <th>
+          Destroy
+        </th>
+      </tr>
+    </thead>
+
+  <% @products.each do |product| %>
+  <tbody>
+    <tr>
+        <td><%= product.title %></td>
+        <td>  <%= product.description %></td>
+        <td>  US$: <%= product.price%></td>
+        <td><%= link_to 'Show', product_path(product) %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product_path(product),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
+
+
+
+
+
+</div>
+<%= link_to 'New Product', new_product_path %>
