@@ -49,6 +49,9 @@ GEM
       rails (~> 4.2)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    annotate (2.7.0)
+      activerecord (>= 3.2, < 6.0)
+      rake (~> 10.4)
     arel (6.0.3)
     ast (2.2.0)
     autoprefixer-rails (6.3.1)
@@ -300,6 +303,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  annotate
   better_errors
   bootstrap-sass
   byebug

@@ -8,23 +8,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
-# Custom added Gems
-# ---- START ----
-
-gem 'administrate'
-gem 'bootstrap-sass'
-gem 'devise'
-gem 'devise_invitable'
-gem 'figaro'
-gem 'high_voltage'
-gem 'pg'
-gem 'puma'
-gem 'pundit'
-gem 'simple_form'
-gem 'slim-rails'
-gem 'mandrill-api'
-
-# ---- END ----
 
 
 group :development do
@@ -57,3 +40,23 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+
+# Custom added Gems
+# ---- START ----
+
+gem 'administrate'
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'devise_invitable'
+gem 'figaro'
+gem 'high_voltage'
+gem 'pg'
+gem 'puma'
+gem 'pundit'
+gem 'simple_form'
+gem 'slim-rails'
+gem 'mandrill-api'
+gem 'annotate'
+
+# ---- END ----
