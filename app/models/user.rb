@@ -32,6 +32,7 @@
 #
 
 class User < ActiveRecord::Base
+  has_many :products, dependent: :destroy
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
 

@@ -21,20 +21,20 @@ group :development do
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
   gem 'pry-rescue'
-  gem 'rspec-rails'
+  gem 'rspec-rails' # installs RSpec gems with support for Rails
+  gem 'factory_girl_rails' # creates test data
   gem 'rubocop'
   gem 'byebug'
 end
 
 group :test do
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'launchy'
-  gem 'selenium-webdriver'
+  gem 'capybara' # test web pages
+  gem 'database_cleaner' # clean slate for db
+  gem 'launchy' # view errors in browser
+  gem 'selenium-webdriver' # for test that require js
 end
 
 group :production do
