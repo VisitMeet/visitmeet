@@ -1,18 +1,20 @@
 # == Schema Information
 #
-# Table name: products
+# Table name: categories
 #
 #  id          :integer          not null, primary key
-#  title       :string
+#  product_id  :integer
+#  name        :string
 #  description :text
-#  price       :integer
-#  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  category_id :integer
 #
 
-class Product < ActiveRecord::Base
-  belongs_to :user
-  has_one :category
+FactoryGirl.define do
+  factory :category do
+    products nil
+name "MyString"
+description "MyText"
+  end
+
 end

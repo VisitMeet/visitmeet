@@ -1,18 +1,17 @@
 # == Schema Information
 #
-# Table name: products
+# Table name: categories
 #
 #  id          :integer          not null, primary key
-#  title       :string
+#  product_id  :integer
+#  name        :string
 #  description :text
-#  price       :integer
-#  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  category_id :integer
 #
 
-class Product < ActiveRecord::Base
-  belongs_to :user
-  has_one :category
+require 'rails_helper'
+
+RSpec.describe Category, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
