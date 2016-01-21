@@ -10,3 +10,8 @@ deploy:
   app: visitmeet
   on:
     repo: bishisht/visitmeet
+notifications:
+  slack:
+    rooms:
+      - narmadainfosys:8dMgPLd6RzpSx7eom3WaYNHn#visitmeet
+      - narmadainfosys:8dMgPLd6RzpSx7eom3WaYNHn#rubyrails  
