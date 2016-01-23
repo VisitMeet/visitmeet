@@ -1,0 +1,8 @@
+site "http://community.opscode.com/api/v1"
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'postgresql91', '~> 0.99.6'
+cookbook 'ruby_build'
+cookbook 'nodejs'
+cookbook 'rvm', '~> 0.9.4'
