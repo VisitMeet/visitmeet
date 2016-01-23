@@ -1,3 +1,20 @@
+GIT
+  remote: git://github.com/mariochavez/administrate.git
+  revision: b7c78ed53c62f58a8327eed831a2050aa76a88e1
+  branch: remove-inline_svg
+  specs:
+    administrate (0.1.2)
+      autoprefixer-rails (~> 6.0)
+      datetime_picker_rails (~> 0.0.6)
+      jquery-rails (~> 4.0)
+      kaminari (~> 0.16)
+      momentjs-rails (~> 2.8)
+      neat (~> 1.1)
+      normalize-rails (~> 3.0)
+      rails (~> 4.2)
+      sass-rails (~> 5.0)
+      selectize-rails (~> 0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,18 +54,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    administrate (0.1.2)
-      autoprefixer-rails (~> 6.0)
-      datetime_picker_rails (~> 0.0.6)
-      inline_svg (~> 0.6)
-      jquery-rails (~> 4.0)
-      kaminari (~> 0.16)
-      momentjs-rails (~> 2.8)
-      neat (~> 1.1)
-      normalize-rails (~> 3.0)
-      rails (~> 4.2)
-      sass-rails (~> 5.0)
-      selectize-rails (~> 0.6)
     annotate (2.7.0)
       activerecord (>= 3.2, < 6.0)
       rake (~> 10.4)
@@ -90,7 +95,7 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
     database_cleaner (1.5.1)
-    datetime_picker_rails (0.0.6)
+    datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     debug_inspector (0.0.2)
     devise (3.5.3)
@@ -122,10 +127,6 @@ GEM
     high_voltage (2.4.0)
     hub (1.12.4)
     i18n (0.7.0)
-    inline_svg (0.6.1)
-      activesupport (>= 4.0.4)
-      loofah (>= 2.0)
-      nokogiri (~> 1.6)
     interception (0.5)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -302,7 +303,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  administrate
+  administrate!
   annotate
   better_errors
   bootstrap-sass

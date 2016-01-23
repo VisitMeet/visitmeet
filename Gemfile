@@ -45,7 +45,7 @@ end
 # Custom added Gems
 # ---- START ----
 
-gem 'administrate'
+gem "administrate", github: "mariochavez/administrate", branch: "remove-inline_svg"
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise_invitable'
