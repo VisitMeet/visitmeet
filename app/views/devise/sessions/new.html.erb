@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 <h2 class="lead well text-center">Log in</h2>
+<%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">

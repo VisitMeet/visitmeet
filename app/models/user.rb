@@ -40,8 +40,19 @@ class User < ActiveRecord::Base
     self.role ||= :user
   end
 
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0,20]
+      user.name = auth.info.name #user model has name
+      # user.image = auth.info.image #user have no image.
+    end
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  devise :omniauthable, :omniauth_providers => [:github]
 end

@@ -59,4 +59,8 @@ gem 'slim-rails'
 gem 'mandrill-api'
 gem 'annotate'
 
+# Omniauth
+
+gem 'omniauth-github'
+
 # ---- END ----
