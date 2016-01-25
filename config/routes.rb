@@ -10,7 +10,12 @@ Rails.application.routes.draw do
 
   resources :products
 
-  devise_for :users
+  devise_for :users, :skip => [:sessions]
+  as :user do
+    get 'signin' => 'devise/sessions#new', :as => :new_user_session
+    post 'signin' => 'devise/sessions#create', :as => :user_session
+    delete 'signout' => 'devise/sessions#destroy'
+  end
   # root to: 'visitors#index'
   root to: 'welcome#index'
 end
