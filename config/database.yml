@@ -4,16 +4,13 @@ development:
   encoding: utf8
   database: visitmeet_development
   pool: 5
-  username: visitor
-  password: bandmember
+
 test:
   adapter: postgresql
   host: localhost
   encoding: utf8
   database: visitmeet_test
   pool: 5
-  username: visitor
-  password: bandmember
 
 production:
   adapter:  postgresql
@@ -21,6 +18,12 @@ production:
   encoding: utf8
   database: visitmeet_production
   pool:     5
-  username: visitor
-  password: changemenow
+  template: template0
+
+staging:
+  adapter:  postgresql
+  host:     localhost
+  encoding: utf8
+  database: visitmeet_staging
+  pool:     5
   template: template0
