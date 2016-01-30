@@ -87,3 +87,6 @@ pickle-email-*.html
 /config/application.yml
 
 # /config/database.yml
+
+# Ignore the README file
+README
