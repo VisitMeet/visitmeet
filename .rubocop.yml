@@ -1,8 +1,15 @@
-AllCops:
-  RunRailsCops: true
-  Include:
-    - '**/Gemfile'
-    - '**/Rakefile'
+AlignParameters:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Encoding:
+  Enabled: false
+
   Exclude:
    - 'bin/*'
    - 'db/seeds.rb'
