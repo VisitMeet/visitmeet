@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/profile'
+
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
@@ -10,13 +12,9 @@ Rails.application.routes.draw do
 
   resources :products
 
-  devise_for :users, :skip => [:sessions], :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  as :user do
-    get 'signin' => 'devise/sessions#new', :as => :new_user_session
-    post 'signin' => 'devise/sessions#create', :as => :user_session
-    delete 'signout' => 'devise/sessions#destroy'
-  end
-  # devise_for :users,
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+              controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
+
   # root to: 'visitors#index'
   root to: 'welcome#index'
 end
