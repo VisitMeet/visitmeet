@@ -16,7 +16,7 @@ Devise.setup do |config|
   config.maximum_attempts = 4
   config.last_attempt_warning = true
   config.reset_password_within = 6.hours
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
