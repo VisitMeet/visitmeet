@@ -30,9 +30,8 @@ class ProductsController < ApplicationController
   end
 
   def create
-
-    @product = Product.new(product_params)
-    # @product = current_user.product.build(product_params)
+    @user = current_user
+    @product = @user.products.build(product_params)
 
     if @product.save
       flash[:success] = " New Product Created!"
