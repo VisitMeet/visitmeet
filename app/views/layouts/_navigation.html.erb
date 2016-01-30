@@ -32,11 +32,17 @@
 					</form>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">User<strong class="caret"></strong></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<% if user_signed_in? %>
+										Welcome, <%= current_user.email %>
+								<% else %>
+											User
+								<% end %>
+								<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<% if user_signed_in? %>
 								<li>
-									<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+									<%= link_to('Logout', destroy_user_session_path, :method => :get) %>
 								</li>
 								<% else %>
 								<li>
@@ -48,7 +54,8 @@
 								<li>
 									<% if user_signed_in? %>
 									<li>
-										<%= link_to('Edit registration', edit_user_registration_path) %>
+										<%= link_to 'Edit registration', edit_user_registration_path  %>
+										<%= link_to "Your Profile", users_profile_path %>
 									</li>
 									<% else %>
 									<li>
