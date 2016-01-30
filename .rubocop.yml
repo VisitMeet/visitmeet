@@ -1,6 +1,13 @@
 AlignParameters:
   Enabled: false
 
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 2.3
+
 Rails:
   Enabled: true
 
@@ -8,10 +15,13 @@ Metrics/LineLength:
   Max: 120
 
 Style/Encoding:
-  Enabled: false
+  Enabled: true
 
   Exclude:
    - 'bin/*'
    - 'db/seeds.rb'
    - 'db/schema.rb'
    - 'vendor/bundle/**/*'
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed
