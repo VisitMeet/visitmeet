@@ -1,5 +1,4 @@
 # encoding: utf-8
-# require 'stripe_mock'
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: User edit
