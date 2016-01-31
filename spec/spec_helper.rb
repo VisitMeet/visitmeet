@@ -1,4 +1,3 @@
-# encoding: utf-8
 # simplecov usage ref : https://github.com/colszowka/simplecov
 # these two lines must be at very top of spec/spec_helper.rb
 # after any RSpec test run completes, coverage report shows at coverage/index.html

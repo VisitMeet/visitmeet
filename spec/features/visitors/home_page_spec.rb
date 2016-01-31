@@ -8,14 +8,17 @@ feature 'Home page' do
   #   Given I am a visitor
   #   When I visit the home page
   #   Then I see "Welcome"
-  scenario 'visit the home page' do
+  scenario 'visitor can arrive on home page' do
     visit root_path
+    expect(current_path).to eq '/'
     expect(page).to have_content 'Welcome'
   end
 
-  scenario 'visitor can arrive' do
-    visit 'http://visitmeet.herokuapp.com'
-    # save_and_open_page
-    expect(page).to have_content 'useable'
+  scenario 'visitor can access the sign_in page from home page' do
+    visit root_path
+    expect(current_path).to eq '/'
+    expect(page).to have_content 'Welcome'
+    click_on 'Login' # => "/users/sign_in"
+    expect(current_path).to eq '/users/sign_in'
   end
 end
