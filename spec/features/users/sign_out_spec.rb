@@ -1,3 +1,4 @@
+# encoding: utf-8
 # Feature: Sign out
 #   As a user
 #   I want to sign out

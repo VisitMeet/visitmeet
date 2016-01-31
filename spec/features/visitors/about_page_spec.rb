@@ -1,3 +1,4 @@
+# encoding: utf-8
 # Feature: 'About' page
 #   As a visitor
 #   I want to visit an 'about' page
