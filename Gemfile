@@ -61,5 +61,8 @@ gem 'annotate'
 # Omniauth
 
 gem 'omniauth-github'
+#
 
+gem "socialization"
+ 
 # ---- END ----

@@ -289,6 +289,8 @@ GEM
       railties (>= 3.1, < 5.0)
       slim (~> 3.0)
     slop (3.6.0)
+    socialization (1.2.0)
+      activerecord
     spring (1.6.2)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -359,6 +361,7 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   slim-rails
+  socialization
   spring
   spring-commands-rspec
   turbolinks
