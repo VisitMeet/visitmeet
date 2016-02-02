@@ -1,3 +1,4 @@
+# encoding: utf-8
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Home page
@@ -16,22 +17,18 @@ feature 'Home page' do
   # Scenario: Visit the home page
   #   Given I am a visitor
   #   When I visit the home page
-  #   Then I see "Welcome"
+  #   Then I see 'Welcome'
   scenario 'visitor can arrive on home page' do
     visit root_path
     expect(current_path).to eq '/'
     expect(page).to have_content 'Hello World!'
   end
 
-  scenario 'visitor sign_in page exists' do
-    visit new_user_session_path
+  scenario 'visitor can access the sign_in page from home page' do
+    visit root_path
+    expect(current_path).to eq '/'
+    expect(page).to have_content 'Hello World!'
+    click_on 'Login'
     expect(current_path).to eq '/users/login'
-    expect(page).to have_content 'Log in'
-    expect(page).to have_content 'Email'
-    expect(page).to have_content 'Password'
-    expect(page).to have_content 'Remember me'
-    
-    click_on 'Sign up'
-    expect(current_path).to eq '/users/sign_up'
   end
 end

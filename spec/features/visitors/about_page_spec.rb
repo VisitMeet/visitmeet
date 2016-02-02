@@ -1,3 +1,4 @@
+# encoding: utf-8
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: 'About' page
@@ -16,7 +17,7 @@ feature 'About page' do
   # Scenario: Visit the 'about' page
   #   Given I am a visitor
   #   When I visit the 'about' page
-  #   Then I see "About the Website"
+  #   Then I see 'About the Website'
   scenario 'Visit the about page' do
     visit '/pages/about'
     expect(current_path).to eq '/pages/about'

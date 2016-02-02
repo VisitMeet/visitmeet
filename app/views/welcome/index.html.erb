@@ -21,26 +21,38 @@ This is <b>VisitMeet</b>.
 </h2>
 <p>
 We are a not-for-profit company aimed at poverty
- alleviation, employments and exchanges amongst all
-  on earth,
-infrastructure development and travelling with
- world
-
-
-<a href="#">
-<span data-toggle="modal" data-target=".useable-defination">
-  useable
-</span>
-</a>
-
- money.<br>
-<a class="btn btn-default" href="http://www.github.com/bishisht/visitmeet" role="button">
-<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-Github
-</a>
+ alleviation with ..
+ <br>
+ employments and exchanges amongst all on earth.
+ <br>
+ <br>
+We are combining infrastructure development 
+<br>
+with travelling with world
+  <a href="#">
+    <span data-toggle="modal" data-target=".useable-defination">useable</span>
+  </a>
+  money.
+  <br>
+  <br>
+  <a class="btn btn-default" href="http://www.github.com/bishisht/visitmeet" role="button">
+    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+    Github
+  </a>
 </p>
 <p>
-<a class="btn btn-primary btn-large" href="#">Our Blog</a>
+  <a class="btn btn-primary btn-large" href="#">Our Blog</a>
+    <br>
+    <% if user_signed_in? %>
+      Welcome, <%= current_user.email %> &#124; 
+      <li><%= link_to('Account', edit_user_registration_path) %></li>
+      <li><%= link_to('Logout', destroy_user_session_path, method: :get) %></li>
+    <% else %>
+      <li><%= link_to('Login', new_user_session_path) %></li>
+      <li><%= link_to('Register', new_user_registration_path)  %></li>
+    <% end %>
+</p>
+<p>
 <address>
 <strong>VisitMeet, Inc.</strong><br>
 10400 Santoc Tol, Aithpur, Ward No. 6<br>
