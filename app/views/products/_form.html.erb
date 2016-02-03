@@ -21,5 +21,8 @@
   <p>
     <%= p.input :price %>
   </p>
+  <p>
+      <%= p.select :category, options_for_select(Product.categories.map {|k, v| [k.humanize.capitalize, k]}) %>
+  </p>
   <%= p.button :submit, class: "btn btn-primary" %>
 <% end %>

@@ -6,6 +6,7 @@ class ProductDashboard < Administrate::BaseDashboard
     title: Field::String,
     description: Field::Text,
     price: Field::String,
+    category: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -20,6 +21,7 @@ class ProductDashboard < Administrate::BaseDashboard
     :title,
     :description,
     :price,
+    :category,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -34,6 +36,7 @@ class ProductDashboard < Administrate::BaseDashboard
       :title,
       :description,
       :price,
+      :category
     ]
 
     def display_resource(product)

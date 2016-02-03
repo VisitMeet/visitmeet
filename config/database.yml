@@ -12,6 +12,8 @@ test:
   host: localhost
   encoding: utf8
   database: visitmeet_test
+  username:  postgres
+  password: bandana
   pool: 5
 
 production:
@@ -27,5 +29,7 @@ staging:
   host:     localhost
   encoding: utf8
   database: visitmeet_staging
+  username:  postgres
+  password: bandana
   pool:     5
   template: template0
