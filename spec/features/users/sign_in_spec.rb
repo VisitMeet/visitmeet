@@ -1,3 +1,4 @@
+# encoding: utf-8
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign in
@@ -54,5 +55,18 @@ feature 'Sign in', :devise do
     user = FactoryGirl.create(:user)
     signin(user.email, 'invalidpass')
     expect(page).to have_content I18n.t 'devise.failure.invalid', authentication_keys: 'email'
+  end
+
+  scenario 'user sign_in page exists' do
+    visit new_user_session_path
+    expect(current_path).to eq '/users/login'
+    expect(page).to have_content 'Log in'
+    expect(page).to have_content 'Email'
+    expect(page).to have_content 'Password'
+    expect(page).to have_content 'Remember me'
+    
+    click_on 'Sign up'
+    expect(current_path).to eq '/users/sign_up'
+    expect(page).to have_content 'Sign up for VisitMeet'
   end
 end

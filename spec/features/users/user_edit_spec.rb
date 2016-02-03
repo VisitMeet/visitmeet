@@ -1,3 +1,4 @@
+# encoding: utf-8
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: User edit

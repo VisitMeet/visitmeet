@@ -1,3 +1,4 @@
+# encoding: utf-8
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign up
@@ -20,7 +21,6 @@ feature 'Sign Up', :devise do
   scenario 'visitor can sign up with valid email address and password' do
     pending 'needs work, Devise message not showing on page'
     sign_up_with('test@example.com', 'please123', 'please123')
-    expect(page).to have_content
     txts = [I18n.t('devise.registrations.signed_up'), I18n.t('devise.registrations.signed_up_but_unconfirmed')]
     expect(page).to have_content(/.*#{txts[0]}.*|.*#{txts[1]}.*/)
   end
@@ -75,7 +75,7 @@ feature 'Sign Up', :devise do
   scenario 'visitor cannot sign up with mismatched password and confirmation' do
     pending 'needs work, Devise message not showing properly per tests'
     sign_up_with('test@example.com', 'please123', 'mismatch')
-    expect(page).to have_content "Please review the problems below:"
+    expect(page).to have_content 'Please review the problems below:'
     expect(page).to have_content "Password confirmation doesn't match"
   end
 
@@ -88,9 +88,9 @@ feature 'Sign Up', :devise do
     click_on 'Register'
     expect(current_path).to eq '/users/sign_up'
 
-    fill_in 'Email', with: 'usertwo@example.com'
-    fill_in 'Password', with: 'changeme'
-    fill_in 'Password confirmation', with: 'changeme'
+    fill_in :user_email, with: 'usertwo@example.com'
+    fill_in :user_password, with: 'changeme'
+    fill_in :user_password_confirmation, with: 'changeme'
     expect(page).to have_content 'Sign up'
 
     click_on 'Sign up'

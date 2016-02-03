@@ -1,13 +1,14 @@
 # encoding: utf-8
 # https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 AlignParameters:
-  Enabled: false
+  Enabled: true
 
 AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'spec/fixtures/**/*'
     - 'tmp/**/*'
+
   TargetRubyVersion: 2.3
 
 Rails:
@@ -31,4 +32,3 @@ Style/Encoding:
 
 Style/FrozenStringLiteralComment:
   EnforcedStyle: when_needed
-  
