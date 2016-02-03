@@ -3,6 +3,8 @@ development:
   host: localhost
   encoding: utf8
   database: visitmeet_development
+  username:  postgres
+  password: bandana
   pool: 5
 
 test:
