@@ -54,4 +54,5 @@ gem 'puma'
 gem 'pundit'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'socialization'
 # ---- END ----

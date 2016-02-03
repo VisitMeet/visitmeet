@@ -10,6 +10,9 @@
           Description
         </th>
         <th>
+          Category
+        </th>
+        <th>
           Price
         </th>
         <th>
@@ -32,6 +35,7 @@
     <tr>
         <td><%= product.title %></td>
         <td>  <%= product.description %></td>
+        <td><%= product.category %></td>
         <td>  US$: <%= product.price%></td>
         <td> <%= product.user_id %></td>
         <td><%= link_to 'Show', product_path(product) %></td>
