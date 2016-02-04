@@ -16,4 +16,6 @@ class Product < ActiveRecord::Base
   enum category: [:Food, :Travelling, :Lodging, :Shopping]
   belongs_to :user
   has_one :category
+  geocoded_by :location
+  after_validation :geocode
 end

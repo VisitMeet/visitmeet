@@ -1,3 +1,5 @@
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script src="jquery.geocomplete.js"></script>
 <%= simple_form_for @product do |p| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -22,7 +24,20 @@
     <%= p.input :price %>
   </p>
   <p>
+    <%= p.input :latitude %>
+  </p>
+  <p>
+    <%= p.input :longitude %>
+  </p>
+  <p>
+    <%= p.input :location %>
+  </p>
+  <p>
       <%= p.select :category, options_for_select(Product.categories.map {|k, v| [k.humanize.capitalize, k]}) %>
   </p>
   <%= p.button :submit, class: "btn btn-primary" %>
 <% end %>
+<script type="text/javascript">
+  $("#product_location").geocomplete();
+
+</script>
