@@ -58,4 +58,6 @@ gem 'socialization'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'paperclip'
+gem 'aws-sdk'
 # ---- END ----
