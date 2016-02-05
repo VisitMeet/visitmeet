@@ -26,7 +26,7 @@ We are a not-for-profit company aimed at poverty
  employments and exchanges amongst all on earth.
  <br>
  <br>
-We are combining infrastructure development 
+We are combining infrastructure development
 <br>
 with travelling with world
   <a href="#">
@@ -39,12 +39,13 @@ with travelling with world
     <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
     Github
   </a>
+  <%= link_to "Visit Home Page", visitors_index_path, :class => "btn btn-default" %>
 </p>
 <p>
   <a class="btn btn-primary btn-large" href="#">Our Blog</a>
     <br>
     <% if user_signed_in? %>
-      Welcome, <%= current_user.email %> &#124; 
+      Welcome, <%= current_user.email %> &#124;
       <li><%= link_to('Account', edit_user_registration_path) %></li>
       <li><%= link_to('Logout', destroy_user_session_path, method: :get) %></li>
     <% else %>
