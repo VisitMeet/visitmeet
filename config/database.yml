@@ -3,7 +3,7 @@ development:
   host: localhost
   encoding: utf8
   database: visitmeet_development
-  username:  postgres
+  username:  visitmeet #change back to postgres for pull requests
   password: bandana
   pool: 5
 
@@ -12,7 +12,7 @@ test:
   host: localhost
   encoding: utf8
   database: visitmeet_test
-  username:  postgres
+  username:  visitmeet #change back to postgres for pull requests
   password: bandana
   pool: 5
 
@@ -29,7 +29,7 @@ staging:
   host:     localhost
   encoding: utf8
   database: visitmeet_staging
-  username:  postgres
+  username: visitmeet #change back to postgres for pull requests
   password: bandana
   pool:     5
   template: template0
