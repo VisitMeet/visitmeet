@@ -4,7 +4,7 @@ development:
   encoding: utf8
   database: visitmeet_development
   username:  postgres #mine is visitmeet
-  password: bandana
+  password: nepal
   pool: 5
 
 test:
@@ -13,7 +13,7 @@ test:
   encoding: utf8
   database: visitmeet_test
   username:  postgres #mine is visitmeet
-  password: bandana
+  password: nepal
   pool: 5
 
 production:
