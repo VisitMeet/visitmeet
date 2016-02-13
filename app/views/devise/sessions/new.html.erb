@@ -1,17 +1,46 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= render "devise/shared/links" %>
-    <h2 class="lead well text-center">Log in</h2>
-      <!-- % = link_to "Sign in with Github", user_omniauth_authorize_path(:github) % -->
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-inputs">
-        <%= f.input :email, required: false, autofocus: true %>
-        <%= f.input :password, required: false %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      </div>
-      <div class="form-actions">
-        <%= f.button :submit, "Sign in", :class => "btn btn-primary btn-lg btn-block" %>
-      </div>
-    <% end %>
+<link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+<div class="middlePage login-body">
+  <div class="page-header">
+    <h1 class="logo">Visitmeet <small>Cheapeast way to travel!</small></h1>
   </div>
-</div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2 class="lead well text-center">Log in</h2>
+    </div>
+  </div>
+
+
+
+  <body>
+
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-5" >
+            <a href="#"><img src="http://techulus.com/buttons/fb.png" /></a><br/>
+            <a href="#"><img src="http://techulus.com/buttons/tw.png" /></a><br/>
+            <a href="#"><img src="http://techulus.com/buttons/gplus.png" /></a>
+          </div>
+
+          <div class="col-md-7">
+
+            <!--  PUT HERE-->
+            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :email, required: false, autofocus: true %>
+              <%= f.input :password, required: false %>
+              <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+            </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Sign in", :class => "btn btn-primary" %>
+              <br>
+            </div>
+            <% end %>
+            <br>
+            <!-- PUT ABOVE  -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

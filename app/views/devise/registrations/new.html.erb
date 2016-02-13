@@ -1,24 +1,58 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-<h1 class="lead text-center well">Sign up for VisitMeet</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ( "#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up", :class => "btn btn-primary btn-lg btn-block" %>
-  </div>
-<% end %>
-<div class="text-right">
-  Already have an account,
-  <%= render "devise/shared/links" %>
-
-</div>
   </div>
 </div>
+<link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+<div class="middlePage login-body">
+  <div class="page-header">
+    <h1 class="logo">Visitmeet <small>Cheapeast way to travel!</small></h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="lead text-center well">Sign up for VisitMeet</h2>
+        <div class="text-right">
+          Already have an account,
+          <%= render "devise/shared/links" %>
+
+        </div>
+    </div>
+  </div>
+
+
+
+  <body>
+
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-5" >
+            <a href="#"><img src="http://techulus.com/buttons/fb.png" /></a><br/>
+            <a href="#"><img src="http://techulus.com/buttons/tw.png" /></a><br/>
+            <a href="#"><img src="http://techulus.com/buttons/gplus.png" /></a>
+          </div>
+
+          <div class="col-md-7">
+
+            <!--  PUT HERE-->
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= f.error_notification %>
+
+              <div class="form-inputs">
+                <%= f.input :email, required: true, autofocus: true %>
+                <%= f.input :password, required: true, hint: ( "#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+                <%= f.input :password_confirmation, required: true %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.button :submit, "Sign up", :class => "btn btn-primary" %>
+              </div>
+            <% end %>
+            <!-- PUT ABOVE  -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
