@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><%= content_for?(:title) ? yield(:title) : "VisitMeet" %></title>
-<meta name="description" content="<%= content_for?(:description) ? yield(:description) : "My Application" %>">
-<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= csrf_meta_tags %>
-<!-- Custom Fonts -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region=" %>
-<%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
-<%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "VisitMeet" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "My Application" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region=" %>
+  <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
+  <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js" %>
 
 
 </head>
-<body>
-<div class="container-fluid">
-<div class="row">
-<div class="col-md-12 text-center pagination-centered">
-<div class="jumbotron ">
-<h2>
-Hello World! <br>
-This is <b>VisitMeet</b>.
-</h2>
-<p>
-We are a not-for-profit company aimed at poverty
- alleviation with ..
- <br>
- employments and exchanges amongst all on earth.
- <br>
- <br>
-We are combining infrastructure development
-<br>
-with travelling with world
-  <a href="#">
-    <span data-toggle="modal" data-target=".useable-defination">useable</span>
-  </a>
-  money.
-  <br>
-  <br>
-  <a class="btn btn-default" href="http://www.github.com/bishisht/visitmeet" role="button">
-    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-    Github
-  </a>
-  <%= link_to "Visit Home Page", visitors_index_path, :class => "btn btn-default" %>
-</p>
-<p>
-  <a class="btn btn-primary btn-large" href="#">Our Blog</a>
-    <br>
-    <% if user_signed_in? %>
-      Welcome, <%= current_user.email %> &#124;
-      <li><%= link_to('Account', edit_user_registration_path) %></li>
-      <li><%= link_to('Logout', destroy_user_session_path, method: :get) %></li>
-    <% else %>
-      <li><%= link_to('Login', new_user_session_path) %></li>
-      <li><%= link_to('Register', new_user_registration_path)  %></li>
-    <% end %>
-</p>
-<p>
-<address>
-<strong>VisitMeet, Inc.</strong><br>
-10400 Santoc Tol, Aithpur, Ward No. 6<br>
-Kanchanpur, MNR, Nepal 94103<br>
-<abbr title="Phone">P:</abbr> +(977) 99-524-677
-</address>
+<body class="body-background">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center pagination-centered">
+        <div class="jumbotron jumbotron-welcome">
+          <h2>
+            Hello World! <br>
+            This is <b>VisitMeet</b>.
+          </h2>
+          <p>
+            We are a not-for-profit company aimed at poverty
+            alleviation with ..
+            <br>
+            employments and exchanges amongst all on earth.
+            <br>
+            <br>
+            We are combining infrastructure development
+            <br>
+            with travelling with world
+            <a href="#">
+              <span data-toggle="modal" data-target=".useable-defination">useable</span>
+            </a>
+            money.
+            <br>
+            <br>
+            <a class="btn btn-default" href="http://www.github.com/bishisht/visitmeet" role="button">
+              <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+              Github
+            </a>
+            <%= link_to "Visit Home Page", visitors_index_path, :class => "btn btn-default" %>
+          </p>
+          <p>
+            <a class="btn btn-primary btn-large" href="#">Our Blog</a>
+            <br>
+            <% if user_signed_in? %>
+            Welcome, <%= current_user.email %> &#124;
+            <li><%= link_to('Account', edit_user_registration_path) %></li>
+            <li><%= link_to('Logout', destroy_user_session_path, method: :get) %></li>
+            <% else %>
+            <li><%= link_to('Login', new_user_session_path) %></li>
+            <li><%= link_to('Register', new_user_registration_path)  %></li>
+            <% end %>
+          </p>
+          <p>
+            <address>
+              <strong>VisitMeet, Inc.</strong><br>
+              10400 Santoc Tol, Aithpur, Ward No. 6<br>
+              Kanchanpur, MNR, Nepal 94103<br>
+              <abbr title="Phone">P:</abbr> +(977) 99-524-677
+            </address>
 
-<address>
-<strong>Bishisht Bhatta</strong><br>
-<a href="mailto:bhattabishisht@gmail.com"> <span class="glyphicon glyphicon glyphicon-send" aria-hidden="true"></span> bhattabishisht@gmail.com</a>
-</address>
-</p>
-</div>
-</div>
-</div>
-</div>
-
-<!--  MODAL START -->
-
-<div class="modal fade useable-defination" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <strong>Definition:</strong> <br>
-	       able or fit to be used<br>
-      <strong>Synonyms:</strong> <br>
-      <p>
-        Fit for use, ready for use, able to be used, at someone's disposal, disposable;
-        working, in working order, functioning, functional, serviceable, operational, up and running, accessible.
-      </p>
+            <address>
+              <strong>Bishisht Bhatta</strong><br>
+              <a href="mailto:bhattabishisht@gmail.com"> <span class="glyphicon glyphicon glyphicon-send" aria-hidden="true"></span> bhattabishisht@gmail.com</a>
+            </address>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<!--  MODAL END -->
 
-<div class="container">
-  <h3 class="text-center">Our current listed products.</h3>
+  <!--  MODAL START -->
+
+  <div class="modal fade useable-defination" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <strong>Definition:</strong> <br>
+        able or fit to be used<br>
+        <strong>Synonyms:</strong> <br>
+        <p>
+          Fit for use, ready for use, able to be used, at someone's disposal, disposable;
+          working, in working order, functioning, functional, serviceable, operational, up and running, accessible.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--  MODAL END -->
+
+  <div class="container">
+    <h3 class="text-center">Our current listed products.</h3>
+    <hr>
+    <div id="map" style='width: 100%; height: 500px;'></div>
+  </div>
+
   <hr>
-  <div id="map" style='width: 100%; height: 500px;'></div>
-</div>
-
-<hr>
-<br>
+  <br>
 </body>
 </html>
 

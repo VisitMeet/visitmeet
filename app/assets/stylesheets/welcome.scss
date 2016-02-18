@@ -1,3 +1,18 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.body-background {
+    background: url('http://www.free-slideshow.com/stock-photos/nepal/snowy-himalayas-nepal4.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.jumbotron-welcome {
+  //  background: rgb(200, 54, 54); /* This is for ie8 and below */
+   background: rgba(175, 175, 175, 0.5);
+}
