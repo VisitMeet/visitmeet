@@ -1,11 +1,10 @@
-# encoding: utf-8
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign up
 #   As a visitor
 #   I want to sign up
 #   So I can visit protected areas of the site
-feature 'Sign Up', :devise do
+feature 'Sign Up', :devise, js: true do
   before(:each) do
     FactoryGirl.reload
   end
@@ -53,18 +52,22 @@ feature 'Sign Up', :devise do
   #   When I sign up with a short password
   #   Then I see a 'too short password' message
   scenario 'visitor cannot sign up with a short password' do
-    pending 'needs work, Devise message not showing properly per tests'
+    pending 'TODO: message not showing properly on view, test passes'
+    # TODO: WHY IS THE MESSAGE NOT SHOWING PROPERLY : 20160204
     sign_up_with('test@example.com', 'please', 'please')
-    expect(page).to have_content 'Password is too short'
-  end
+    expect(page).to have_content ' is too short'
+    expect(page).to have_content ' minimum is 8 characters'
+    expect(page).to have_content ' is too short (minimum is 8 characters)'
+   end
 
   # Scenario: Visitor cannot sign up without password confirmation
   #   Given I am not signed in
   #   When I sign up without a password confirmation
   #   Then I see a missing password confirmation message
   scenario 'visitor cannot sign up without password confirmation' do
-    pending 'needs work, Devise message not showing properly per tests'
+    pending 'still needs work, Devise message not showing properly per tests'
     sign_up_with('test@example.com', 'please123', '')
+    expect(current_path).to eq '/users'
     expect(page).to have_content "Password confirmation doesn't match"
   end
 
