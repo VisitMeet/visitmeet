@@ -15,6 +15,7 @@ Rails.application.routes.draw do
               controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
 
   # root to: 'visitors#index'
+  get 'visitors/index'
   root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

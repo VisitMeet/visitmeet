@@ -1,4 +1,5 @@
-Visitmeet
+Visitmeet [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
 ================
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
@@ -9,7 +10,7 @@ Ruby on Rails
 This application requires:
 
 - Ruby 2.3.0
-- Rails 4.2.4
+- Rails 4.2.5.1
 
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 

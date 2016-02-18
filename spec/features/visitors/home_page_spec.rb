@@ -21,13 +21,14 @@ feature 'Home page' do
   scenario 'visitor can arrive on home page' do
     visit root_path
     expect(current_path).to eq '/'
-    expect(page).to have_content 'Hello World!'
+    within ('.jumbotron h2') do
+      expect(page).to have_content 'Hello World!'
+    end
   end
 
   scenario 'visitor can access the sign_in page from home page' do
     visit root_path
     expect(current_path).to eq '/'
-    expect(page).to have_content 'Hello World!'
     click_on 'Login'
     expect(current_path).to eq '/users/login'
   end
