@@ -35,7 +35,7 @@ feature 'Sign Up', :devise do
     expect(page).to have_content ' Please review the problems below'
     expect(page).to have_content ' Email is invalid'
     expect(page).to have_content ' 8 characters minimum'
-    expect(page).to have_content ' Already have an account'
+    expect(page).to have_content ' Already have an account ? Log in'
   end
 
   # Scenario: Visitor cannot sign up without password
