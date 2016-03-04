@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'profile/index'
+
   get 'users/profile'
 
   namespace :admin do
