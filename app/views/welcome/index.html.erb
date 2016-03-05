@@ -50,12 +50,17 @@ with travelling with world
   <a class="btn btn-primary btn-large" href="#">Our Blog</a>
     <br>
     <% if user_signed_in? %>
-      Welcome, <%= current_user.email %> &#124;
-      <li><%= link_to('Account', edit_user_registration_path) %></li>
-      <li><%= link_to('Logout', destroy_user_session_path, method: :get) %></li>
+      Welcome, <%= current_user.email %>
+      <div class="row">
+      <%= link_to('Account', edit_user_registration_path, :class=> "btn btn-primary btn-lg") %>
+      <%= link_to('Logout', destroy_user_session_path, method: :get, :class=> "btn btn-primary btn-lg"  ) %>
+
+      </div>
     <% else %>
-      <li><%= link_to('Login', new_user_session_path) %></li>
-      <li><%= link_to('Register', new_user_registration_path)  %></li>
+    <div class="row">
+      <%= link_to 'Login', new_user_session_path, :class=> "btn btn-primary btn-lg" %>
+      <%= link_to 'Register', new_user_registration_path, :class=> "btn btn-primary btn-lg" %>
+    </div>
     <% end %>
 </p>
 <p>
