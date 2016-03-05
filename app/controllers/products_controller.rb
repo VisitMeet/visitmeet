@@ -9,6 +9,10 @@
 #  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  category    :integer
+#  latitude    :float
+#  longitude   :float
+#  location    :string
 #  category_id :integer
 #
 
@@ -17,6 +21,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    # //show the markers in the map
     @map_hash = Gmaps4rails.build_markers(@products) do |product, marker|
       marker.lat product.latitude
       marker.lng product.longitude
@@ -30,8 +35,6 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @categories = Product.categories
-
   end
 
   def edit
@@ -42,8 +45,9 @@ class ProductsController < ApplicationController
 
   def create
     @user = current_user
-    @categories = Product.categories
-    @product = @user.products.build(product_params)
+    # @categories = Product.categories
+    @product = @user.products.create(product_params)
+    # @product = Product.new(product_params)
 
     if @product.save
       flash[:success] = " New Product Created!"
@@ -74,6 +78,6 @@ class ProductsController < ApplicationController
   # Private Methods #
   private
     def product_params
-      params.require(:product).permit(:title, :description, :price, :category, :location, :latitude, :longitude)
+      params.require(:product).permit(:title, :description, :price, :category_id, :location)
     end
 end
