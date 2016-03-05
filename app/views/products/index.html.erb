@@ -7,10 +7,15 @@
       <div class="well well-sm">
           <strong>List by</strong>
           <div class="btn-group">
-              <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
-              </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
-                  class="glyphicon glyphicon-th"></span>Grid</a>
+              <a href="#" id="list" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th-list">
+              </span>List</a>
+              <a href="#" id="grid" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th"></span>Grid</a>
+
+
           </div>
+          <%= link_to 'New Product', new_product_path, 'data-no-turbolink' => true, :class=> "btn btn-primary   pull-right" %>
       </div>
       <div id="products" class="row list-group">
         <% @products.each do |product| %>
@@ -47,7 +52,6 @@
 
 
 </div>
-<%= link_to 'New Product', new_product_path, 'data-no-turbolink' => true %>
 
 <div class="container">
   <div id="map" style='width: 100%; height: 500px;'></div>
