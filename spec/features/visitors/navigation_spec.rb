@@ -27,7 +27,7 @@ feature 'Navigation links', :devise do
     expect(page).to have_content 'Products'
     expect(page).to have_content 'Services'
     expect(page).to have_content 'Sign up for VisitMeet'
-    expect(page).to have_content 'Already have an account ? Log in'
+    expect(page).to have_content 'Already have an account? Log in'
     expect(page).to have_content 'Sign in with GitHub'
     expect(page).to have_content 'Copyright © VisitMeet 2016'
 
