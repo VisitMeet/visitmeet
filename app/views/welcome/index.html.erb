@@ -17,12 +17,23 @@
 </head>
 <body>
 <div class="container-fluid">
+<p class="toplinks">
+  <% if user_signed_in? %>
+    Welcome, <%= current_user.email %> &#124;
+    <%= link_to('Account', edit_user_registration_path) %> &#124;
+    <%= link_to('Logout', destroy_user_session_path, method: :get) %>
+  <% else %>
+    Welcome &#124;
+    <%= link_to('Login', new_user_session_path) %> &#124;
+    <%= link_to('Register', new_user_registration_path)  %>
+  <% end %>
+</p>
 <div class="row">
 <div class="col-md-12 text-center pagination-centered">
-<div class="jumbotron ">
-<h2>
-Hello World! <br>
-This is <b>VisitMeet</b>.
+<div class="jumbotron">
+<h2>Hello World!
+  <br>
+  This is <b>VisitMeet</b>
 </h2>
 <p>
 We are a not-for-profit company aimed at poverty alleviation with ..
@@ -48,14 +59,6 @@ with travelling with world
 <p>
   <a class="btn btn-primary btn-large" href="#">Our Blog</a>
     <br>
-    <% if user_signed_in? %>
-      Welcome, <%= current_user.email %> &#124;
-      <li><%= link_to('Account', edit_user_registration_path) %></li>
-      <li><%= link_to('Logout', destroy_user_session_path, method: :get) %></li>
-    <% else %>
-      <li><%= link_to('Login', new_user_session_path) %></li>
-      <li><%= link_to('Register', new_user_registration_path)  %></li>
-    <% end %>
 </p>
 <p>
 <address>
