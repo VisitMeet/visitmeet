@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20160305150015) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "location"
+    t.integer  "category"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
