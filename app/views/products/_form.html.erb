@@ -23,17 +23,12 @@
   <p>
     <%= p.input :price %>
   </p>
-  <p>
-    <%= p.input :latitude %>
-  </p>
-  <p>
-    <%= p.input :longitude %>
-  </p>
+
   <p>
     <%= p.input :location %>
   </p>
-  <p>
-      <%= p.select :category, options_for_select(Product.categories.map {|k, v| [k.humanize.capitalize, k]}) %>
+  <p class="form-group string product_category">
+      <%= p.collection_select(:category_id, Category.all, :id, :name) %>
   </p>
   <%= p.button :submit, class: "btn btn-primary" %>
 <% end %>

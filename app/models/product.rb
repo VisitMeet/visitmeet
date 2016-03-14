@@ -9,6 +9,10 @@
 #  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  category    :integer
+#  latitude    :float
+#  longitude   :float
+#  location    :string
 #  category_id :integer
 #
 
@@ -18,10 +22,10 @@ class Product < ActiveRecord::Base
   validates :description, presence: true, length: { maximum: 160}
   validates :price, numericality: { less_than_or_equal_to: 20}
 
-  enum category: [:Food, :Travelling, :Lodging, :Shopping]
+  # enum category: [:Food, :Travelling, :Lodging, :Shopping]
 
   belongs_to :user
-  has_one :category
+  belongs_to :category
 
   geocoded_by :location
   after_validation :geocode

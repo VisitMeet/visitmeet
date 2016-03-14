@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'profile/index'
+
   get 'users/profile'
 
   namespace :admin do
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
 
   # root to: 'visitors#index'
   get 'visitors/index'
+  get 'visitors/team'
   root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
