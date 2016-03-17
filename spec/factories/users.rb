@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: users
@@ -33,14 +34,13 @@
 
 FactoryGirl.define do
   factory :user do
-    confirmed_at Time.now
-    name "Test User"
-    email "test@example.com"
-    password "please123"
+    name 'Test User'
+    email 'test@example.com'
+    password 'please123'
+    confirmed_at Time.current
 
     trait :admin do
       role 'admin'
     end
-
   end
 end

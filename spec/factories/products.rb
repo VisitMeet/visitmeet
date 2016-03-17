@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: products
@@ -14,10 +15,9 @@
 
 FactoryGirl.define do
   factory :product do
-    title "MyString"
-    description "MyText"
+    title 'MyString'
+    description 'MyText'
     price 1
     user nil
   end
 end
- 

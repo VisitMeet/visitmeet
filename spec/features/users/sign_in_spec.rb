@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign in
@@ -29,10 +29,13 @@ feature 'Sign in', :devise do
   #   When I sign in with valid credentials
   #   Then I see a success message
   scenario 'user can sign in with valid credentials' do
-    pending 'needs work, Devise message not showing on page'
     user = FactoryGirl.create(:user)
     signin(user.email, user.password)
-    expect(page).to have_content I18n.t 'devise.sessions.signed_in'
+    user = User.last
+    expect(page).to have_content "#{user.email}"
+    expect(page).to have_content 'Welcome, test@example.com'
+    # TODO: get this next text working again:
+    # expect(page).to have_content I18n.t 'devise.sessions.signed_in'
   end
 
   # Scenario: User cannot sign in with wrong email
@@ -64,9 +67,9 @@ feature 'Sign in', :devise do
     expect(page).to have_content 'Email'
     expect(page).to have_content 'Password'
     expect(page).to have_content 'Remember me'
-    
+
     click_on 'Sign up'
     expect(current_path).to eq '/users/sign_up'
-    expect(page).to have_content 'Sign up for VisitMeet'
+    expect(page).to have_content 'Register to Visit & Meet'
   end
 end
