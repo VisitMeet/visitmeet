@@ -1,4 +1,6 @@
+# frozen_string_literal: true
 module Admin
+  # admins administer users
   class UsersController < Admin::ApplicationController
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:

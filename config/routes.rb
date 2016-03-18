@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
   get 'profile/index'
 
@@ -13,10 +14,9 @@ Rails.application.routes.draw do
 
   resources :products
 
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
-              controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' },
+                     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  # root to: 'visitors#index'
   get 'visitors/index'
   get 'visitors/team'
   root to: 'welcome#index'

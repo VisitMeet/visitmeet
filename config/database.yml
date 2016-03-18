@@ -35,17 +35,3 @@ production:
   # Ref https://github.com/rails/rails/commit/391061a30d7ab2923ea342048fe643469de3f1a9
   # pool: <%%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   template: template0
-
-staging:
-  adapter:  postgresql
-  host:     localhost
-  encoding: utf8
-  database: visitmeet_staging
-  # username:  postgres
-  # password: bandana
-  pool: 5
-  # puma changes
-  # encoding: unicode 
-  # Ref https://github.com/rails/rails/commit/391061a30d7ab2923ea342048fe643469de3f1a9
-  # pool: <%%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  template: template0

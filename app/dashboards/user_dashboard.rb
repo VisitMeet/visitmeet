@@ -1,5 +1,6 @@
-require "administrate/base_dashboard"
-
+# frozen_string_literal: true
+require 'administrate/base_dashboard'
+# UserDashboard administers users
 class UserDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
@@ -33,8 +34,8 @@ class UserDashboard < Administrate::BaseDashboard
     invitation_sent_at: Field::DateTime,
     invitation_accepted_at: Field::DateTime,
     invitation_limit: Field::Number,
-    invitations_count: Field::Number,
-  }
+    invitations_count: Field::Number
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -45,8 +46,8 @@ class UserDashboard < Administrate::BaseDashboard
     :invited_by,
     :id,
     :email,
-    :encrypted_password,
-  ]
+    :encrypted_password
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
@@ -79,13 +80,12 @@ class UserDashboard < Administrate::BaseDashboard
     :invitation_sent_at,
     :invitation_accepted_at,
     :invitation_limit,
-    :invitations_count,
-  ]
+    :invitations_count
+  ].freeze
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
-  #
   def display_resource(user)
-    "User ##{user.id}"
+    "User #{user.id}"
   end
 end

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class AddLatitudeLongitudeLocationToProducts < ActiveRecord::Migration
   def change
     add_column :products, :latitude, :float
