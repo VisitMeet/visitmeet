@@ -1,5 +1,7 @@
-<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
-<script src="jquery.geocomplete.js"></script>
+<% content_for :head do %>
+  <% javascript_include_tag 'http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false'>
+  <% javascript_include_tag '/vendor/assets/javascripts/jquery.geocomplete.js'>
+<% end %>
 <%= simple_form_for @product do |p| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">

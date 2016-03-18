@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: products
@@ -15,6 +16,5 @@
 #  location    :string
 #  category_id :integer
 #
-
 module ProductsHelper
 end

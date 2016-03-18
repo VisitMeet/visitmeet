@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: products
@@ -15,10 +16,8 @@
 #  location    :string
 #  category_id :integer
 #
-
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
-
   def index
     @products = Product.all
     # //show the markers in the map
@@ -35,22 +34,20 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @categories = Product.categories
   end
 
   def edit
     @product = Product.find(params[:id])
     @categories = Product.categories
-
   end
 
   def create
     @user = current_user
-    # @categories = Product.categories
-    @product = @user.products.create(product_params)
-    # @product = Product.new(product_params)
-
+    @categories = Product.categories
+    @product = @user.products.build(product_params)
     if @product.save
-      flash[:success] = " New Product Created!"
+      flash[:success] = 'New Product Created!'
       redirect_to @product
     else
       render 'new'
@@ -60,7 +57,6 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     @categories = Product.categories
-
     if @product.update(product_params)
       redirect_to @product
     else
@@ -75,9 +71,10 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
-  # Private Methods #
   private
-    def product_params
-      params.require(:product).permit(:title, :description, :price, :category_id, :location)
-    end
+
+  def product_params
+    params.require(:product).permit(:title, :description, :price, :category, :location, :latitude, :longitude)
+  end
+
 end

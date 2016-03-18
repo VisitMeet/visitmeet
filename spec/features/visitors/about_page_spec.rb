@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: 'About' page

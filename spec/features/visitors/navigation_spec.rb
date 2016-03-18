@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Navigation links
@@ -25,24 +25,23 @@ feature 'Navigation links', :devise do
     expect(page).to have_content 'Visit'
     expect(page).to have_content 'Meet'
     expect(page).to have_content 'Products'
-    expect(page).to have_content 'Services'
-    expect(page).to have_content 'Sign up for VisitMeet'
+    expect(page).to have_content 'Register to Visit & Meet'
     expect(page).to have_content 'Already have an account? Log in'
     expect(page).to have_content 'Sign in with GitHub'
     expect(page).to have_content 'Copyright © VisitMeet 2016'
 
-    click_on 'Log in'
+    click_on 'Login'
     expect(current_path).to eq '/users/login'
   end
 
   scenario 'view navigation links on home page' do
     visit root_path
     expect(current_path).to eq '/'
-    within('.jumbotron h2 b') do
-      expect(page).to have_content 'VisitMeet'
-    end
     expect(page).to have_link 'Login'
     expect(page).to have_link 'Register'
+    within '.jumbotron h2 b' do
+      expect(page).to have_content 'VisitMeet'
+    end
 
     click_on 'Login'
     expect(current_path).to eq '/users/login'

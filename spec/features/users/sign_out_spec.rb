@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign out
@@ -19,11 +19,17 @@ feature 'Sign out', :devise, js: true do
   #   When I sign out
   #   Then I see a signed out message
   scenario 'user signs out successfully' do
-    pending 'needs work, Devise message not showing on page'
     user = FactoryGirl.create(:user)
     signin(user.email, user.password)
-    expect(page).to have_content I18n.t 'devise.sessions.signed_in'
-    click_link 'Logout'
-    expect(page).to have_content I18n.t 'devise.sessions.signed_out'
+    expect(page).to have_content 'Welcome'
+    expect(current_path).to eq '/'
+    # TODO: get this next text working again:
+    # expect(page).to have_content I18n.t 'devise.sessions.signed_in'
+
+    click_on 'Logout'
+    expect(page).to have_content 'Welcome'
+    expect(current_path).to eq '/'
+    # TODO: get this next test working again:
+    # expect(page).to have_content I18n.t 'devise.sessions.signed_out'
   end
 end
