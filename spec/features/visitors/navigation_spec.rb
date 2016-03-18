@@ -38,11 +38,11 @@ feature 'Navigation links', :devise do
   scenario 'view navigation links on home page' do
     visit root_path
     expect(current_path).to eq '/'
-    within('.jumbotron h2 b') do
-      expect(page).to have_content 'VisitMeet'
-    end
     expect(page).to have_link 'Login'
     expect(page).to have_link 'Register'
+    within '.jumbotron h2 b' do
+      expect(page).to have_content 'VisitMeet'
+    end
 
     click_on 'Login'
     expect(current_path).to eq '/users/login'

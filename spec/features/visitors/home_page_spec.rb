@@ -31,9 +31,14 @@ feature 'Home page' do
     end
     within '.hometext' do
       expect(page).to have_content 'We are a not-for-profit company aimed at poverty alleviation with employments and exchanges amongst all on earth We are combining infrastructure development with travelling with world useable money'
-      expect(page).to have_link 'Our Information Page'
     end
-    expect(page).to have_link 'Github'
+    within '.information.text-center' do
+      expect(page).to have_content 'Our Information Page'
+      expect(page).to have_link('Our Information Page')
+    end
+    within '.github' do
+      expect(page).to have_link 'Github'
+    end
     # expect(page).to have_link 'Our Blog' : page does not exist yet
     expect(page).to have_content 'VisitMeet, Inc.'
     expect(page).to have_content '10400 Santoc Tol, Aithpur, Ward No. 6'
@@ -43,7 +48,7 @@ feature 'Home page' do
     expect(page).to have_content 'VisitMeet, Inc.'
     expect(page).to have_content 'Bishisht Bhatta'
     expect(page).to have_link 'bhattabishisht@gmail.com'
-    expect(page).to have_content 'We begin by offering one product, AWARENESS, arted'
+    expect(page).to have_content 'We begin by offering one human product enjoyed by all who have eyes that see A NEW AWARENESS ~ arted ~'
   end
 
   scenario 'all visitors can access the sign_in page from home page' do

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'administrate/base_dashboard'
-class ProductDashboard < Administrate::BaseDashboard
+# ProductDashboard administers products
+  class ProductDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,

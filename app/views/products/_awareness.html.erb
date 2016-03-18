@@ -1,24 +1,51 @@
-<div id="awareness">
+<div id='awareness'>
   <p>
     This is the AWARENESS Star Art.
     <br>
   </p>
+</div>
+<div class='productprice'>
+  Shipping:
+  <br> &nbsp;&nbsp; Global: $19.00
+  <br> &nbsp;&nbsp; USA: $11.50
+</div>
+<div id='artshown'>
+  <div id='awarenessnowsmall'>
+    <br> You will receive:
+    <br>
+    <br>
+    <strong>5 AWARENESS</strong>
+    Border Star Art prints for your own artings
+    <%= image_tag('awareness-thumb.jpg', size: '180x315', alt: 'AWARENESS thumbnail') %>
+    <br>
+  </div>
+</div>
+<div id='awareness_small'>
+  <br>
+  <strong>1 AWARENESS</strong>
+  SnowFlame Star Art print delighting all who see it
+  <%= image_tag('awareness-snowflame-thumb.jpg', size: '180x315', alt: 'AWARENESS thumbnail') %>
+  <br>
+</div>
+<div id='awarenesssnowlarge'>
+  <%= image_tag('awareness-snowflame.jpg', size: '1122x419', alt: 'AWARENESS SnowFlame') %>
+  <br>
+  <br>
+</div>
 <form>
 <script
-  src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+  src='https://checkout.stripe.com/v2/checkout.js' class='stripe-button'
   data-key=<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>
-  data-amount="1900"
-  data-name="Purchase AWARENESS Star Art"
-  data-description="Purchase AWARENESS ($19.00)"
-  data-image="../../app/assets/images/square-awareness.jpg">
+  data-amount='1900'
+  data-name='Purchase AWARENESS Star Art'
+  data-description='Purchase AWARENESS ($19.00)'
+  data-image='../../app/assets/images/square-awareness.jpg'>
 </script>
 </form>
-  <div id="awareness_small">
-    <div id="awareness_large">
-      <%= image_tag("awareness.jpg", size: "1122x419", alt: "AWARENESS Star Art") %>
-      <br>
-      <br>
-      <br>
-    </div>
-  </div>
+<div id='awareness_large'>
+  <%= image_tag('awareness.jpg', size: '1122x419', alt: 'AWARENESS Star Art') %>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>

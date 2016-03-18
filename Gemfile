@@ -41,6 +41,12 @@ group :production do
 end
 # Custom added Gems
 # ---- START ----
+# https://github.com/rails/spring/commit/131287d9399990396eba74d49f6678a19d728809
+# You cannot link to a git repo from your Gemfile. Spring doesn't support this
+# due to the way that it gets loaded (bypassing bundler for performance reasons).
+#
+# Therefore, to test changes with your app,
+# run `rake install` to properly install this github gem on your system.
 gem 'administrate', github: 'mariochavez/administrate', branch: 'remove-inline_svg'
 gem 'annotate'
 gem 'bootstrap-sass'

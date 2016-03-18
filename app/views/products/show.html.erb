@@ -7,48 +7,6 @@
 <div class="productprice">
   Product price: $ <%= @product.price %> US
 </div>
-<div class="productprice">
-  Shipping:
-  <br> &nbsp;&nbsp; Global: $19.00 
-  <br> &nbsp;&nbsp; USA: $11.50
-</div>
-
-<%# p>
-  <b>Art image url:</b>
-  <%= 'assets/images/awareness-snowflame.jpg' %>
-<%#/p>
-
-<%#    div id="artshown" %>
-  <%#  %= render @awareness %>
-<%#    /div %>
-
-<div id="artshown">
-  <div id="awarenessnowsmall">
-    <br> You will receive:
-    <br>
-    <br>
-    <strong>5 AWARENESS</strong>
-    Border Star Art prints for your own artings
-    <%= image_tag('awareness-thumb.jpg', size: '180x315', alt: 'AWARENESS thumbnail') %>
-    <br>
-  </div>
- <div id="awareness_small">
-    <br>
-    <strong>1 AWARENESS</strong>
-    SnowFlame Star Art print delighting all who see it
-    <%= image_tag('awareness-snowflame-thumb.jpg', size: '180x315', alt: 'AWARENESS thumbnail') %>
-    <br>
-  </div>
-  <div id="awareness_large">
-    <%= image_tag("awareness.jpg", size: "1122x419", alt: "AWARENESS Star Art") %>
-    <br>
-  </div>
-   <div id="awarenesssnowlarge">
-    <%= image_tag("awareness-snowflame.jpg", size: "1122x419", alt: "AWARENESS SnowFlame") %>
-    <br>
-    <br>
-  </div>
-</div>
 
 <% if user_signed_in? %>
   <% if current_user.has_role? :admin %>

@@ -29,8 +29,8 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <%= csrf_meta_tags %>
     <%= yield(:head) %>
+    <%= csrf_meta_tags %>
   </head>
   <body>
     <div class="container-fluid">
@@ -65,6 +65,9 @@
               <br>
               <br>
             </div>
+            <div class="information text-center">
+              <%= link_to('Our Information Page', '/visitors/index', class: 'btn btn-primary btn-medium', method: :get) %>
+            </div>
             <div class="artshowcase">
               We begin by offering one human product
               <br>
@@ -75,44 +78,41 @@
               </h4>
               ~ arted ~
               <br>
+              <!-- p> TODO: create the blog page to make a working link
+                <a class="btn btn-primary btn-large" href="#">Our Blog</a>
+                <br>
+              </p -->
+              <p>
+                <address>
+                <strong>
+                VisitMeet, Inc.
+                </strong>
+                <br> 10400 Santoc Tol, Aithpur, Ward No. 6
+                <br> Kanchanpur, MNR, Nepal 94103
+                <br><abbr title="Phone">Ph:</abbr> +(977) 99-524-677
+                <br>
+                <br><strong>Bishisht Bhatta</strong>
+                <br>
+                <a href="mailto:bhattabishisht@gmail.com">
+                  <span class="glyphicon glyphicon glyphicon-send" aria-hidden="true"></span>
+                   bhattabishisht@gmail.com
+                </a>
+                </address>
+              </p>
             </div>
-            <div class="text-center">
-              <%= link_to 'Our Information Page', '/visitors/index', class: 'btn btn-primary btn-medium' %>
-            </div>
-            <!-- p> TODO: create the blog page to make a working link
-              <a class="btn btn-primary btn-large" href="#">Our Blog</a>
-              <br>
-            </p -->
-            <p>
-              <address>
-              <strong>
-              VisitMeet, Inc.
-              </strong>
-              <br> 10400 Santoc Tol, Aithpur, Ward No. 6
-              <br> Kanchanpur, MNR, Nepal 94103
-              <br><abbr title="Phone">Ph:</abbr> +(977) 99-524-677
-              <br>
-              <br><strong>Bishisht Bhatta</strong>
-              <br>
-              <a href="mailto:bhattabishisht@gmail.com">
-                <span class="glyphicon glyphicon glyphicon-send" aria-hidden="true"></span>
-                bhattabishisht@gmail.com
-              </a>
-              </address>
-            </p>
           </div>
         </div>
         <!-- h3 class="text-center">We currently offer these products ..</h3 -->
         <!-- # powered by google script at page bottom -->
         <!-- div id="map" style='width: 100%; height: 500px;'></div -->
-      </div>
-      <div class="github">
-        <br>
-        <br>
-        <br>
-        <br> Are you not a programmer yet wonder what the codes look like ??
-        <br> Codes shown in this Repository are the codes creating this site
-        <br>
+        </div>
+        <div class="github">
+          <br>
+          <br>
+          <br>
+          <br> Are you not a programmer yet wonder what the codes look like ??
+          <br> Codes shown in this Repository are the codes creating this site
+          <br>
           <a class="btn btn-primary btn-medium" href="http://www.github.com/bishisht/visitmeet" role="button">
             <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
             Our Open Source Code Repository at Github
@@ -138,11 +138,11 @@
                 <br> &nbsp;&nbsp; Fit for use, ready for use, able to be used, at someone's disposal, disposable;
                 <br> &nbsp;&nbsp; working, in working order, functioning, functional, serviceable, operational,
                 <br> &nbsp;&nbsp; up and running, accessible.
-          </p>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!--  MODAL END -->
+       <!--  MODAL END -->
   </body>
 </html>
 
@@ -156,3 +156,4 @@
 <!-- }); -->
 <!-- /script -->
 <!-- TODO: script errors : RetiredVersion, SensorNotRequired, InvalidClientId, InvalidKey: https://developers.google.com/maps/documentation/javascript/error-messages -->
+<!-- % = yield(:head) % -->
