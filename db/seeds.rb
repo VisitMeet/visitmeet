@@ -7,7 +7,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 user = CreateAdminService.new.call
-Rails::Logger.info 'CREATED ADMIN USER: ' << user.email
+puts 'CREATED ADMIN USER: ' + user.email
 # Environment variables (ENV['...']) can be set in the file config/application.yml.
 # See http://railsapps.github.io/rails-environment-variables.html
 Category.create(name: 'Fooding')
@@ -19,9 +19,6 @@ Product.create(
   title: 'AWARENESS',
   description: 'Star Art of Awareness',
   price: 19,
-  user_id: 1,
-  category: 'Shopping',
-  category_id: 4,
   latitude: 44.05396,
   longitude: -123.09273,
   location: ''
@@ -32,11 +29,9 @@ Product.create(title: 'Local Chicken Curry', description: 'Local Chicken Curry i
 Product.create(title: 'Pork Kachol', description: 'Steamed Pork mixed with Nepali masalas.', price: 30)
 
 product = Product.first
-Rails::Logger.info product.title.to_s
-Rails::Logger.info product.category.to_s
-Rails::Logger.info product.price.to_s
-Rails::Logger.info product.user_id.to_s
-Rails::Logger.info product.description.to_s
-Rails::Logger.info product.latitude.to_s
-Rails::Logger.info product.longitude.to_s
-Rails::Logger.info 'Four more products have been created'
+puts 'Product Title: ' + product.title.to_s
+puts 'Product Price: ' + product.price.to_s
+puts 'Product Description: ' + product.description.to_s
+puts 'Product Ltitude: ' + product.latitude.to_s
+puts 'Product Longitude: ' + product.longitude.to_s
+puts 'Four more products have been created'

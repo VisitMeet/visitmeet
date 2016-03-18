@@ -25,13 +25,12 @@ feature 'Navigation links', :devise do
     expect(page).to have_content 'Visit'
     expect(page).to have_content 'Meet'
     expect(page).to have_content 'Products'
-    expect(page).to have_content 'Services'
     expect(page).to have_content 'Register to Visit & Meet'
     expect(page).to have_content 'Already have an account? Log in'
     expect(page).to have_content 'Sign in with GitHub'
     expect(page).to have_content 'Copyright © VisitMeet 2016'
 
-    click_on 'Log in'
+    click_on 'Login'
     expect(current_path).to eq '/users/login'
   end
 
