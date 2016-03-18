@@ -19,7 +19,6 @@ feature 'Home page' do
   #   When I visit the home page
   #   Then I see 'Welcome'
   scenario 'all visitors can arrive on home page' do
-    visit root_path
     expect(current_path).to eq '/'
   end
 
@@ -32,11 +31,11 @@ feature 'Home page' do
     end
     within '.hometext' do
       expect(page).to have_content 'We are a not-for-profit company aimed at poverty alleviation with employments and exchanges amongst all on earth We are combining infrastructure development with travelling with world useable money'
-      expect(page).to have_link 'Our Home Page'
+      expect(page).to have_link 'Our Information Page'
     end
     expect(page).to have_link 'Github'
     # expect(page).to have_link 'Our Blog' : page does not exist yet
-    expect(page).to have_content("VisitMeet, Inc.")
+    expect(page).to have_content 'VisitMeet, Inc.'
     expect(page).to have_content '10400 Santoc Tol, Aithpur, Ward No. 6'
     expect(page).to have_content('VisitMeet, Inc.')
     expect(page).to have_content 'Kanchanpur, MNR, Nepal 94103'

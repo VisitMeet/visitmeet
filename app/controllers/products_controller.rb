@@ -1,20 +1,7 @@
-# == Schema Information
-#
-# Table name: products
-#
-#  id          :integer          not null, primary key
-#  title       :string
-#  description :text
-#  price       :integer
-#  user_id     :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  category_id :integer
-#
-
+# frozen_string_literal: true
+# see updated config/schema.rb
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
-
   def index
     @products = Product.all
     @map_hash = Gmaps4rails.build_markers(@products) do |product, marker|
@@ -31,22 +18,19 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @categories = Product.categories
-
   end
 
   def edit
     @product = Product.find(params[:id])
     @categories = Product.categories
-
   end
 
   def create
     @user = current_user
     @categories = Product.categories
     @product = @user.products.build(product_params)
-
     if @product.save
-      flash[:success] = " New Product Created!"
+      flash[:success] = 'New Product Created!'
       redirect_to @product
     else
       render 'new'
@@ -56,7 +40,6 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     @categories = Product.categories
-
     if @product.update(product_params)
       redirect_to @product
     else
@@ -71,9 +54,9 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
-  # Private Methods #
   private
-    def product_params
-      params.require(:product).permit(:title, :description, :price, :category, :location, :latitude, :longitude)
-    end
+
+  def product_params
+    params.require(:product).permit(:title, :description, :price, :category, :location, :latitude, :longitude)
+  end
 end

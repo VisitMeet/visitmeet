@@ -32,7 +32,7 @@ feature 'Sign in', :devise do
     user = FactoryGirl.create(:user)
     signin(user.email, user.password)
     user = User.last
-    expect(page).to have_content "#{user.email}"
+    expect(page).to have_content user.email.to_s
     expect(page).to have_content 'Welcome, test@example.com'
     # TODO: get this next text working again:
     # expect(page).to have_content I18n.t 'devise.sessions.signed_in'

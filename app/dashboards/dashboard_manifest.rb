@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # DashboardManifest tells Administrate which dashboards to display
 class DashboardManifest
   # `DASHBOARDS`
@@ -11,12 +12,12 @@ class DashboardManifest
   # to work correctly.
   DASHBOARDS = [
     :users,
-    :products,
-  ]
+    :products
+  ].freeze
 
   # `ROOT_DASHBOARD`
   # the name of the dashboard that will be displayed
-  # at "http://your_site.com/admin"
+  # at 'http://your_site.com/admin'
   #
   # This dashboard will likely be the first page that admins see
   # when they log into the dashboard.

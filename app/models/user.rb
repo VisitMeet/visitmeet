@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # see db/schema.db for user attributes
 class User < ActiveRecord::Base
   has_many :products, dependent: :destroy
