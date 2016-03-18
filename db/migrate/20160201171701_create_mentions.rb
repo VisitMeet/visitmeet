@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class CreateMentions < ActiveRecord::Migration
   def change
     create_table :mentions do |t|

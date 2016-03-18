@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+require 'devise/orm/active_record'
 Devise.setup do |config|
   config.secret_key = '52dac4f72ad586f5ad66c3eb6b3456c1dbb6c597e3781c16613af1f386bfe4b1245a7583886675681c8ff9225bad2435998b6daa0acd655647afe43e7dd71bca'
   config.mailer_sender = 'Bishisht Bhatta <bhattabishisht@gmail.com>'
