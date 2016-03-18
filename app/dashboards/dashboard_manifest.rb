@@ -12,7 +12,8 @@ class DashboardManifest
   # to work correctly.
   DASHBOARDS = [
     :users,
-    :products
+    :products,
+    :categories
   ].freeze
 
   # `ROOT_DASHBOARD`

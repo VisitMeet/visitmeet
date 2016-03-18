@@ -1,3 +1,4 @@
+# encoding: utf-8
 # frozen_string_literal: true
 # simplecov usage ref : https://github.com/colszowka/simplecov
 # these two lines must be at very top of spec/spec_helper.rb

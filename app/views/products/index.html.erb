@@ -13,6 +13,7 @@
             Grid
           </a>
         </div>
+        <%= link_to 'New Product', new_product_path, 'data-no-turbolink': true, class: 'btn btn-primary pull-right' %>
       </div>
       <p>
         Press image to see larger
@@ -26,15 +27,18 @@
               </a>
               <div class="caption">
                 <h4 class="group inner list-group-item-heading">
-                  <%= product.title %>
+                  Title: <%= product.title %>
                 </h4>
                 <p class="group inner list-group-item-text">
-                  <%= product.description %>
+                  Descriptioin: <%= product.description %>
+                </p>
+                <p class="group inner list-group-item-text">
+                  Location: <%= product.location %>
                 </p>
                 <div class="row">
                   <div class="col-xs-12 col-md-6">
                     <p class="lead">
-                      <small>usd</small> $: <%= product.price %>
+                      Price: <small>usd</small> $: <%= product.price %>
                     </p>
                   </div>
                   <div class="col-xs-12 col-md-6">
@@ -50,9 +54,6 @@
     </div>
   </div>
 </div>
-
-<%= link_to 'New Product', new_product_path, 'data-no-turbolink' => true %>
-
 <div class="container">
   <div id="map" style='width: 100%; height: 500px;'></div>
 </div>

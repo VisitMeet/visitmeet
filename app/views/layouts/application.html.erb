@@ -28,10 +28,10 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
     <div class="container">
+      <header>
+        <%= render 'layouts/navigation' %>
+      </header>
       <%= render 'layouts/messages' %>
         <%= yield %>
       <%= render 'layouts/footer' %>

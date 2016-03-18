@@ -1,9 +1,26 @@
 # frozen_string_literal: true
-# see updated config/schema.rb
+# == Schema Information
+#
+# Table name: products
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  description :text
+#  price       :integer
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  category    :integer
+#  latitude    :float
+#  longitude   :float
+#  location    :string
+#  category_id :integer
+#
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   def index
     @products = Product.all
+    # //show the markers in the map
     @map_hash = Gmaps4rails.build_markers(@products) do |product, marker|
       marker.lat product.latitude
       marker.lng product.longitude
@@ -59,4 +76,5 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:title, :description, :price, :category, :location, :latitude, :longitude)
   end
+
 end

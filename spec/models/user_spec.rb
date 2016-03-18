@@ -30,6 +30,8 @@
 #  invited_by_id          :integer
 #  invited_by_type        :string
 #  invitations_count      :integer          default(0)
+#  provider               :string
+#  uid                    :string
 #
 
 describe User do

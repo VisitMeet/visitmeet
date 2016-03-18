@@ -2,6 +2,8 @@
 # see db/schema.db for user attributes
 class User < ActiveRecord::Base
   has_many :products, dependent: :destroy
+  has_one :profile, dependent: :destroy
+
   enum role: [:admin, :user, :guide, :traveller]
   after_initialize :set_default_role, if: :new_record?
 

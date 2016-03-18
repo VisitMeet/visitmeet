@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  root to: 'welcome#index'
+  get 'profile/index'
 
-  get 'visitors/index'
+  get 'users/profile'
 
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' },
                      controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  get 'users/profile'
+  get 'visitors/index'
+  get 'visitors/team'
+  root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
