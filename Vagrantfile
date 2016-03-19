@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -12,11 +13,10 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty32"
-
+  config.vm.box = 'ubuntu/trusty32'
 
   ################## CUSTOM CODE START HERE ##################
-  
+
   ################## CUSTOM CODE START HERE ##################
 
   # Disable automatic box update checking. If you disable this, then

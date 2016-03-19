@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: users
@@ -32,19 +33,17 @@
 #  provider               :string
 #  uid                    :string
 #
-
 class User < ActiveRecord::Base
   has_many :products, dependent: :destroy
   has_one :profile, dependent: :destroy
-
-  enum role: [:user, :vip, :admin]
-  after_initialize :set_default_role, :if => :new_record?
+  enum role: [:admin, :user, :guide, :traveller]
+  after_initialize :set_default_role, if: :new_record?
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:github]
-
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, omniauth_providers: [:github]
 
   def set_default_role
     self.role ||= :user
@@ -55,10 +54,9 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
-      user.name = auth.info.name #user model has name
+      user.password = Devise.friendly_token[0, 20]
+      user.name = auth.info.name # user model has name
       # user.image = auth.info.image #user have no image.
     end
   end
-
 end
