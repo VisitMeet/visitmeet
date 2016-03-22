@@ -233,11 +233,7 @@ GEM
     pry-rescue (1.4.2)
       interception (>= 0.5)
       pry
-<<<<<<< HEAD
-    puma (3.1.0)
-=======
     puma (3.1.1)
->>>>>>> a3b6a1011e4377e907d659ed84fc3ad8ecb974f8
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     quiet_assets (1.1.0)
@@ -312,14 +308,8 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
     selectize-rails (0.12.1)
-<<<<<<< HEAD
-    selenium-webdriver (2.52.0)
-      childprocess (~> 0.5)
-      multi_json (~> 1.0)
-=======
     selenium-webdriver (2.53.0)
       childprocess (~> 0.5)
->>>>>>> a3b6a1011e4377e907d659ed84fc3ad8ecb974f8
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     simple_form (3.2.1)
