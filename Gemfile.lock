@@ -214,11 +214,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
-<<<<<<< HEAD
-    paperclip (4.3.5)
-=======
     paperclip (4.3.6)
->>>>>>> a3b6a1011e4377e907d659ed84fc3ad8ecb974f8
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
