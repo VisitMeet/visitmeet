@@ -39,6 +39,10 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+group :development do
+  gem 'rails-erd'
+end
 # Custom added Gems
 # ---- START ----
 # https://github.com/rails/spring/commit/131287d9399990396eba74d49f6678a19d728809

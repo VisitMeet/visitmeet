@@ -1,16 +1,61 @@
-<div class="producttitle">
-  <%= @product.title %>
-</div>
-<div class="productdescription">
-  <%= @product.description %>
-</div>
-<div class="productprice">
-  Product price: $ <%= @product.price %> US
-</div>
+    <div class="content-wrapper">
+		<div class="item-container">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="product col-md-3 service-image-left">
 
-<% if user_signed_in? %>
-  <% if current_user.has_role? :admin %>
-    <%= link_to 'Edit', edit_product_path(@product) %> &#124;
-  <% end %>
-<% end %>
-<%= link_to 'Back', products_path, 'data-no-turbolink': true %>
+						<center>
+							<img id="item-display" src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
+						</center>
+					</div>
+
+					<div class="container service1-items col-sm-2 col-md-2 pull-left">
+						<center>
+							<a id="item-1" class="service1-item">
+								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
+							</a>
+							<a id="item-2" class="service1-item">
+								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
+							</a>
+							<a id="item-3" class="service1-item">
+								<img src="http://www.corsair.com/Media/catalog/product/g/s/gs600_psu_sideview_blue_2.png" alt=""></img>
+							</a>
+						</center>
+					</div>
+				</div>
+
+				<div class="col-md-7">
+					<div class="product-title">
+             <%= @product.title %>
+          </div>
+					<div class="product-desc">
+            <%= @product.description %>
+          </div>
+					<div class="product-rating">
+            <i class="fa fa-star gold"></i>
+            <i class="fa fa-star gold"></i>
+            <i class="fa fa-star gold"></i>
+            <i class="fa fa-star gold"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+					<hr>
+					<div class="product-price">
+            $ <%= @product.price %>
+          </div>
+					<div class="product-stock">In Stock</div>
+					<hr>
+					<div class="btn-group cart">
+						<button type="button" class="btn btn-success">
+							Add to cart
+						</button>
+					</div>
+					<div class="btn-group wishlist">
+						<button type="button" class="btn btn-danger">
+							Add to wishlist
+						</button>
+					</div>
+            <%= link_to 'Back to Product page', products_path, 'data-no-turbolink': true, :class => "btn btn-primary"  %>
+				</div>
+			</div>
+		</div>
+	</div>
