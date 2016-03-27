@@ -24,7 +24,7 @@
               </a>
               <div class="caption">
                 <h4 class="group inner list-group-item-heading">
-                  Title: <%= product.title %>
+                  <%= link_to "#{product.title}", product_path(product) %>
                 </h4>
                 <p class="group inner list-group-item-text">
                   Descriptioin: <%= product.description %>
