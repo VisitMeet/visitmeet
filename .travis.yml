@@ -9,9 +9,9 @@ deploy:
     secure: YIN1HrVC6jdtHHoGxuR4czf45I/dcjbtfUlcQapYONlN2WPKcfdW8B4ZxvgzWcgWWEDHHHwOQ11wjZmfQiDGtOCx8HXii4Kob1oVmT9z9FRfkxfay26ZKBV5SFY8ROzlmCgZ09pKFNVIaaNkLN/uXgDmrXmNvuwKEYPRq7dCVSzGxxtmzVf773iaXnE9ObsrQanPxa3BT9g5vpvncJA+QzecL04vuCGVDrOYnz8Ib+15JRIWWaHjjLOCJXbuBcy/z4q8qYzE8mYptiWO4Z7nyoN0Qbp7D5FVLK6lpIvCRG4ms31b29IV//4kWYjuDbUxA57/j6bxPe1bC/zA9t3YUEHgWNsTaw8AApOqrIVq6XYMsZsTxct6SCFsSuDm6RMXkIJZpVa4o8UGms4OaK+RE5ZjuEgK83B+0Q49Li625ya/QUj4FicUec7wQUEmra62/iI+EXlUcCS2VqgXjexHDnzqSPP863LruaEvomYFdTOpvVnTX31QNFlM06irRAij87qZjg6mEiD7/Ed1kzgrp1GNr/E3cs55Zy24IIvD0tOx6r2hhgnLxtvDa83uoRadLquxu5qVAqS+6NTPrIiX0QEBe+QZbb7mbvMdX3NaONlXEICUgTZ3r1ws67e0CmqB98W3XM3slLYwjoxhRUq/Yhl42zui3axBCokwv3BNYcI=
   app: visitmeet
   on:
-    repo: bishisht/visitmeet
+    repo: VisitMeet/visitmeet
 notifications:
   slack:
     rooms:
       - narmadainfosys:8dMgPLd6RzpSx7eom3WaYNHn#visitmeet
-      - narmadainfosys:8dMgPLd6RzpSx7eom3WaYNHn#rubyrails  
+      - narmadainfosys:8dMgPLd6RzpSx7eom3WaYNHn#rubyrails
