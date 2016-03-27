@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: categories
@@ -7,9 +8,19 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
-require 'rails_helper'
+include Warden::Test::Helpers
+Warden.test_mode!
 
 RSpec.describe Category, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  after(:each) do
+    Warden.test_reset!
+  end
+
+  it 'has a valid factory' do
+    expect(build(:category)).to be_valid
+
+    category = FactoryGirl.create(:category)
+    expect(category.persisted?).to eq true
+    expect(category.name).to_not be nil
+  end
 end

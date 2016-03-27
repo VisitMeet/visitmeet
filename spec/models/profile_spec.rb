@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: profiles
@@ -7,9 +8,18 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
-require 'rails_helper'
+include Warden::Test::Helpers
+Warden.test_mode!
 
 RSpec.describe Profile, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  after(:each) do
+    Warden.test_reset!
+  end
+
+  it 'has a valid factory' do
+    expect(build(:profile)).to be_valid
+
+    profile = FactoryGirl.create(:profile)
+    expect(profile.persisted?).to eq true
+  end
 end

@@ -33,9 +33,15 @@
 #  provider               :string
 #  uid                    :string
 #
+include Warden::Test::Helpers
+Warden.test_mode!
 
-describe User do
+RSpec.describe User, type: :model do
   before(:each) { @user = User.new(email: 'user@example.com') }
+
+  after(:each) do
+    Warden.test_reset!
+  end
 
   subject { @user }
 
@@ -43,5 +49,25 @@ describe User do
 
   it '#email returns a string' do
     expect(@user.email).to match 'user@example.com'
+  end
+
+  it 'has a valid user factory' do
+    expect(build(:user)).to be_valid
+
+    user = FactoryGirl.create(:user, email: 'validfactory@example.com')
+    expect(user.persisted?).to eq true
+    expect(user.email).to_not be nil
+    expect(user.email).to eq 'validfactory@example.com'
+  end
+
+  it 'has a valid user admin factory' do
+    expect(build(:user)).to be_valid
+
+    user = FactoryGirl.create(:user, email: 'validfactory@example.com')
+    user.role = 'admin'
+    user.save!
+    expect(user.persisted?).to eq true
+    expect(user.email).to_not be nil
+    expect(user.email).to eq 'validfactory@example.com'
   end
 end

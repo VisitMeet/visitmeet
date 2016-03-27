@@ -54,8 +54,20 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
+  # this RSpec method was added per Terminal response on 20140628
+  # check this method next time in raise_errors, any change ? 20150611
+  config.raise_errors_for_deprecations!
+
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  config.include Warden::Test::Helpers
+  config.include Devise::TestHelpers, type: :controller
+  # config.include ControllerHelpers, type: :controller
+
+  # Ref : http://stackoverflow.com/questions/13420923/configuring-warden-for-use-in-rspec-controller-specs
+  # USAGE : `before { warden.set_user FactoryGirl.create(:user) }`
+  # config.include Warden::Test::ControllerHelpers, type: :controller
 end
