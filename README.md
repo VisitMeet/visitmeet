@@ -1,5 +1,4 @@
-Visitmeet [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
+Visitmeet 
 ================
 
 [![Join the chat at https://gitter.im/VisitMeet/visitmeet](https://badges.gitter.im/VisitMeet/visitmeet.svg)](https://gitter.im/VisitMeet/visitmeet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
