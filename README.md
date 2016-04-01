@@ -2,6 +2,8 @@ Visitmeet [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed
 
 ================
 
+[![Join the chat at https://gitter.im/VisitMeet/visitmeet](https://badges.gitter.im/VisitMeet/visitmeet.svg)](https://gitter.im/VisitMeet/visitmeet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 Ruby on Rails
