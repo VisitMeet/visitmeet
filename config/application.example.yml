@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # Add account credentials and API keys here.
 # See http://railsapps.github.io/rails-environment-variables.html
 # This file should be listed in .gitignore to keep your settings secret!
