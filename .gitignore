@@ -87,8 +87,11 @@ pickle-email-*.html
 /config/application.yml
 /config/database.yml
 
-# Ignore instructions for tests
+# Ignore instructions for tests, a temporary directory
 /instructions
 
 # Ignore the README file
 README
+
+# Byebug history
+.byebug_history

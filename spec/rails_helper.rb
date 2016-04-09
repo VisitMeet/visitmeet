@@ -70,4 +70,8 @@ RSpec.configure do |config|
   # Ref : http://stackoverflow.com/questions/13420923/configuring-warden-for-use-in-rspec-controller-specs
   # USAGE : `before { warden.set_user FactoryGirl.create(:user) }`
   # config.include Warden::Test::ControllerHelpers, type: :controller
+
+  # Translations test setup
+  # https://robots.thoughtbot.com/better-tests-through-internationalization
+  config.include AbstractController::Translation
 end

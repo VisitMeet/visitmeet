@@ -27,7 +27,8 @@ feature 'Home page' do
 
     within '.jumbotron h2' do
       expect(page).to have_content 'Hello World!'
-      expect(page).to have_content 'Welcome to VisitMeet'
+      expect(page).to have_content 'Welcome to'
+      expect(page).to have_content 'VisitMeet'
     end
     within '.hometext' do
       expect(page).to have_content 'We are a not-for-profit company aimed at poverty alleviation with employments and exchanges amongst all on earth We are combining infrastructure development with travelling with world useable money'
