@@ -1,4 +1,18 @@
 # frozen_string_literal: true
+# spec/models/user_spec.rb
+# testing app/models/user.rb
+#
+# Migrations
+#
+# db/migrate/20160115121043_devise_create_users.rb
+# db/migrate/20160115121047_add_name_to_users.rb
+# db/migrate/20160115121051_add_confirmable_to_users.rb
+# db/migrate/20160115121058_add_role_to_users.rb
+# db/migrate/20160115121151_devise_invitable_add_to_users.rb
+# db/migrate/20160118081841_create_products.rb
+# db/migrate/20160125172412_add_omniauth_to_users.rb
+# db/migrate/20160303161926_create_profiles.rb
+#
 # == Schema Information
 #
 # Table name: users

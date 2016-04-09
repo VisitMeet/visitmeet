@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+# app/controllers/users/omniauth_callback_controller.rb
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def github
     # Implement this in model.
     user = User.from_omniauth(request.env['omniauth.auth'])
 
     if user.persisted?
-      sign_in_and_redirect users_profile_path # , :event => :authentication #this will throw if @user is not activated
+      sign_in_and_redirect users_profile_path # , :event => :authentication # this will throw if @user is not activated
       # set_flash_message(:notice, :success, :kind => 'Github') if is_navigational_format?
       flash[:notice] = 'User signed in using Github'
       redirect_to products_path

@@ -11,17 +11,18 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  category    :integer
+#  category_id :integer
 #  latitude    :float
 #  longitude   :float
 #  location    :string
-#  category_id :integer
 #
 FactoryGirl.define do
   factory :product do
     title 'MyString'
     description 'MyText'
     price 100
-    category 3
+    category 1
+    category_id 0
     latitude 42.0941
     longitude -125.0941
     location ''

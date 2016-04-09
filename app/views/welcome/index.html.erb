@@ -35,10 +35,17 @@
   <body>
     <div class="container-fluid">
       <div class="toplinks">
-        <% if user_signed_in? %>
+        <% if !current_user.blank? %>
           Welcome, <%= current_user.email %> &#124;
-          <%= link_to('Account', edit_user_registration_path) %> &#124;
+          <%= link_to('Account Settings', edit_user_registration_path) %> &#124;
           <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        <!-- % elsif current_user.admin? % -->
+        <% elsif current_user.admin? %>
+          <h3>Admin</h3>
+          <p><%= link_to 'User count:', users_path %> <%= @userscount %></p>
+          <p><%= link_to 'Database Volume', sequences_path, html: { id: "databasetotal" } %> : <%= @databasetotal %> lines</div>
+          <h4>Products Listed</h4>
+          <p><%= link_to 'Products count:', products_path %> <%= @productscount %></p>
         <% else %>
           Welcome &#124;
           <%= link_to('Login', new_user_session_path) %> &#124;

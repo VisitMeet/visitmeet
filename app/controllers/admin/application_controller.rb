@@ -1,14 +1,30 @@
 # frozen_string_literal: true
+# app/controllers/admin/application_controller.rb
 # All Administrate controllers inherit from this `Admin::ApplicationController`,
-# making it the ideal place to put authentication logic or other
-# before_filters.
+# making it the ideal place to put authentication logic or other before_filters.
 #
 # If you want to add pagination or other controller-level concerns,
 # you're free to overwrite the RESTful controller actions.
+#
+# SECURITY UPGRADE NOTE:
+# REFERENCE: http://edgeguides.rubyonrails.org/4_1_release_notes.html
+# 2.8 CSRF protection from remote <script> tags
+#
+# Cross-site request forgery (CSRF) protection now covers
+# GET requests with JavaScript responses, too. That prevents
+# a third-party site from referencing your JavaScript URL
+# and attempting to run it to extract sensitive data.
+#
+# This means any of your tests that hit .js URLs will now
+# fail CSRF protection unless they use xhr. Upgrade your tests
+# to be explicit about expecting XmlHttpRequests. Instead of
+# `post :create, format: :js`, switch to the explicit 
+# `xhr :post, :create, format: :js`
+#
 module Admin
   # administer admins, products, users
   class ApplicationController < Administrate::ApplicationController
-    before_action :authenticate_admin
+    before_action :authenticate_admin, except: ['/pages#about']
     before_action :update_sanitized_params, if: :devise_controller?
     protect_from_forgery with: :exception
     helper_method :resource, :resource_name, :devise_mapping

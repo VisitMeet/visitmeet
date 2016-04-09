@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# spec/features/visitors/sign_in_spec.rb
+# include Devise::TestHelpers
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign in
@@ -29,11 +31,11 @@ feature 'Sign in', :devise do
   #   When I sign in with valid credentials
   #   Then I see a success message
   scenario 'user can sign in with valid credentials' do
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user, email: 'cansignin@example.com')
     signin(user.email, user.password)
     user = User.last
     expect(page).to have_content user.email.to_s
-    expect(page).to have_content 'Welcome, test@example.com'
+    expect(page).to have_content 'Welcome, cansignin@example.com'
     # TODO: get this next text working again:
     # expect(page).to have_content I18n.t 'devise.sessions.signed_in'
   end
@@ -44,7 +46,7 @@ feature 'Sign in', :devise do
   #   When I sign in with a wrong email
   #   Then I see an invalid email message
   scenario 'user cannot sign in with wrong email' do
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user, email: 'neverinvalid@example.com')
     signin('invalid@email.com', user.password)
     expect(page).to have_content I18n.t 'devise.failure.not_found_in_database', authentication_keys: 'email'
   end

@@ -32,6 +32,7 @@ group :development, :test do
 end
 group :test do
   gem 'capybara' # test web pages
+  gem 'capybara-screenshot' # 
   gem 'database_cleaner' # resets db for each test, or however you set it up in spec/support/database_cleaner.yml
   gem 'selenium-webdriver' # set `js: true` for any test(s) encountering javascript handling
   gem 'simplecov', require: false # see instructions at top of spec/spec_helper.rb

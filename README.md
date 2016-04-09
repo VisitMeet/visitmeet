@@ -24,20 +24,20 @@ People join VisitMeet.
 They either post a Offers below 25$ or buy offers from other people.
 People can search for offeres by following people or by visiting the offer map.
 
-
-
 Issues
 -------------
-Check github issues.
+Check our [github issues](https://github.com/VisitMeet/visitmeet/issues).
 
 Contributing
 ------------
-We are in heavy need of contributers. Please feel free to email me bhattabishisht@gmail.com .
+We are in heavy need of contributers. Our [github issues](https://github.com/VisitMeet/visitmeet/issues) page also shows projects up-for-grabs. Please feel free to email me <bhattabishisht@gmail.com>.
 
 Credits
 -------
 Bishisht Bhatta
-Kathyonu
+<https://bishisht.wordpress.com/>
+<http://www.bishisht.livejournal.com/>
+Kathy Onu
 
 License
 -------
