@@ -33,7 +33,6 @@
 #  provider               :string
 #  uid                    :string
 #
-
 FactoryGirl.define do
   factory :user do
     name 'Test User'

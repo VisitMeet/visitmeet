@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: categories
@@ -7,9 +8,8 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
 FactoryGirl.define do
   factory :category do
-    name "MyString"
+    name 'MyString'
   end
 end

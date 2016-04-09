@@ -16,12 +16,14 @@
 #  location    :string
 #  category_id :integer
 #
-
 FactoryGirl.define do
   factory :product do
     title 'MyString'
     description 'MyText'
-    price 1
-    user nil
+    price 100
+    category 3
+    latitude 42.0941
+    longitude -125.0941
+    location ''
   end
 end

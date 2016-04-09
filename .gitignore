@@ -90,5 +90,8 @@ pickle-email-*.html
 # Ignore Byebug
 .byebug_history
  
+# Ignore instructions for tests, a temporary directory
+/instructions
+
 # Ignore the README file
 README
