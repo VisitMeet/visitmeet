@@ -27,7 +27,7 @@ feature 'Home page' do
 
     within '.jumbotron h2' do
       expect(page).to have_content 'Hello World!'
-      expect(page).to have_content 'Welcome to'
+      expect(page).to have_content 'Welcome To'
       expect(page).to have_content 'VisitMeet'
     end
     within '.hometext' do
