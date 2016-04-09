@@ -85,8 +85,10 @@ pickle-email-*.html
 
 # Ignore application configuration
 /config/application.yml
-
 /config/database.yml
 
+# Ignore Byebug
+.byebug_history
+ 
 # Ignore the README file
 README
