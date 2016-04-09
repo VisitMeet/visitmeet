@@ -1,5 +1,28 @@
 # frozen_string_literal: true
-# == Schema Information
+# code: app/controllers/users_controller.rb
+# test: spec/controllers/users_controller_spec.rb
+# These are Functional Tests for Rail Controllers testing the
+# various actions of a single controller. Controllers handle the
+# incoming web requests to your application and eventually respond
+# with a rendered view.
+#
+# SECURITY UPGRADE NOTE:
+# REFERENCE: http://edgeguides.rubyonrails.org/4_1_release_notes.html
+#
+# 2.8 CSRF protection from remote <script> tags
+#
+# Cross-site request forgery (CSRF) protection now covers
+# GET requests with JavaScript responses, too. That prevents
+# a third-party site from referencing your JavaScript URL
+# and attempting to run it to extract sensitive data.
+#
+# This means any of your tests that hit .js URLs will now
+# fail CSRF protection unless they use xhr. Upgrade your tests
+# to be explicit about expecting XmlHttpRequests. Instead of
+# `post :create, format: :js`, switch to the explicit 
+# `xhr :post, :create, format: :js`
+#
+# == Schema Information : last verified accurate : 20160417 - kathyonu
 #
 # Table name: users
 #
@@ -35,7 +58,9 @@
 #
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:profile]
+
   def profile
     @user = current_user
+    @userscount = User.all.size
   end
 end

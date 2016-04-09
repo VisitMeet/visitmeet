@@ -1,4 +1,17 @@
 # frozen_string_literal: true
+# code: app/controllers/products_controller.rb
+# test: spec/controllers/products_controller_spec.rb
+# These are Functional Tests for Rail Controllers testing the various actions of a single controller.
+# Controllers handle the incoming web requests to your application and eventually respond with a rendered view.
+#
+# Migrations
+#
+# db/migrate/20160118081841_create_products.rb
+# db/migrate/20160203171325_add_categories_to_product.rb
+# db/migrate/20160204160517_add_latitude_longitude_location_to_products.rb
+# db/migrate/20160304162257_add_category_id_to_products.rb
+# db/migrate/20160304163929_remove_category_from_products.rb
+#
 # == Schema Information
 #
 # Table name: products
@@ -16,10 +29,15 @@
 #  location    :string
 #  category_id :integer
 #
+include Devise::TestHelpers
+include Warden::Test::Helpers
+Warden.test_mode!
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
+
   def index
     @products = Product.all
+    @productscount = Product.all.size
     # //show the markers in the map
     @map_hash = Gmaps4rails.build_markers(@products) do |product, marker|
       marker.lat product.latitude

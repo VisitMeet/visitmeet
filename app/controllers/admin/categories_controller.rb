@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# app/controllers/admin/categories_controller.rb
+# see SECURITY UPGRADE NOTE in app/controllers/application_controller.rb
 module Admin
   class CategoriesController < Admin::ApplicationController
     # To customize the behavior of this controller,

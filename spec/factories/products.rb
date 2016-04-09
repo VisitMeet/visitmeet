@@ -14,10 +14,10 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  category    :integer
+#  category_id :integer
 #  latitude    :float
 #  longitude   :float
 #  location    :string
-#  category_id :integer
 #
 FactoryGirl.define do
   factory :product do

@@ -1,9 +1,9 @@
 <div class="row">
-<div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3">
 
 <% content_for :head do %>
-  <% javascript_include_tag 'http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false'%>
-  <% javascript_include_tag '/vendor/assets/javascripts/jquery.geocomplete.js'%>
+  <% javascript_include_tag 'http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false' %>
+  <% javascript_include_tag '/vendor/assets/javascripts/jquery.geocomplete.js' %>
 <% end %>
 <%= simple_form_for @product, :html => {:multipart => true } do |p| %>
   <% if @product.errors.any? %>
@@ -28,7 +28,6 @@
   <p>
     <%= p.input :price %>
   </p>
-
   <p>
     <%= p.input :location %>
   </p>

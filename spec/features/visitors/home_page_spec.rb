@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# spec/features/visitors/home_page_sped.rb
+require 'pry'
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Home page
@@ -60,7 +62,7 @@ feature 'Home page' do
   end
 
   scenario 'all visitors can access the sign_up page from home page' do
-    expect(current_path).to eq '/'
+    expect(current_path).to eq root_path
 
     click_on 'Register'
     expect(current_path).to eq '/users/sign_up'

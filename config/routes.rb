@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'users/profile'
   get 'visitors/index'
   get 'visitors/team'
+  get 'pages/about' => 'high_voltage/pages#show', id: 'about'
+  # get '/about' => 'high_voltage/pages#show', id: 'about'
 
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|

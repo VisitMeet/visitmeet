@@ -1,45 +1,41 @@
-    <div class="content-wrapper">
-		<div class="item-container">
-			<div class="container">
-				<div class="col-md-12">
-					<div class="product col-md-3 service-image-left">
+    <div class='content-wrapper'>
+		<div class='item-container'>
+			<div class='container'>
+				<div class='col-md-12'>
+					<div class='product col-md-3 service-image-left'>
 						<center>
-              <%= link_to image_tag(@product.image.url, class: 'media-object'), @product.image.url, target: '_blank' %>
+<%= link_to image_tag(@product.image.url, class: 'media-object'), @product.image.url, target: '_blank' %>
 						</center>
 					</div>
-
-
-				<div class="col-md-7">
-					<div class="product-title">
-             <%= @product.title %>
-          </div>
-					<div class="product-desc">
-            <%= @product.description %>
-          </div>
-					<div class="product-rating">
-            <i class="fa fa-star gold"></i>
-            <i class="fa fa-star gold"></i>
-            <i class="fa fa-star gold"></i>
-            <i class="fa fa-star gold"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-					<hr>
-					<div class="product-price">
-            <%= number_to_currency @product.price %>
-          </div>
-					<div class="product-stock">In Stock</div>
-					<hr>
-					<div class="btn-group cart">
-              <%= link_to 'Add to cart', shopping_cart_path(@product.id), :class=>"btn btn-success" %>
+				<div class='col-md-7'>
+					<div class='product-title'>
+            			<%= @product.title %>
+         			</div>
+					<div class='product-desc'>
+            			<%= @product.description %>
+         			</div>
+					<div class='product-rating'>
+			            <i class='fa fa-star gold'></i>
+        			    <i class='fa fa-star gold'></i>
+						<i class='fa fa-star gold'></i>
+						<i class='fa fa-star gold'></i>
+						<i class='fa fa-star-o'></i>
+        			</div>
+					<div class='product-price'>
+           				<%= number_to_currency @product.price %>
+         			</div>
+					<div class='product-stock'>In Stock</div>
+					<div class='btn-group cart'>
+<%= link_to 'Add to cart', shopping_cart_path(@product.id), class: 'btn btn-success' %>
 					</div>
-					<div class="btn-group wishlist">
-						<button type="button" class="btn btn-danger">
+					<div class='btn-group wishlist'>
+						<button type='button' class='btn btn-danger'>
 							Add to wishlist
 						</button>
 					</div>
-            <%= link_to 'Back to Product page', products_path, 'data-no-turbolink': true, :class => "btn btn-primary"  %>
-				</div>
+<%= link_to 'Back to Product page', products_path, 'data-no-turbolink': true, class: 'btn btn-primary' %>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>

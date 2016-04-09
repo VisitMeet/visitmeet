@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# spec/features/users/user_deletes_spec.rb
+include Devise::TestHelpers
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: User edit

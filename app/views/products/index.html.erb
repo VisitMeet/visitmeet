@@ -10,7 +10,7 @@
             Grid
           </a>
         </div>
-        <%= link_to 'New Product', new_product_path, data: { :no_turbolink => true }, class: 'btn btn-primary pull-right' %>
+  <%= link_to 'New Product', new_product_path, data: { no_turbolink: true }, class: 'btn btn-primary pull-right' %>
       </div>
       <p>
         Press image to see larger
@@ -19,13 +19,13 @@
         <% @products.each do |product| %>
           <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
-              <%= link_to image_tag(product.image.url, class: 'media-object'), product.image.url, target: '_blank' %>
+  <%= link_to image_tag(product.image.url, class: 'media-object'), product.image.url, target: '_blank' %>
               <div class="caption">
                 <h4 class="group inner list-group-item-heading">
                   <%= link_to "#{product.title}", product_path(product) %>
                 </h4>
                 <p class="group inner list-group-item-text">
-                  Descriptioin: <%= product.description %>
+                  Description: <%= product.description %>
                 </p>
                 <p class="group inner list-group-item-text">
                   Location: <%= product.location %>
@@ -38,13 +38,13 @@
                     </p>
                   </div>
                   <div class="col-xs-12 col-md-6">
-                    <a class="btn btn-success" href="https://www.goodworksonearth.net">Contact the Artist</a>
-                    <%= link_to 'Show Details', product_path(product) %>
-
-                    <!-- a class="btn btn-success" href="real link when ready">Add to Cart</a -->
+                    <a class="btn btn-success" href="https://www.goodworksonearth.net">
+                      Contact the Artist
+                    </a>
+  <%= link_to 'Show Details', product_path(product) %>
                   </div>
                   <div class="col-xs-12 col-md-6">
-                    <%= link_to 'Add to cart', shopping_cart_path(:product_id => product.id), :class=>"btn btn-success" %>                    
+  <%= link_to 'Add to cart', shopping_cart_path(product_id: product.id), class: "btn btn-success" %>                    
                   </div>
                 </div>
               </div>
@@ -55,8 +55,6 @@
 <div class="container">
   <div id="map" style='width: 100%; height: 500px;'></div>
 </div>
-
-
 
 <script src="//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="></script>
 <script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
@@ -71,7 +69,12 @@ handler.buildMap({ provider: {}, internal: { id: 'map' } }, function(){
   handler.fitMapToBounds();
 });
 </script>
-<!-- TODO: script errors reported : RetiredVersion, SensorNotRequired, InvalidClientId, InvalidKey: https://developers.google.com/maps/documentation/javascript/error-messages -->
+<!-- TODO: DO WE NEED TESTS ON THIS ? kathyonu : 20160417 : is it fixed ? -->
+<!-- TODO: script errors reported -->
+<!-- RetiredVersion, SensorNotRequired, InvalidClientId, InvalidKey: -->
+<!-- https://developers.google.com/maps/ documentation/javascript/error-messages -->
+<!-- see CSRF protection note in app/controllers/users_controller.rb regarding .js -->
+<!-- could that be part of problem or are the keys not set ? -->
 
 <script type="text/javascript">
 $(document).ready(function() {

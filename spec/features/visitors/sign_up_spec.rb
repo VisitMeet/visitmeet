@@ -87,8 +87,8 @@ feature 'Sign Up', :devise, js: true do
     # expect(page).to have_content 'Register'
     expect(page).to have_link 'Register'
 
-    visit '/users/sign_up'
-    # click_link('Register')
+    # visit '/users/sign_up'
+    click_link('Register')
     expect(current_path).to eq '/users/sign_up'
     expect(page).to have_content 'Email'
     expect(page).to have_content 'Password'
