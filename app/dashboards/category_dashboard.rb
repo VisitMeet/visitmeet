@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+# app/controllers/dashboards/category_dashboard.rb
+require 'administrate/base_dashboard'
 class CategoryDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
@@ -34,8 +36,7 @@ class CategoryDashboard < Administrate::BaseDashboard
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
-  #
   def display_resource(category)
-    "Category ##{category.id}"
+    "Category #{category.id}"
   end
 end

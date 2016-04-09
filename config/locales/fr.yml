@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 fr:
-  hello: "Hello world"
+  hello: "Hello World"
   introduction: "Nous sommes une société sans but lucratif visant à lutter contre la pauvreté avec des emplois et des échanges entre tous sur la terre"
   welcome_to: "Bienvenue à"
   will_paginate:

@@ -18,20 +18,20 @@ Category.create(name: 'Shopping')
 Product.create(
   title: 'AWARENESS',
   description: 'Star Art of Awareness',
-  price: 19,
+  price: 1900, # prices are in cents for Stripe
   latitude: 44.05396,
   longitude: -123.09273,
   location: ''
 )
-Product.create(title: 'Fishing', description: 'Fishing in home', price: 15)
-Product.create(title: 'Paneer Pakoda with Tea', description: 'Paneer Pakoda with Tea', price: 20)
-Product.create(title: 'Local Chicken Curry', description: 'Local Chicken Curry in Nepali Style', price: 25)
-Product.create(title: 'Pork Kachol', description: 'Steamed Pork mixed with Nepali masalas.', price: 30)
+Product.create(title: 'Fishing', description: 'Fishing in home', price: 1500)
+Product.create(title: 'Paneer Pakoda with Tea', description: 'Paneer Pakoda with Tea', price: 2000)
+Product.create(title: 'Local Chicken Curry', description: 'Local Chicken Curry in Nepali Style', price: 2500)
+Product.create(title: 'Pork Kachol', description: 'Steamed Pork mixed with Nepali masalas.', price: 3000)
 
 product = Product.first
 puts 'Product Title: ' + product.title.to_s
 puts 'Product Price: ' + product.price.to_s
 puts 'Product Description: ' + product.description.to_s
-puts 'Product Ltitude: ' + product.latitude.to_s
+puts 'Product Latitude: ' + product.latitude.to_s
 puts 'Product Longitude: ' + product.longitude.to_s
 puts 'Four more products have been created'

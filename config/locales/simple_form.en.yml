@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 en:
   simple_form:
     "yes": 'Yes'

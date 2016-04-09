@@ -1,7 +1,8 @@
 # frozen_string_literal: true
+# app/controllers/dashboards/products_dashboard.rb
 require 'administrate/base_dashboard'
 # ProductDashboard administers products
-  class ProductDashboard < Administrate::BaseDashboard
+class ProductDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,

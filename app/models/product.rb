@@ -19,9 +19,9 @@
 class Product < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 60 }
   validates :description, presence: true, length: { maximum: 160 }
-  validates :price, numericality: { less_than_or_equal_to: 20 } # TODO: WHY such a low $20 LIMIT ??
+  validates :price, numericality: { less_than_or_equal_to: 300 } # TODO: WHY such a low $20 LIMIT ??
 
-  # enum category: [:Food, :Travelling, :Lodging, :Shopping]
+  enum category: [:Food, :Travelling, :Lodging, :Shopping]
 
   belongs_to :user
   belongs_to :category
