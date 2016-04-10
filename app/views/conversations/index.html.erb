@@ -1,0 +1,8 @@
+<h1>All Conversations for <small> <%= current_user.email %></small></h1>
+<% @conversations.each do |c| %>
+  <div class="">
+    <%= link_to c.subject, conversation_path(c) %>
+  </div>
+<% end %>
+
+<%= link_to "New Conversation", new_conversation_path %>

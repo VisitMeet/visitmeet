@@ -1,0 +1,16 @@
+<h1>New Conversation</h1>
+<%= form_tag conversations_path, method: :post do %>
+<div class="">
+  <%= select_tag :user_id, options_from_collection_for_select(@recipients, :id, :name) %>
+</div>
+<div class="">
+  <%= text_field_tag :subject,nil,  placeholder: "Subject" %>
+
+</div>
+<div class="">
+<%= text_area_tag :body, nil, placeholder: "Body" %>
+</div>
+
+
+<%= submit_tag %>
+<% end %>

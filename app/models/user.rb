@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: users
@@ -45,6 +44,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:github]
 
+  # User can send message to each other.
+  acts_as_messageable
+
   def set_default_role
     self.role ||= :user
   end
@@ -58,5 +60,13 @@ class User < ActiveRecord::Base
       user.name = auth.info.name # user model has name
       # user.image = auth.info.image #user have no image.
     end
+  end
+
+  def name
+    "User #{id}"
+  end
+
+  def mailboxer_email(object)
+    nil
   end
 end
