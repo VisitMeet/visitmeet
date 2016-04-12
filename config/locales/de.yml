@@ -1,4 +1,5 @@
+# frozen_string_literal: true
 de:
-  hello: "Hello world"
+  hello: "Hello World"
   introduction: "Wir sind eine Non-Profit-Unternehmen bei der Armutsbekämpfung ausgerichtet bei Einsätzen und den Austausch unter allen auf der Erde"
   welcome_to: "willkommen zu"
