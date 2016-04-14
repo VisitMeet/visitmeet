@@ -67,6 +67,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'paperclip'
+# gem 'carrierwave'
 gem 'aws-sdk'
 gem 'mailboxer', github: 'mailboxer/mailboxer'
 #                                       ---- END ----
