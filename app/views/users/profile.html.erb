@@ -6,7 +6,7 @@
 				<div class="col-md-4">
 					<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
 					<h3 class="text-center">
-						<%= current_user.name %>
+						<%= @user.name %>
 					</h3>
 					<form role="form">
 						<div class="form-group">
@@ -33,18 +33,7 @@
 								Example block-level help text here.
 							</p>
 						</div>
-						<div class="checkbox">
-
-							<label>
-								<input type="checkbox" /> Check me out
-							</label>
-						</div>
-						<button type="submit" class="btn btn-default">
-							Submit
-						</button>
-					</form>
-				</div>
-				<div class="col-md-1">
+						<div class="checkboxprofile
 				</div>
 				<div class="col-md-7">
 					<div class="jumbotron well">
@@ -52,7 +41,7 @@
 							Hello, world!
 						</h2>
 						<p>
-							This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+							<%= current_user.profile.bio %>
 						</p>
 						<p>
 							<a class="btn btn-primary btn-large" href="#">Learn more</a>

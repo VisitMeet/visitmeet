@@ -62,9 +62,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def name
-    "User #{id}"
-  end
 
   def mailboxer_email(object)
     nil
