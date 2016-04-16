@@ -40,7 +40,11 @@
                   <div class="col-xs-12 col-md-6">
                     <a class="btn btn-success" href="https://www.goodworksonearth.net">Contact the Artist</a>
                     <%= link_to 'Show Details', product_path(product) %>
+
                     <!-- a class="btn btn-success" href="real link when ready">Add to Cart</a -->
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <%= link_to 'Add to cart', shopping_cart_path(product.id), :method => 'POST', :class=>"btn btn-success" %>                    
                   </div>
                 </div>
               </div>

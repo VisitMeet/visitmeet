@@ -70,4 +70,6 @@ gem 'paperclip'
 # gem 'carrierwave'
 gem 'aws-sdk', '< 2.0'
 gem 'mailboxer', github: 'mailboxer/mailboxer'
+gem 'acts_as_shopping_cart', '~> 0.2.1'
+
 #                                       ---- END ----
