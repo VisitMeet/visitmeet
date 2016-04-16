@@ -1,7 +1,7 @@
 <h1>New Conversation</h1>
 <%= form_tag conversations_path, method: :post do %>
 <div class="">
-  <%= select_tag :user_id, options_from_collection_for_select(@recipients, :id, :name) %>
+  <%= select_tag :user_id, options_from_collection_for_select(@recipients, :id, :email) %>
 </div>
 <div class="">
   <%= text_field_tag :subject,nil,  placeholder: "Subject" %>
@@ -12,5 +12,5 @@
 </div>
 
 
-<%= submit_tag %>
+<%= submit_tag, "Send Message" %>
 <% end %>
