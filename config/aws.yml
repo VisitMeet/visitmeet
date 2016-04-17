@@ -5,3 +5,7 @@ development:
 production:
   access_key_id: "AKIAJNCN6JXNV4ZSXOZA"
   secret_access_key: "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"
+
+test:
+  access_key_id: "AKIAJNCN6JXNV4ZSXOZA"
+  secret_access_key: "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"
