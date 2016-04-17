@@ -6,9 +6,7 @@ Visitmeet
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 [![Code Climate](https://codeclimate.com/github/VisitMeet/visitmeet/badges/gpa.svg)](https://codeclimate.com/github/VisitMeet/visitmeet)
-
 [![Test Coverage](https://codeclimate.com/github/VisitMeet/visitmeet/badges/coverage.svg)](https://codeclimate.com/github/VisitMeet/visitmeet/coverage)
-
 [![Issue Count](https://codeclimate.com/github/VisitMeet/visitmeet/badges/issue_count.svg)](https://codeclimate.com/github/VisitMeet/visitmeet)
 
 Ruby on Rails
