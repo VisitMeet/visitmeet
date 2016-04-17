@@ -110,4 +110,8 @@ RSpec.configure do |config|
 
   # config.assets.precompile += %w( geocomplete.js )
   # config.assets.precompile += %w( jquery.geocomplete.js )
+
+  # Translations test setup
+  # https://robots.thoughtbot.com/better-tests-through-internationalization
+  config.include AbstractController::Translation
 end
