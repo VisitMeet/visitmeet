@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+# code: spec/factories/products.rb
+# test: spec/products/products_spec.rb
+#
 # == Schema Information
 #
 # Table name: products
@@ -18,12 +21,12 @@
 #
 FactoryGirl.define do
   factory :product do
-    title 'MyString'
-    description 'MyText'
-    price 100
+    title 'AWARENESS'
+    description 'Star Art of Awareness'
+    price 1900
     category 3
-    latitude 42.0941
-    longitude -125.0941
+    latitude 44.05396
+    longitude -123.09273
     location ''
   end
 end

@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+# code: db/seeds.rb
+# test: $ bundle exec rake db:reset
+# require 'pry'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -6,6 +9,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# binding.pry
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' + user.email
 # Environment variables (ENV['...']) can be set in the file config/application.yml.
@@ -19,6 +23,9 @@ Product.create(
   title: 'AWARENESS',
   description: 'Star Art of Awareness',
   price: 1900, # prices are in cents for Stripe
+  user_id: 1,
+  category: 'Shopping',
+  category_id: 4,
   latitude: 44.05396,
   longitude: -123.09273,
   location: ''

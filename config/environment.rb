@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+# code: config/environment.rb
+# test: to be determined
 # Load the Rails application.
 require File.expand_path('../application', __FILE__)
 

@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 ruby '2.3.0'
-gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.6'
 gem 'bcrypt' # http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html'
 gem 'jbuilder', '~> 2.3', '>= 2.3.1' # Create JSON structures via a Builder-style DSL
 gem 'sass-rails', '~> 5.0', '>= 5.0.4' # Sass adapter for the Rails asset pipeline.

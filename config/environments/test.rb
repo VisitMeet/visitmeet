@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+# code: config/environments/test.rb
+# test: spec/config/ : assigned kathyonu : 20160416
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -13,11 +16,11 @@ Rails.application.configure do
   config.eager_load = false
 
   # Configure static file server for tests with Cache-Control for performance.
-  config.serve_static_files = true
+  config.serve_static_files   = true
   config.static_cache_control = 'public, max-age=3600'
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
   # Raise exceptions instead of rendering exception templates.
@@ -38,6 +41,7 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  # Raises error for missing translations
+  # Raises error for missing translations : also in development.rb
+  # TODO: Research how this command works, then uncomment as need be
   # config.action_view.raise_on_missing_translations = true
 end

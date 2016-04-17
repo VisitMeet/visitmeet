@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+# code: config/environments/production.rb
+# test: spec/config/ : assigned kathyonu : 20160416
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -11,7 +14,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local = false
+  config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
@@ -94,8 +97,10 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.paperclip_defaults = {
-    :storage => :s3,
+    storage: :s3,
+    # TODO: explanation of below : reference for below ?
+    # HOW TO determine WHEN it is unnecessary ? -kathyonu
     # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
-    :bucket => 'visitmeet'
+    bucket: 'visitmeet'
   }
 end

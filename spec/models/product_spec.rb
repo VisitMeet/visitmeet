@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+# code: app/models/product.rb
+# test: spec/models/product_spec.rb
+# schema.rb last confirmed accurate : 20160417 kathyonu
 # == Schema Information
 #
 # Table name: products
@@ -10,11 +13,19 @@
 #  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  category    :integer
+#  category_id :integer
 #  latitude    :float
 #  longitude   :float
 #  location    :string
-#  category_id :integer
+#  category    :integer
+#  image       :string
+#  image_file_name :string
+#  image_content_type :string
+#  image_full_size :integer
+#  image_updated_at :datetime
+#
+#  index on category_id, name: "index_products_on_category_id", using: :btree
+#  index on user_id,     name: "index_products_on_user_id",     using: :btree
 #
 include Warden::Test::Helpers
 Warden.test_mode!
@@ -55,7 +66,7 @@ RSpec.describe Product, type: :model do
     expect(FactoryGirl.build(:product, description: 'a' * 161)).to be_invalid
   end
 
-  it 'should not allow a price greater than 320' do
-    expect(FactoryGirl.build(:product, price: 321)).to be_invalid
+  it 'should not allow a price greater than 99999900' do
+    expect(FactoryGirl.build(:product, price: 999_999_99)).to be_invalid
   end
 end
