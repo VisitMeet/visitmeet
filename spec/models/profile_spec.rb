@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# spec/models/profile_spec.rb
-# testing app/models/profile.rb
+# code: app/models/profile.rb
+# test: spec/models/profile_spec.rb
 #
 # Migrations
 #

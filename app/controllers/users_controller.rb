@@ -57,6 +57,8 @@
 #  uid                    :string
 #
 class UsersController < ApplicationController
+  include ActionController::Helpers
+
   before_action :authenticate_user!, only: [:profile]
 
   def profile

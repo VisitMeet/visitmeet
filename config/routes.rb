@@ -1,9 +1,16 @@
 # frozen_string_literal: true
-# app/config/routes.rb
+# code: app/config/routes.rb
+# test: spec/routing/admin/application_controller_routing_spec.rb
+# test: spec/routing/admin/categories_controller_routing_spec.rb
+# test: spec/routing/admin/products_controller_routing_spec.rb
+# test: spec/routing/admin/users_controller_routing_spec.rb
+# test: spec/routing/user/omniauth_callback_controller_routing_spec.rb
+# test: spec/routing/products_routing_spec.rb
+# test: spec/routing/users_routing_spec.rb
+# test: spec/routing/visitors_routing_spec.rb
 Rails.application.routes.draw do
-  root to: 'welcome#index'
-  
   get 'visitors/index'
+
   get 'visitors/team'
 
   # get 'pages/about' => 'high_voltage/pages#show', id: 'about'
@@ -25,6 +32,8 @@ Rails.application.routes.draw do
   get 'profile/index'
 
   get 'users/profile'
+
+  root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

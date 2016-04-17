@@ -23,7 +23,7 @@ require 'capybara-screenshot'
 
 ActiveRecord::Base.connection.reconnect!
 
-# Reference : http://stackoverflow.com/questions/11770552/ 
+# Reference : http://stackoverflow.com/questions/11770552/
 # How to get Rails.logger printing to the console/stdout when running rspec?
 def log_test(message)
   Rails.logger.info(message)
@@ -107,4 +107,7 @@ RSpec.configure do |config|
 
   # ref: http://codecrate.com/2014/11/rspec-controllers-best-practices.html
   config.render_views
+
+  # config.assets.precompile += %w( geocomplete.js )
+  # config.assets.precompile += %w( jquery.geocomplete.js )
 end

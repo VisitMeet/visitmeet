@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 # spec/features/users/user_delete_spec.rb
-include Devise::TestHelpers
+# include Devise::TestHelpers
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: User delete
@@ -22,7 +22,7 @@ feature 'User delete', :devise, js: true do
   #   Then I should see an account deleted message
   # User cannot currently delete their own account : noted 20160131
   scenario 'user cannot delete own account' do
-    # @request.env['devise.mapping'] = Devise.mappings[:user]
+    # @request.env["devise.mapping"] = Devise.mappings[:user]
     user = FactoryGirl.create(:user, email: 'destroyme@example.com')
     login_as(user, scope: :user)
 

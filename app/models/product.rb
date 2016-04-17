@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# app/models/product.rb
+# code: app/models/product.rb
 # tests: spec/models/product_spec.rb
 #
 # Migrations affecting 

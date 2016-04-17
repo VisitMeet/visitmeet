@@ -7,6 +7,7 @@
 module Admin
   # admins administer products
   class ProductsController < Admin::ApplicationController
+    include ActionController::Helpers
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #
