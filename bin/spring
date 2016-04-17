@@ -1,15 +1,29 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-
+#
 # This file loads spring without using Bundler, in order to be fast.
 # It gets overwritten when you run the `spring binstub` command.
-
+#
 unless defined?(Spring)
   require 'rubygems'
   require 'bundler'
 
   if (match = Bundler.default_lockfile.read.match(/^GEM$.*?^    (?:  )*spring \((.*?)\)$.*?^$/m))
-    Gem.paths = { 'GEM_PATH' => [Bundler.bundle_path.to_s, *Gem.path].uniq }
+    # ref for new gem paths line : https://github.com/rubygems/rubygems/issues/1551
+    Gem.paths = { 'GEM_PATH' => [Bundler.bundle_path.to_s, *Gem.path].uniq.join(File::PATH_SEPARATOR) }
+    #
+    # Gem.paths = { 'GEM_PATH' => [Bundler.bundle_path.to_s, *Gem.path.to_s].uniq }
+    # 20160416 added the second .to_s above
+    # Gem.paths = { 'GEM_PATH' => [Bundler.bundle_path.to_s, *Gem.path].uniq }
+    #
+    # Explanation for the change:
+    # running the $ rails -v command caused this error
+    # Array values in the parameter to `Gem.paths=` are deprecated.
+    # # Please use a String or nil.
+    # # An Array ({"GEM_PATH"=>["/Users/William/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet", \
+    # # "/Users/William/.rvm/gems/ruby-2.3.0@global"]}) was passed in from bin/rails:4:in `load'
+    # # Rails 4.2.5.1
+    #
     gem 'spring', match[1]
     require 'spring/binstub'
   end
