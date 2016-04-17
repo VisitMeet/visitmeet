@@ -1,7 +1,21 @@
+# frozen_string_literal: true
+# code: config/aws.yml
+# test: spec/config/aws_spec.rb
 development:
-  access_key_id: "AKIAJNCN6JXNV4ZSXOZA"
-  secret_access_key: "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"
+  access_key_id: 'AKIAJNCN6JXNV4ZSXOZA'
+  secret_access_key: '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'
 
 production:
-  access_key_id: "AKIAJNCN6JXNV4ZSXOZA"
-  secret_access_key: "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"
+  access_key_id: 'AKIAJNCN6JXNV4ZSXOZA'
+  secret_access_key: '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'
+
+# ref for this addition
+# https://github.com/tiy-austin-ror-jan2015/tiy-rails-template/issues/38
+test:
+  access_key_id: 'AKIAJNCN6JXNV4ZSXOZA'
+  secret_access_key: '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'
+
+# Note: again, we are exposiing api keys, and this is a no no.
+# TODO: this must be fixed with tests to prevent their showing up
+# then we change our keys and use the Rails call method from the
+# environment variables. tests to be written
