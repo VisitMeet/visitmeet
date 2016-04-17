@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# spec/models/user_spec.rb
-# testing app/models/user.rb
+# code: app/models/user.rb
+# test: spec/models/user_spec.rb : passing 20160415 kathyonu
+# the following was last verified accurate 20160415 kathyonu
 #
 # Migrations
 #
@@ -47,6 +48,7 @@
 #  provider               :string
 #  uid                    :string
 #
+require 'pry'
 include Warden::Test::Helpers
 Warden.test_mode!
 
@@ -77,11 +79,22 @@ RSpec.describe User, type: :model do
   it 'has a valid user admin factory' do
     expect(build(:user)).to be_valid
 
-    user = FactoryGirl.create(:user, email: 'validfactory@example.com')
+    user = FactoryGirl.create(:user, email: 'validadminfactory@example.com')
     user.role = 'admin'
     user.save!
     expect(user.persisted?).to eq true
     expect(user.email).to_not be nil
-    expect(user.email).to eq 'validfactory@example.com'
+    expect(user.email).to eq 'validadminfactory@example.com'
+  end
+
+  it 'is set up to fail this test to see the failure' do
+    pending 'needs more work to pass'
+    user = FactoryGirl.create(:user, email: 'omniauthuser@example.com')
+    expect(self.from_omniauth(auth)).to raise_error(NameError)
+    #
+    # expect(self.from_omniauth(auth)).not_to raise_error(NameError)
+    # NameError:
+    #  undefined local variable or method `auth' for #<RSpec::ExampleGroups::User:0x007f9625b23190>
+    #
   end
 end

@@ -24,20 +24,29 @@
 module Admin
   # administer admins, products, users
   class ApplicationController < Administrate::ApplicationController
-    before_action :authenticate_admin, except: ['/pages#about']
+    include ActionController::Helpers
+    # commented out the before_action as it exists elsewhere as needed : 20160412ko
+    before_action :authenticate_admin!, except: ['/pages#about'] # note can be removed
     before_action :update_sanitized_params, if: :devise_controller?
     protect_from_forgery with: :exception
-    helper_method :resource, :resource_name, :devise_mapping
 
-    def authenticate_admin
-      # TODO: Add authentication logic here.
+    # def authenticate_admin
+    # # TODO: Add authentication logic here.
+    # # see admin_controller? below
+    # end
+
+    # reference for next three methods
+    # also see admin_controller? method in app/controllers/application_controller.rb
+    def admin_controller?
+      !devise_controller? and request.path =~ /^\/admin/
     end
+    helper_method :admin_controller?
 
     # Override this value to specify the number of elements to display
     # at a time on index pages. Defaults to 20.
-    # def records_per_page
-    #   params[:per_page] || 20
-    # end
+    def records_per_page
+      params[:per_page] || 20
+    end
 
     def resource_name
       :user

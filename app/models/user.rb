@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+# code : app/models/user.rb
+# test : spec/models/user_spec.rb
+# schema data last verified accurate 2016041 kathyonu
+#
 # == Schema Information
 #
 # Table name: users
@@ -31,7 +36,6 @@
 #  invitations_count      :integer          default(0)
 #  provider               :string
 #  uid                    :string
-#
 class User < ActiveRecord::Base
   has_many :products, dependent: :destroy
   has_one :profile, dependent: :destroy
@@ -56,12 +60,14 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.info.email
-      user.password = Devise.friendly_token[0, 20]
+      # ref for change : http://www.rubydoc.info/github/plataformatec/devise/Devise.friendly_token
+      user.password = Devise.friendly_token(length = 20)
+      # user.password = Devise.friendly_token[0, 20]
       user.name = auth.info.name # user model has name
-      # user.image = auth.info.image #user have no image.
+      # user.image = auth.info.image # users have no image.
+      # # note.to.self : users rotating 'profile image' provided by ??
     end
   end
-
 
   def mailboxer_email(object)
     nil

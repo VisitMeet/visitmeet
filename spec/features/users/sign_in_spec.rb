@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 # spec/features/visitors/sign_in_spec.rb
 # include Devise::TestHelpers
+# include Features::SessionHelpers
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign in
@@ -73,5 +74,19 @@ feature 'Sign in', :devise do
     click_on 'Sign up'
     expect(current_path).to eq '/users/sign_up'
     expect(page).to have_content 'Register to Visit & Meet'
+  end
+
+  scenario 'user can choose to sign in with github credentials' do
+    visit new_user_session_path
+    expect(page).to have_content 'Sign in with Github'
+    expect(page).to have_link 'Sign in with Github'
+
+    click_on('Sign in with Github')
+    pending 'needs more work to pass'
+    # ActionController::RoutingError:
+    # # No route matches [GET] "/login/oauth/authorize"
+    expect(response).to be successful
+    expect(response.status).to eq 200
+    expect(current_path).to eq '/home'
   end
 end

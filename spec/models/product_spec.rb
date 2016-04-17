@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 # code: app/models/product.rb
 # test: spec/models/product_spec.rb
-# schema.rb last confirmed accurate : 20160417 kathyonu
 #
-# Migrations involved
+# Migrations involved : last confirmed accurate : 20160417 kathyonu
 #
 # db/migrate/20160118081841_create_products.rb
 # db/migrate/20160203171325_add_categories_to_product.rb

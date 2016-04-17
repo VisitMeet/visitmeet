@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# app/helpers/profile_helper.rb
+# app/helpers/products_helper.rb
 #
 # == Schema Information
 #

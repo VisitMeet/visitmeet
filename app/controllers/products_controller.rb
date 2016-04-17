@@ -29,10 +29,9 @@
 #  location    :string
 #  category_id :integer
 #
-include Devise::TestHelpers
-include Warden::Test::Helpers
-Warden.test_mode!
 class ProductsController < ApplicationController
+  include ActionController::Helpers
+
   before_action :authenticate_user!, only: [:new]
 
   def index

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-# code: app/models/products.rb
-# test: spec/models/products_spec.rb
+# code: app/models/product.rb
+# tests: spec/models/product_spec.rb
 #
 # Migrations 
 #

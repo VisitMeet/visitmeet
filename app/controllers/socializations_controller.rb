@@ -1,6 +1,10 @@
 # frozen_string_literal: true
+# app/controllers/socializations_controller.rb
 class SocializationsController < ApplicationController
+  include ActionController::Helpers
+
   before_action :load_socializable
+
   def follow
     current_user.follow!(@socializable)
     render json: { follow: true }

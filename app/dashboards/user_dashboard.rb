@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# code: app/controllers/dashboards/user_dashboard.rb
+# test: spec/controllers/dashboards/user_dashboard_spec.rb
 require 'administrate/base_dashboard'
 # UserDashboard administers users
 class UserDashboard < Administrate::BaseDashboard

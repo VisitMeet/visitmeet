@@ -3,6 +3,7 @@
 # see SECURITY UPGRADE NOTE in app/controllers/application_controller.rb
 module Admin
   class CategoriesController < Admin::ApplicationController
+    include ActionController::Helpers
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #

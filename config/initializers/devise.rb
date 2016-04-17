@@ -1,8 +1,16 @@
+<<<<<<< d0d0421bc20b4049bde18cac619d0b5d35131d5b
+=======
+# frozen_string_literal: true
+# config/initializers/devise.rb
+>>>>>>> stopping point 102tests31failures/12pendings
 require 'devise/orm/active_record'
 Devise.setup do |config|
+  # 1. TODO: Security Violation : exposing secret_key in the public repository
+  # repair is to first set the key in local and heroku envrionments, then
+  # change the `config.secret_key `line to this: 
+  # config.secret_key = ENV['SECRET_KEY']
   config.secret_key = '52dac4f72ad586f5ad66c3eb6b3456c1dbb6c597e3781c16613af1f386bfe4b1245a7583886675681c8ff9225bad2435998b6daa0acd655647afe43e7dd71bca'
   config.mailer_sender = 'Bishisht Bhatta <bhattabishisht@gmail.com>'
-  require 'devise/orm/active_record'
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]
   config.skip_session_storage = [:http_auth]
@@ -19,8 +27,12 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
 
-  # ==> OmniAuth
-  # Add a new OmniAuth provider. Check the wiki for more information on setting
-  # up on your models and hooks.
+  # ==> OmniAuth : https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
+  # Add a new OmniAuth provider. Check the wiki for more information on setting up
+  # on your models and hooks.
+  # config.omniauth :facebook, "APP_ID", "APP_SECRET" : template
+  # config.omniauth :github, "APP_ID", "APP_SECRET" : template
+  # next line is for when we take the respository private for SSL cert requirements
+  # config.omniauth :github, ENV['OMNIAUTH_APP_ID'], ENV['OMNIAUTH_APP_SECRET'], scope: 'user,public_repo'
   config.omniauth :github, '97ef5b4212154f75e8f6', 'ebe3766550855ca09b9ce311ed1f76c456359dc5', scope: 'user,public_repo'
 end

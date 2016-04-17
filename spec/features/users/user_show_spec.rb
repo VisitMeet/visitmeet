@@ -4,9 +4,9 @@
 # priceless : https://github.com/jnicklas/capybara/blob/master/lib/capybara/session.rb#L27
 require 'pry'
 # see spec/support/selectors.rb method usages : example `find(:href, '#role-options-1')`
-include Selectors
+# include Devise::TestHelpers
 # include Features::SessionHelpers
-include Devise::TestHelpers
+include Selectors
 include Warden::Test::Helpers
 Warden.test_mode!
 
@@ -34,15 +34,12 @@ feature 'User profile page', :devise, type: :feature, js: true do
   #   When I visit the user profile page
   #   Then I see my own email address
   scenario 'user sees own profile' do
-     user = FactoryGirl.build(:user, email: 'ownprofile@example.com')
-     user.role = 'admin'
-     user.save!
-
-
-
+    user = FactoryGirl.build(:user, email: 'ownprofile@example.com')
+    user.role = 'admin'
+    user.save!
 
     # login_as(user, scope: :user)
-    # @request.env['devise.mapping'] = Devise.mappings[:admin]
+    # @request.env["devise.mapping"] = Devise.mappings[:admin]
     # login_as(user, scope: :admin)
 
     visit new_user_session_path
@@ -139,7 +136,7 @@ feature 'User profile page', :devise, type: :feature, js: true do
     visit 'users/profile'
     expect(current_path).to eq '/users/login'
 
-    # @request.env['devise.mapping'] = Devise.mappings[:admin]
+    # @request.env["devise.mapping"] = Devise.mappings[:admin]
     login_as(user, scope: :admin)
 
     # fill_in :user_email, with: 'index@example.com'
@@ -537,7 +534,7 @@ feature 'User profile page', :devise, type: :feature, js: true do
   end
 
   it 'shows notice regarding public version and user data loss' do
-    visit '/welcome/index'
+    visit root_path
     expect(page).to have_content 'This application is released under Public Alpha Version.'
     expect(page).to have_content 'Company is subjected to make any changes without prior notice.'
   end
