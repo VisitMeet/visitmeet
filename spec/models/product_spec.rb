@@ -40,7 +40,7 @@
 # add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
 # add_index "products", ["user_id"], name: "index_products_on_user_id", using: :btree
 #
-# TODO: 20160406 : further test product&category&category_id&name relationships 
+# TODO: 20160406 : further test product&category&category_id&name relationships
 include Warden::Test::Helpers
 Warden.test_mode!
 
@@ -58,8 +58,8 @@ RSpec.describe Product, type: :model, js: true do
     expect(product.description).to_not eq nil
     expect(product.price).to_not eq nil
     expect(product.category).to_not eq nil
-    expect(product.category).to eq 'Travels'
-    expect(product.category_id).to eq 0
+    expect(product.category).to eq 'Shops'
+    expect(product.category_id).to eq 4
     expect(product.latitude).to_not eq nil
     expect(product.longitude).to_not eq nil
     expect(product.location).to_not eq nil
@@ -90,6 +90,7 @@ RSpec.describe Product, type: :model, js: true do
 
   it 'should not allow a price greater than 99999900' do
     expect(FactoryGirl.build(:product, price: 999_999_99)).to be_invalid
+  end
 
   it 'requires a price to be greater than 98 cents' do
     expect(FactoryGirl.build(:product, price: 50)).to be_invalid
@@ -100,7 +101,7 @@ RSpec.describe Product, type: :model, js: true do
   end
 
   it 'allows any price to be less than 99999999 cents' do
-    expect(FactoryGirl.build(:product, price: 1000000)).to be_valid
+    expect(FactoryGirl.build(:product, price: 1_000_000)).to be_valid
   end
 
   it 'requires four category enumerables' do
@@ -108,10 +109,5 @@ RSpec.describe Product, type: :model, js: true do
     expect(FactoryGirl.build(:product, category: 1)).to be_valid
     expect(FactoryGirl.build(:product, category: 2)).to be_valid
     expect(FactoryGirl.build(:product, category: 3)).to be_valid
-  end
-
-  it 'can or cannot belong to many categories ?' do
-    pending 'write the code we wish we had'
-    # example : a GUIDE provides a traveller with LODGING ?
   end
 end

@@ -25,6 +25,7 @@ FactoryGirl.define do
     description 'Star Art of Awareness'
     price 1900
     category 3
+    category_id 4
     latitude 44.05396
     longitude -123.09273
     location ''

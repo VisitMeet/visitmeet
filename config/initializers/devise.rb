@@ -1,13 +1,11 @@
-<<<<<<< d0d0421bc20b4049bde18cac619d0b5d35131d5b
-=======
 # frozen_string_literal: true
-# config/initializers/devise.rb
->>>>>>> stopping point 102tests31failures/12pendings
+# code: config/initializers/devise.rb
+# test: assigned to kathyonu
 require 'devise/orm/active_record'
 Devise.setup do |config|
   # 1. TODO: Security Violation : exposing secret_key in the public repository
   # repair is to first set the key in local and heroku envrionments, then
-  # change the `config.secret_key `line to this: 
+  # change the `config.secret_key` line to this:
   # config.secret_key = ENV['SECRET_KEY']
   config.secret_key = '52dac4f72ad586f5ad66c3eb6b3456c1dbb6c597e3781c16613af1f386bfe4b1245a7583886675681c8ff9225bad2435998b6daa0acd655647afe43e7dd71bca'
   config.mailer_sender = 'Bishisht Bhatta <bhattabishisht@gmail.com>'

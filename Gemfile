@@ -77,9 +77,12 @@ gem 'underscore-rails'
 gem 'paperclip'
 #
 # TODO: WHY is carrierwave commented out ? : 20160417
-# gem 'carrierwave'
+# gem 'carrierwave', '~> 0.10.0'
+# will we be using it ?
+# ref https://rubygems.org/gems/carrierwave/versions/0.10.0
+# ref http://www.rubydoc.info/gems/carrierwave/0.10.0
 #
-# TODO: WHY is aws-sdk < ?
+# TODO: WHY is/now was aws-sdk < ?
 # gem 'aws-sdk', '< 2.0'
 # change ref : https://rubygems.org/gems/aws-sdk/versions/2.2.31
 # code: http://docs.aws.amazon.com/sdkforruby/api/index.html
@@ -94,4 +97,4 @@ gem 'mailboxer', '~> 0.13.0'
 # due to the way that it gets loaded (bypassing bundler for performance reasons).
 #
 gem 'acts_as_shopping_cart', '~> 0.2.1'
-#                                       ---- END ----
+# #                               ---- END ----
