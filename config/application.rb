@@ -1,8 +1,14 @@
+# frozen_string_literal: true
+# code: config/application.rb
+# test: TODO: to be identified
 require File.expand_path('../boot', __FILE__)
+
 require 'rails/all'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
 module Visitmeet
   # generates test framework and factories
   class Application < Rails::Application
@@ -31,6 +37,7 @@ module Visitmeet
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
     config.encoding = 'utf-8'
   end
 end

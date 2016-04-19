@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+# code: config/routes.rb
+# test: spec/routings : assigned kathyonu : 20160416
 Rails.application.routes.draw do
-
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
   # ALL GET REQUESTS HERE
   get 'profile/index'
   get 'users/profile'
@@ -14,9 +18,8 @@ Rails.application.routes.draw do
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
 
-
   # ALL RESOURCE ROUTES HERE
-  resource :shopping_cart
+  resources :shopping_cart
   resources :products
   resources :conversations do
     resources :messages
@@ -26,5 +29,4 @@ Rails.application.routes.draw do
                      controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   root to: 'welcome#index'
-
 end
