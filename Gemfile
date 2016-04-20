@@ -1,5 +1,3 @@
-# encoding: utf-8
-# frozen_string_literal: true
 source 'https://rubygems.org'
 ruby '2.3.0'
 gem 'rails', '4.2.6'
@@ -40,22 +38,9 @@ group :production do
   gem 'rails_12factor'
 end
 
-#                                         Custom added Gems
-#                                         ---- START ----
-# https://github.com/rails/spring/commit/131287d9399990396eba74d49f6678a19d728809
-# You cannot link to a git repo from your Gemfile. Spring doesn't support this
-# due to the way that it gets loaded (bypassing bundler for performance reasons).
-#
-# Therefore, to test changes with your app,
-# run `rake install` to properly install this github gem on your system.
-# gem 'administrate', github: 'mariochavez/administrate', branch: 'remove-inline_svg'
+gem 'administrate', github: 'mariochavez/administrate', branch: 'remove-inline_svg'
 
-# Gemfile.lock VULNERABILITY : 20160417
-# Cross-site request forgery (CSRF) vulnerability in administrate gem
-# Please consult the following and update where appropriate.
-# administrate 0.1.2
-#  Upgrade to: `>= 0.1.5`
-gem 'administrate', '>= 0.1.5'
+#gem 'administrate', '>= 0.1.5'
 gem 'annotate'
 gem 'bootstrap-sass'
 gem 'devise'
@@ -74,32 +59,12 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'paperclip'
-#
-# TODO: WHY is carrierwave commented out ? : 20160417
-# gem 'carrierwave'
-<<<<<<< HEAD
-#
-# TODO: WHY is aws-sdk < ?
-# gem 'aws-sdk', '< 2.0'
-# change ref : https://rubygems.org/gems/aws-sdk/versions/2.2.31
-# code: http://docs.aws.amazon.com/sdkforruby/api/index.html
 gem 'aws-sdk', '~> 2.2', '>= 2.2.31'
 gem 'mailboxer', '~> 0.13.0'
-# gem 'mailboxer', github: 'mailboxer/mailboxer'
-# change ref: https://rubygems.org/gems/mailboxer/versions/0.13.0
-# code: mailboxer : http://www.rubydoc.info/gems/mailboxer/0.13.0
-# another change ref from above on this page :
-# https://github.com/rails/spring/commit/131287d9399990396eba74d49f6678a19d728809
-# You cannot link to a git repo from your Gemfile. Spring doesn't support this
-# due to the way that it gets loaded (bypassing bundler for performance reasons).
-#
 gem 'acts_as_shopping_cart', '~> 0.2.1'
-=======
 gem 'aws-sdk'
 gem 'mailboxer', github: 'mailboxer/mailboxer'
 gem 'best_in_place', '~> 3.0.1'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-
->>>>>>> testing
 #                                       ---- END ----
