@@ -5,40 +5,15 @@
 					<div class="col-md-5">
 						<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
 						<h3 class="text-center">
+							Full Name: <br>
 							<%= best_in_place @user, :name %>
-
 						</h3>
-						<form role="form">
-							<div class="form-group">
-
-								<label for="exampleInputEmail1">
-									Email address
-								</label>
-								<input class="form-control" id="exampleInputEmail1" type="email" />
-							</div>
-							<div class="form-group">
-
-								<label for="exampleInputPassword1">
-									Password
-								</label>
-								<input class="form-control" id="exampleInputPassword1" type="password" />
-							</div>
-							<div class="form-group">
-
-								<label for="exampleInputFile">
-									File input
-								</label>
-								<input id="exampleInputFile" type="file" />
-								<p class="help-block">
-									Example block-level help text here.
-								</p>
-							</div>
-
 						</div>
 						<div class="col-md-7">
 							<div class="jumbotron well">
+								<h4>Bio:</h4>
 								<p>
-									<%= best_in_place @user, :bio %>
+									<%= best_in_place @user, :bio, :as => :textarea %>
 								</p>
 							</div>
 
