@@ -47,6 +47,11 @@ We are in heavy need of contributers. Please feel free to email me bhattabishish
 You can contribute in many ways. You can code, you can do the documentation, you can write a blog on us,
 you can share a word or two among your friends.
 
+1. Fork it.
+2. Create your feature branch (git checkout -b my-new-feature )
+3. Commit your changes (git commit -am 'Add some feature )
+4. Push to the branch (git push origin my-new-feature )
+5. Create new Pull Request !
 
 Credits
 -------
