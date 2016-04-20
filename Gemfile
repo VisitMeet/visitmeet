@@ -77,6 +77,7 @@ gem 'paperclip'
 #
 # TODO: WHY is carrierwave commented out ? : 20160417
 # gem 'carrierwave'
+<<<<<<< HEAD
 #
 # TODO: WHY is aws-sdk < ?
 # gem 'aws-sdk', '< 2.0'
@@ -93,4 +94,12 @@ gem 'mailboxer', '~> 0.13.0'
 # due to the way that it gets loaded (bypassing bundler for performance reasons).
 #
 gem 'acts_as_shopping_cart', '~> 0.2.1'
+=======
+gem 'aws-sdk'
+gem 'mailboxer', github: 'mailboxer/mailboxer'
+gem 'best_in_place', '~> 3.0.1'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+>>>>>>> testing
 #                                       ---- END ----
