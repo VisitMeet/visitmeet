@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: users
@@ -35,7 +34,27 @@
 #
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:profile]
+  respond_to :json, :html
   def profile
     @user = current_user
   end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def update
+    if current_user.update(user_params)
+      respond_with current_user
+    end
+  end
+
+  def edit
+    @user = current_user
+  end
+
+  private
+    def user_params
+          params.require(:user).permit(:name, :bio)
+    end
 end

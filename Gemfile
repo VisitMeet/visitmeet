@@ -70,4 +70,8 @@ gem 'paperclip'
 # gem 'carrierwave'
 gem 'aws-sdk'
 gem 'mailboxer', github: 'mailboxer/mailboxer'
+gem 'best_in_place', '~> 3.0.1'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 #                                       ---- END ----

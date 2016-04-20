@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'profile/index'
-
   get 'users/profile'
 
   namespace :admin do
@@ -11,6 +9,7 @@ Rails.application.routes.draw do
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
 
+  resources :user
   resources :products
   resources :conversations do
     resources :messages
