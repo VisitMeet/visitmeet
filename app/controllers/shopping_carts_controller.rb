@@ -1,5 +1,7 @@
 class ShoppingCartsController < ApplicationController
   before_filter :extract_shopping_cart
+  def index
+  end
 
   def create
     @product = Product.find(params[:product_id])

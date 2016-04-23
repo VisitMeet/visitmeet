@@ -2,13 +2,10 @@
 # code: config/routes.rb
 # test: spec/routings : assigned kathyonu : 20160416
 Rails.application.routes.draw do
-<<<<<<< HEAD
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # ALL GET REQUESTS HERE
   get 'profile/index'
-=======
->>>>>>> testing
   get 'users/profile'
   get 'visitors/index'
   get 'visitors/team'
@@ -21,12 +18,9 @@ Rails.application.routes.draw do
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
 
-<<<<<<< HEAD
   # ALL RESOURCE ROUTES HERE
-  resources :shopping_cart
-=======
+  resources :shopping_carts
   resources :users
->>>>>>> testing
   resources :products
   resources :conversations do
     resources :messages
