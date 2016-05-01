@@ -62,8 +62,7 @@ class User < ActiveRecord::Base
     end
   end
 
-
-  def mailboxer_email(object)
+  def mailboxer_email(*)
     nil
   end
 end
