@@ -2,6 +2,8 @@
 # code: config/routes.rb
 # test: spec/routings : assigned kathyonu : 20160416
 Rails.application.routes.draw do
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' },
+                     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # ALL GET REQUESTS HERE
@@ -25,9 +27,6 @@ Rails.application.routes.draw do
   resources :conversations do
     resources :messages
   end
-
-  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' },
-                     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   root to: 'welcome#index'
 end
