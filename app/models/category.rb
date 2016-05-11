@@ -8,7 +8,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
+# Category model.
 class Category < ActiveRecord::Base
   has_many :products
 end

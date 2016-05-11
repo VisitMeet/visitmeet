@@ -14,6 +14,8 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'web-console', '~> 2.0'
+  gem 'guard-rubocop'
+
 end
 group :development, :test do
   gem 'byebug'
@@ -27,6 +29,7 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'rspec-rails' # installs RSpec gems with support for Rails : Launchy requires this
   gem 'rubocop', require: false # http://www.rubydoc.info/gems/rubocop/0.36.0#Installation
+
 end
 group :test do
   gem 'capybara' # test web pages

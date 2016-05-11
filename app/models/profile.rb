@@ -8,7 +8,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
+# User's Profile model.
 class Profile < ActiveRecord::Base
   belongs_to :user
 end
