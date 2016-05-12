@@ -1,14 +1,16 @@
+<!-- code: app/views/pages/about.html.erb -->
+<!-- test: spec/features/visitors/about_page_spec.rb -->
+<%= content_for :title, 'About VisitMeet, the Seed Story' %>
 <!-- Page Content -->
 <div class="container">
   <!-- Page Heading/Breadcrumbs -->
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">About the Website
-        <small>Subheading</small>
-      </h1>
+      <h1 class="page-header">What About VisitMeet</h1>
+      <h2> . . that makes it unique</h2>
       <ol class="breadcrumb">
         <li><%= link_to 'Home', root_path %></li>
-        <li> class="active">About</li>
+        <li><%= link_to 'About', '/about' %></li>
       </ol>
     </div>
   </div>
@@ -16,13 +18,22 @@
   <!-- Intro Content -->
   <div class="row">
     <div class="col-md-6">
-      <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+      <!-- image_tag template -->
+      <!-- image_tag(source, options={}) --> 
+      <%= image_tag('two-whales.jpg', {id: 'twowhales', class: 'img-responsive', height: '468', width: '459', alt: 'Two Whales'}) %>
     </div>
     <div class="col-md-6">
-      <h2>About Modern Business</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+      <h2>Three strangers meet and visit . .</h2>
+      <!- % = t "hello" % -->
+      <p>and in what you might consider a middle of nowhere, they share their story of how they came to be at that roadside cafe. A native born asked the two strangers that question. One was a Guide for a tour company, and the other the Traveller. The conversation flowed and the native born, a computer engineering student, and the Guide and the Traveller were all three astounded to learn how little the Guide earned from the high amount the Traveller paid to have the Guide give of their time and talents.</p>
+      <p>As the engineering student listened, he learned and he knew he could reverse the 'payout' to the Guide, and save the Traveller money, meaning that instead of receiving $100 US, or 10% of the fee the Traveller paid the tour, the Guide will receive 80% of the fee paid by the Traveller, and in doing this flip of the percentages, the costs to the Traveller would go down, dramatically for the services of human Guides in the know in their local and larger areas.</p>
+      <p>A VisitMeet example: Traveller now pays $420.00 for a Guide in an area for a certain time period. As you can well imagine, a Guide in Nepal will charge far less than a Guide in San Francisco. Guide received 80% of that amount, and VisitMeet will use 20% to pay costs of servers and hosting and security certifications on our financial accounts, and as we begin to earn income, we will then begin to turn those profits to local communities in a true non-profit organizational sharing spirit.</p>
+      <p>We do call VisitMeet the site that care built. It is being built by programmers, for programmers and their kin and friends, and on and on and, programmers are the most careful and caring people we know, with every eye dotted and every colon in its proper place.</p>
+      <p>Have you ever communicated with a programmer? Join us now, and help us by giving us non-programmer feedback. We are coming to the point we will need and want test-users to tell us how we are doing. We invite you.</p>
+      <p>
+        <br> - the VisitMeet Team
+      </p>
+
     </div>
   </div>
   <!-- /.row -->
@@ -35,10 +46,10 @@
       <div class="thumbnail">
         <img class="img-responsive" src="http://placehold.it/750x450" alt="">
         <div class="caption">
-          <h3>John Smith<br>
-            <small>Job Title</small>
+          <h3>Camera Shy Group<br>
+            <small>Programmers</small>
           </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+          <p>Someday, we will post images the programmers wish to share as they wish to share them.</p>
           <ul class="list-inline">
             <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a></li>
             <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a></li>
@@ -51,11 +62,11 @@
     <div class="thumbnail">
       <img class="img-responsive" src="http://placehold.it/750x450" alt="">
       <div class="caption">
-        <h3>John Smith
+        <h3>Bishisht Bhatta
           <br>
-          <small>Job Title</small>
+          <small>Creator, VisitMeet</small>
         </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+        <p>Someday he will fill this line in with his words.</p>
           <ul class="list-inline">
             <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a></li>
             <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a></li>
@@ -68,11 +79,11 @@
     <div class="thumbnail">
       <img class="img-responsive" src="http://placehold.it/750x450" alt="">
       <div class="caption">
-        <h3>John Smith
+        <h3>Your name here ?
           <br>
-          <small>Job Title</small>
+          <small>What if anything here ?</small>
         </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+        <p>How shall you describe you?</p>
         <ul class="list-inline">
           <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a></li>
           <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a></li>

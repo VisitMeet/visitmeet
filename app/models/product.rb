@@ -1,10 +1,21 @@
 # frozen_string_literal: true
-# code: app/models/products.rb
-# test: spec/models/products_spec.rb
+# code: app/models/product.rb
+# tests: spec/models/product_spec.rb
+#
+# Migrations
+#
+# db/migrate/20160115121043_devise_create_users.rb
+# db/migrate/20160115121047_add_name_to_users.rb
+# db/migrate/20160115121051_add_confirmable_to_users.rb
+# db/migrate/20160115121058_add_role_to_users.rb
+# db/migrate/20160115121151_devise_invitable_add_to_users.rb
+# db/migrate/20160118081841_create_products.rb
+# db/migrate/20160125172412_add_omniauth_to_users.rb
+# db/migrate/20160303161926_create_profiles.rb
 #
 # == Schema Information
 #
-# Table name: products
+# Table name: products : last verified accurate 20160417 -ko
 #
 #  id          :integer          not null, primary key
 #  title       :string
@@ -18,13 +29,18 @@
 #  longitude   :float
 #  location    :string
 #  category_id :integer
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 class Product < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 60 }
   validates :description, presence: true, length: { maximum: 160 }
   validates :price, numericality: { less_than_or_equal_to: 999_999_00 } # stripe limit is 99999999 in cents
+  validates :price, numericality: { greater_than_or_equal_to: 98 } # minimum in cents in US currency
 
-  enum category: [:Food, :Travelling, :Lodging, :Shopping]
+  enum category: [:Foods, :Travels, :Lodges, :Shops]
 
   belongs_to :user
   belongs_to :category

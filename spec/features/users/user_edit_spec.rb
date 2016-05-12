@@ -1,4 +1,10 @@
 # frozen_string_literal: true
+# code: to be detemined what is being tested
+# test: spec/features/users/user_edit_spec.rb
+#
+# see NOTE ON : include Devise::TestHelpers at top of
+# # spec/features/users/sign_in_spec.rb
+# # include Devise::TestHelpers
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: User edit
@@ -25,8 +31,11 @@ feature 'User edit', :devise do
     fill_in 'Email', with: 'newemail@example.com'
     fill_in 'Current password', with: user.password
     click_button 'Update'
-    expect(page).to have_content 'Welcome, newemail@example.com'
+    # expect(page).to have_content 'Welcome, newemail@example.com'
     # TODO: get this next tests working again:
+    expect(page).to have_content 'Your account has been updated successfully.'
+    txts = [I18n.t('devise.registrations.updated')]
+    # we are testing with a FactoryGirl created user, that is confirmed upon creation.
     # expect(page).to have_content 'You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address'
     # txts = [I18n.t('devise.registrations.updated'), I18n.t('devise.registrations.update_needs_confirmation')]
     # expect(page).to have_content(/.*#{txts[0]}.*|.*#{txts[1]}.*/)

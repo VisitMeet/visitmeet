@@ -1,6 +1,14 @@
 GIT
+  remote: git://github.com/intridea/omniauth-github.git
+  revision: 45f2fc73d6d06f30863adac0e6aa112bcaaadf67
+  specs:
+    omniauth-github (1.1.2)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (>= 1.1.1, < 2.0)
+
+GIT
   remote: git://github.com/mailboxer/mailboxer.git
-  revision: 99d16871375c0a34097d1ef122a9e42fc918794c
+  revision: f2ac542657e7ad39d01d3b0afdbfe5c9e5902a0d
   specs:
     mailboxer (0.13.0)
       carrierwave (>= 0.5.8)
@@ -65,19 +73,19 @@ GEM
     acts_as_shopping_cart (0.2.2)
       activerecord (~> 4)
     addressable (2.4.0)
-    annotate (2.7.0)
+    annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
-      rake (~> 10.4)
+      rake (>= 10.4, < 12.0)
     arel (6.0.3)
     ast (2.2.0)
     autoprefixer-rails (6.3.6)
       execjs
-    aws-sdk (2.2.36)
-      aws-sdk-resources (= 2.2.36)
-    aws-sdk-core (2.2.36)
+    aws-sdk (2.3.3)
+      aws-sdk-resources (= 2.3.3)
+    aws-sdk-core (2.3.3)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.2.36)
-      aws-sdk-core (= 2.2.36)
+    aws-sdk-resources (2.3.3)
+      aws-sdk-core (= 2.3.3)
     bcrypt (3.1.11)
     best_in_place (3.0.3)
       actionpack (>= 3.2)
@@ -95,19 +103,23 @@ GEM
       sass (~> 3.4)
       thor (~> 0.19)
     builder (3.2.2)
-    byebug (8.2.4)
-    capybara (2.7.0)
+    byebug (9.0.0)
+    capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (0.11.0)
+    capybara-screenshot (1.0.12)
+      capybara (>= 1.0, < 3)
+      launchy
+    carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+      mimemagic (>= 0.3.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     climate_control (0.0.3)
@@ -122,12 +134,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    concurrent-ruby (1.0.1)
+    concurrent-ruby (1.0.2)
     database_cleaner (1.5.3)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     debug_inspector (0.0.2)
-    devise (4.0.0)
+    devise (4.1.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 5.1)
@@ -139,7 +151,6 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
-    excon (0.49.0)
     execjs (2.6.0)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
@@ -172,7 +183,7 @@ GEM
     guard-rubocop (1.2.0)
       guard (~> 2.0)
       rubocop (~> 0.20)
-    hashie (3.4.3)
+    hashie (3.4.4)
     high_voltage (3.0.0)
     hub (1.12.4)
     i18n (0.7.0)
@@ -205,9 +216,6 @@ GEM
     lumberjack (1.0.10)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    mandrill-api (1.0.53)
-      excon (>= 0.16.0, < 1.0)
-      json (>= 1.7.7, < 2.0)
     method_source (0.8.2)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
@@ -217,7 +225,7 @@ GEM
     minitest (5.8.4)
     momentjs-rails (2.11.1)
       railties (>= 3.1)
-    multi_json (1.11.2)
+    multi_json (1.12.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     neat (1.7.4)
@@ -239,9 +247,6 @@ GEM
     omniauth (1.3.1)
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
-    omniauth-github (1.1.2)
-      omniauth (~> 1.0)
-      omniauth-oauth2 (~> 1.1)
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
@@ -252,7 +257,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
-    parser (2.3.0.7)
+    parser (2.3.1.0)
       ast (~> 2.2)
     pg (0.18.4)
     powerpack (0.1.1)
@@ -304,11 +309,11 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
-    rake (10.5.0)
+    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    responders (2.1.2)
+    responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
@@ -327,13 +332,13 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubocop (0.39.0)
-      parser (>= 2.3.0.7, < 3.0)
+    rubocop (0.40.0)
+      parser (>= 2.3.1.0, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-progressbar (1.7.5)
+    ruby-progressbar (1.8.0)
     ruby_dep (1.3.1)
     rubyzip (1.2.0)
     sass (3.4.22)
@@ -382,7 +387,7 @@ GEM
     temple (0.7.6)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.2)
+    tilt (2.0.3)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -391,7 +396,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     underscore-rails (1.8.3)
-    unicode-display_width (1.0.3)
+    unicode-display_width (1.0.5)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -417,6 +422,8 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara
+  capybara-screenshot
+  coffee-rails (~> 4.1.0)
   database_cleaner
   devise
   devise_invitable
@@ -433,8 +440,7 @@ DEPENDENCIES
   jquery-ui-rails
   launchy (~> 2.4, >= 2.4.3)
   mailboxer!
-  mandrill-api
-  omniauth-github
+  omniauth-github!
   paperclip
   pg
   pry-rails
@@ -445,6 +451,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rails_12factor
   rails_layout
+  responders (~> 2.1, >= 2.1.2)
   rspec-rails
   rubocop
   sass-rails (~> 5.0, >= 5.0.4)

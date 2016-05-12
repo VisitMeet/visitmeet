@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+# code: spec/support/helpers/session_helpers.rb
+# used: spec/features/users/sign_in_spec.rb
+#
 module Features
   module SessionHelpers
     def sign_up_with(email, password, confirmation)
@@ -10,6 +13,7 @@ module Features
     end
 
     def signin(email, password)
+      # visit '/users/login' # or ..
       visit new_user_session_path
       fill_in :user_email, with: email
       fill_in :user_password, with: password

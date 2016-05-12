@@ -7,7 +7,6 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-  config.cache_classes = false
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -29,11 +28,20 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+  # config.assets.debug = false
   config.assets.debug = true
 
-  # Asset digests allow you to set far-future HTTP expiration dates on all assets,
-  # yet still be able to expire them through the digest params.
-  config.assets.digest = true
+  # Asset digests allow you to set far-future HTTP expiration dates on all
+  # assets, yet still be able to expire them through the digest params.
+  # ref : http://edgeguides.rubyonrails.org/4_2_release_notes.html
+  #
+  # http://guides.rubyonrails.org/asset_pipeline.html
+  # The fingerprinting behavior is controlled by the
+  # config.assets.digest initialization option (which defaults to
+  # true for production and false for development and testing.
+  # Under normal circumstances the default config.assets.digest option
+  # should not be changed.
+  config.assets.digest = false
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
@@ -44,10 +52,7 @@ Rails.application.configure do
   # TODO: Research how this command works, then uncomment as need be
   # config.action_view.raise_on_missing_translations = true
 
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
-
-  # TODO: Research this command, and when writing email tests
-  # Where is sendgrid setup?
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
 
   # TODO: Research this command, and when writing email tests

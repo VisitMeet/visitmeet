@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# app/helpers/products_helper.rb
+#
 # == Schema Information
 #
 # Table name: products

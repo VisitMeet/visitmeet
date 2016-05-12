@@ -36,10 +36,9 @@ A buys it.
 B only gets 80%.
 A traveled in cheapeast way possible.
 
-
 Issues
 -------------
-Check github issues.
+Check our [github issues](https://github.com/VisitMeet/visitmeet/issues).
 
 Contributing
 ------------
@@ -56,8 +55,12 @@ you can share a word or two among your friends.
 Credits
 -------
 Bishisht Bhatta
+<https://bishisht.wordpress.com/>
+<http://www.bishisht.livejournal.com/>
 
-Kathyonu
+Kathy Onu
+<https://github.com/kathyonu/>
+<https://www.goodworksonearth.net/>
 
 License
 -------
