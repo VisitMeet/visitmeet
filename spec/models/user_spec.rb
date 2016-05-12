@@ -48,7 +48,6 @@
 #  provider               :string
 #  uid                    :string
 #
-require 'pry'
 include Warden::Test::Helpers
 Warden.test_mode!
 

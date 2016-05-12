@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 # code: config/routes.rb
 # test: spec/routing/profile_routing_spec.rb
-require 'pry'
 describe ProfileController, type: :routing do
   describe 'routing' do
     # tests app/views/visitors/index

@@ -2,7 +2,6 @@
 # code: app/views/welcome/index.html.erb
 # test: spec/features/welcome/home_page_spec.rb
 #
-require 'pry'
 include Selectors
 include Warden::Test::Helpers
 Warden.test_mode!
