@@ -1,192 +1,142 @@
-// Place all the styles related to the Products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.item.list-group-item
-{
-    float: none;
-    width: 100%;
-    background-color: #fff;
-    margin-bottom: 10px;
+/* Place all the styles related to the Products controller here. */
+/* They will automatically be included in application.css.       */
+/* ref:: http://guides.rubyonrails.org/asset_pipeline.html       */
+/* You can use Sass (SCSS) here: http://sass-lang.com/           */
+.item.list-group-item {
+  float: none;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
 }
-.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
-{
-    background: #428bca;
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover {
+  background: #428bca;
 }
-
-.item.list-group-item .list-group-image
-{
-    margin-right: 10px;
+.item.list-group-item .list-group-image {
+  margin-right: 10px;
 }
-.item.list-group-item .thumbnail
-{
-    margin-bottom: 0px;
+.item.list-group-item .thumbnail {
+  margin-bottom: 0px;
 }
-.item.list-group-item .caption
-{
-    padding: 9px 9px 0px 9px;
+.item.list-group-item .caption {
+  padding: 9px 9px 0px 9px;
 }
-.item.list-group-item:nth-of-type(odd)
-{
-    background: #eeeeee;
+.item.list-group-item:nth-of-type(odd) {
+  background: #eeeeee;
 }
-
-.item.list-group-item:before, .item.list-group-item:after
-{
-    display: table;
-    content: " ";
+.item.list-group-item:before, .item.list-group-item:after {
+  display: table;
+  content: " ";
 }
-
-.item.list-group-item img
-{
-    float: left;
+.item.list-group-item img {
+  float: left;
 }
-.item.list-group-item:after
-{
-    clear: both;
+.item.list-group-item:after {
+  clear: both;
 }
-.list-group-item-text
-{
-    margin: 0 0 11px;
+.list-group-item-text {
+ margin: 0 0 11px;
 }
-
-/*********************************************
-    			Call Bootstrap
-*********************************************/
-
-@import url("bootstrap/bootstrap.min.css");
-@import url("bootstrap-override.css");
+/* * * Call Bootstrap * * */
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-
-/*********************************************
-        		Theme Elements
-*********************************************/
-
+/* * * Theme Elements * * */
 .gold{
-	color: #FFBF00;
+  color: #FFBF00;
+}
+/* * * PRODUCTS * * */
+.product {
+  border: 1px solid #dddddd;
+  height: 321px;
+}
+.product > img {
+  max-width: 230px;
+}
+.product-rating {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.product-title {
+  font-size: 20px;
+}
+.product-desc {
+  font-size: 14px;
+}
+.product-price {
+  font-size: 22px;
+}
+.product-stock {
+  color: #74DF00;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.product-info {
+  	margin-top: 50px;
 }
 
-/*********************************************
-					PRODUCTS
-*********************************************/
-
-.product{
-	border: 1px solid #dddddd;
-	height: 321px;
-}
-
-.product>img{
-	max-width: 230px;
-}
-
-.product-rating{
-	font-size: 20px;
-	margin-bottom: 25px;
-}
-
-.product-title{
-	font-size: 20px;
-}
-
-.product-desc{
-	font-size: 14px;
-}
-
-.product-price{
-	font-size: 22px;
-}
-
-.product-stock{
-	color: #74DF00;
-	font-size: 20px;
-	margin-top: 10px;
-}
-
-.product-info{
-		margin-top: 50px;
-}
-
-/*********************************************
-					VIEW
-*********************************************/
-
+/* * * VIEW * * */
 .content-wrapper {
-	max-width: 1140px;
-	background: #fff;
-	margin: 0 auto;
-	margin-top: 25px;
-	margin-bottom: 10px;
-	border: 0px;
-	border-radius: 0px;
+  max-width: 1140px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 0px;
+  border-radius: 0px;
 }
-
-.container-fluid{
-	max-width: 1140px;
-	margin: 0 auto;
+.container-fluid {
+  max-width: 1140px;
+  margin: 0 auto;
 }
-
 .view-wrapper {
-	float: right;
-	max-width: 70%;
-	margin-top: 25px;
+  float: right;
+  max-width: 70%;
+  margin-top: 25px;
 }
-
 .container {
-	padding-left: 0px;
-	padding-right: 0px;
-	max-width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 100%;
 }
 
-/*********************************************
-				ITEM
-*********************************************/
-
+/* * * ITEM * * */
 .service1-items {
-	padding: 0px 0 0px 0;
-	float: left;
-	position: relative;
-	overflow: hidden;
-	max-width: 100%;
-	height: 321px;
-	width: 130px;
+  padding: 0px 0 0px 0;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 321px;
+  width: 130px;
 }
-
 .service1-item {
-	height: 107px;
-	width: 120px;
-	display: block;
-	float: left;
-	position: relative;
-	padding-right: 20px;
-	border-right: 1px solid #DDD;
-	border-top: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
+  height: 107px;
+  width: 120px;
+  display: block;
+  float: left;
+  position: relative;
+  padding-right: 20px;
+  border-right: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 }
-
 .service1-item > img {
-	max-height: 110px;
-	max-width: 110px;
-	opacity: 0.6;
-	transition: all .2s ease-in;
-	-o-transition: all .2s ease-in;
-	-moz-transition: all .2s ease-in;
-	-webkit-transition: all .2s ease-in;
+  max-height: 110px;
+  max-width: 110px;
+  opacity: 0.6;
+  transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
 }
-
 .service1-item > img:hover {
-	cursor: pointer;
-	opacity: 1;
+  cursor: pointer;
+  opacity: 1;
 }
-
 .service-image-left {
-	padding-right: 50px;
+  padding-right: 50px;
 }
-
 .service-image-right {
-	padding-left: 50px;
+  padding-left: 50px;
 }
-
-.service-image-left > center > img,.service-image-right > center > img{
-	max-height: 155px;
+.service-image-left > center > img, .service-image-right > center > img {
+  max-height: 155px;
 }

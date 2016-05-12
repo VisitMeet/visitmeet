@@ -1,5 +1,7 @@
-require 'rails_helper'
-
+# frozen_string_literal: true
+# code: app/models/shopping_cart.rb
+# test: spec/models/shopping_cart_spec.rb
+#
 RSpec.describe ShoppingCart, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  pending 'describe testing the cart we now have'
 end

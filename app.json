@@ -1,22 +1,48 @@
 {
+  "name": "First use of a variable acts as a comment",
   "name": "Visitmeet",
-  "description": "Cheapeast way to travel around the world.",
+  "description": "http://stackoverflow.com/questions/244777/can-i-use-comments-inside-a-json-file"
+  "description": "Travel cheaply, visit, meet, exchange, and so much more",
+  "logo": "/assets/images/favicon.jpg and remember, first use of variable acts as a comment",
   "logo": "https://avatars3.githubusercontent.com/u/788200",
-  "repository": "https://github.com/VisitMeet/visitmeet",
+  "repository": "https://github.com/bishishtbhatta/visitmeet",
   "keywords": [
+    "Guides",
+    "Travellers",
+    "Foods",
+    "Shops",
+    "Travelling",
+    "Locals",
+    "Arts",
+    "Products",
+    "Services",
+    "Exchanges",
+    "Offers",
+    "Acceptances",
+    "Trades",
     "Cheap Travel",
-    "Develop Poor Country",
+    "Develop Poor Country"
   ],
   "scripts": {"postdeploy": "bundle exec rake db:migrate; bundle exec rake db:seed"},
   "env": {
+    "SENDGRID_SMTP_USERNAME": {
+      "description": "Your SENDGRID_SMTP_USERNAME for sending mail.",
+      "value": ENV['SENDGRID_SMTP_USERNAME'],
+      "required": false
+    },
+    "SENDGRID_SMTP_PASSWORD": {
+      "description": "Your SENDGRID_SMTP_PASSWORD for sending mail.",
+      "value": ENV['SENDGRID_SMTP_PASSWORD'],
+      "required": false
+    },
     "ADMIN_EMAIL": {
       "description": "The administrator's email address for signing in.",
-      "value": "user@example.com",
+      "value": ENV['ADMIN_EMAIL'],
       "required": true
     },
     "ADMIN_PASSWORD": {
       "description": "The administrator's password for signing in.",
-      "value": "changeme",
+      "value": ENV['ADMIN_PASSWORD'],
       "required": true
     },
     "DOMAIN_NAME": {
@@ -24,6 +50,12 @@
       "value": "visitmeet.herokuapp.com",
       "required": false
     },
+    "addons": {
+      "addons": [
+        "zerigo_dns:zerigo-dns-asymmetrical-90919",
+        "heroku-postgresql:postgresql-clear-61373"
+      ]
+    }
     "RAILS_ENV": "production"
   }
 }

@@ -1,0 +1,13 @@
+# frozen_string_literal
+# code : config/exception_notification.yml
+# test : TODO: 20160423 : to be written
+# ref  : http://edgeguides.rubyonrails.org/4_2_release_notes.html
+# Introduced Rails::Application.config_for to load a configuration
+#  for the current environment.
+production:
+  url: http://127.0.0.1:8080
+  namespace: visitmeet_production
+development:
+  url: http://localhost:3001
+  namespace: visitmeet_development
+ 

@@ -1,159 +1,121 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "VisitMeet" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Visit &amp; Meet Your World Neighbors, enjoy exchanges with others, anywhere on earth." %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': true %>
-    <!-- % = javascript_include_tag "//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region=" %>
-    <! % = javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
-    <!-- Custom Fonts -->
-    <!-- % = javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js" %>
-    <!-- favicon.ico creation : http://www.favicon-generator.org/ -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <%= yield(:head) %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="toplinks">
-        <% if user_signed_in? %>
-          Welcome, <%= current_user.email %> &#124;
-          <%= link_to('Account', edit_user_registration_path) %> &#124;
-          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-        <% else %>
-          Welcome &#124;
-          <%= link_to('Login', new_user_session_path) %> &#124;
-          <%= link_to('Register', new_user_registration_path, html: { id: 'register' }) %>
-        <% end %>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center pagination-centered">
-          <div class="jumbotron">
-            <h2>Hello World!
-              <br>
-               <%= t :welcome_to %>
-               <b>VisitMeet</b>
-            </h2>
-            <div class="hometext">
-              <%=t :introduction %>
-              <br>
-              <br> We are combining infrastructure development
-              <br> with travelling with world
-              <a href="#">
-                <span data-toggle="modal" data-target=".useable-definition">useable</span>
-              </a>
-              money
-              <br>
-              <br>
-            </div>
-            <div class="information text-center">
-              <%= link_to('Our Information Page', '/visitors/index', class: 'btn btn-primary btn-medium', method: :get) %>
-            </div>
-            <div class="artshowcase">
-              We begin by offering one human product
-              <br>
-              enjoyed by all who have eyes that see
-              <br>
-              <h4>
-                <%= link_to 'A NEW AWARENESS', products_path %>
-              </h4>
-              ~ arted ~
-              <br>
-              <!-- p> TODO: create the blog page to make a working link
-                <a class="btn btn-primary btn-large" href="#">Our Blog</a>
-                <br>
-              </p -->
-              <p>
-                <address>
-                <strong>
-                VisitMeet, Inc.
-                </strong>
-                <br> 10400 Santoc Tol, Aithpur, Ward No. 6
-                <br> Kanchanpur, MNR, Nepal 94103
-                <br><abbr title="Phone">Ph:</abbr> +(977) 99-524-677
-                <br>
-                <br><strong>Bishisht Bhatta</strong>
-                <br>
-                <a href="mailto:bhattabishisht@gmail.com">
-                  <span class="glyphicon glyphicon glyphicon-send" aria-hidden="true"></span>
-                   bhattabishisht@gmail.com
-                </a>
-                </address>
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- h3 class="text-center">We currently offer these products ..</h3 -->
-        <!-- # powered by google script at page bottom -->
-        <!-- div id="map" style='width: 100%; height: 500px;'></div -->
-        </div>
-        <div class="github">
+  <div class="row">
+    <div class="col-md-12 text-center pagination-centered">
+      <div class="jumbotron">
+        <h2>Hello World!
           <br>
+           <%= t :welcome_to %>
+           <b>VisitMeet</b>
+        </h2>
+        <div class="hometext">
+          <%= t :introduction %>
           <br>
-          <br>
-          <br> Are you not a programmer yet wonder what the codes look like ??
-          <br> Codes shown in this Repository are the codes creating this site
-          <br>
-          <a class="btn btn-primary btn-medium" href="http://www.github.com/bishisht/visitmeet" role="button">
-            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-            Our Open Source Code Repository at Github
+          <br> We are combining infrastructure development
+          <br> with travelling with world
+          <!-- TODO: fill in the blank address / other attributes available on modal -->
+          <a href="#">
+            <span data-toggle="modal" data-target=".useable-definition">useable</span>
           </a>
-          <br> Programmers are invited to help build our sites and so enjoy the benefits
-          <br> Currently building out two sites; VisitMeet.com is riding on Ruby on Rails' Edges
-          <br> VisitMeet.org's tools of creation are Node.js, Yeoman, Gulp and their friends
-          <br> Follow our Repository, watch our progress, contribute as you can see to do
-          <br> Thank You
-          <br>
+          money
           <br>
           <br>
         </div>
-        <!--  MODAL START -->
-        <div class="modal fade useable-definition" tabindex="-1" role="dialog" aria-labelledby="myMediumModalLabel">
-          <div class="modal-dialog modal-md">
-            <div class="modal-content">
-              <p>
-                 &nbsp; <strong>Definition of Useable, also Usable:</strong>
-                <br> &nbsp;&nbsp; able or fit to be used
-                <br>
-                <br> &nbsp; <strong>Synonyms:</strong>
-                <br> &nbsp;&nbsp; Fit for use, ready for use, able to be used, at someone's disposal, disposable;
-                <br> &nbsp;&nbsp; working, in working order, functioning, functional, serviceable, operational,
-                <br> &nbsp;&nbsp; up and running, accessible.
-              </p>
-            </div>
-          </div>
+        <div class="quote">
+          <i>Traveler, there is no path.
+          <br> Paths are made by walking.
+          <br>
+          <span class="author"> - Antonio Machado</span>
         </div>
-       <!--  MODAL END -->
-  </body>
-</html>
-
-<!-- script type="text/javascript" -->
-<!-- var handler = Gmaps.build('Google'); -->
-<!-- handler.buildMap({ provider: {}, internal: { id: 'map' } }, function(){ -->
-<!-- var markers = handler.addMarkers(<%# = raw @map_hash.to_json % > ) ; NOTE Ruby is commented -->
-<!--   handler.map.centerOn(markers[0]); -->
-<!--   handler.bounds.extendWith(markers); -->
-<!--   handler.fitMapToBounds(); -->
-<!-- }); -->
-<!-- /script -->
-<!-- TODO: script errors : RetiredVersion, SensorNotRequired, InvalidClientId, InvalidKey: https://developers.google.com/maps/documentation/javascript/error-messages -->
-<!-- % = yield(:head) % -->
+        </p>
+        <div class="information text-center">
+          <%= link_to('Our Information Page', '/visitors/index', class: 'btn btn-primary btn-medium', method: :get) %>
+        </div>
+        <div class="artshowcase">
+          We begin by offering one human product
+          <br>
+          enjoyed by all who have eyes that see
+          <br>
+          <h4>
+            <%= link_to 'A NEW AWARENESS', products_path %>
+          </h4>
+          ~ arted ~
+          <br>
+          <!-- p> TODO: create the blog page to make a working link
+            <a class="btn btn-primary btn-large" href="#">Our Blog</a>
+            <br>
+          </p -->
+          <p>
+            <address>
+              <strong>
+                VisitMeet, Inc.
+              </strong>
+              <br> 10400 Santoc Tol, Aithpur, Ward No. 6
+              <br> Kanchanpur, MNR, Nepal 94103
+              <br>
+              <abbr title="Phone">
+                Ph:
+              </abbr>
+              +(977) 99-524-677
+              <br>
+              <br>
+              <strong>
+                Bishisht Bhatta
+              </strong>
+              <br>
+              <a href="mailto:bhattabishisht@gmail.com">
+                <span class="glyphicon glyphicon glyphicon-send" aria-hidden="true"></span>
+                bhattabishisht@gmail.com
+              </a>
+            </address>
+          </p>
+        </div>
+        <p>
+          <br>
+          Our 
+          <a href='https://github.com/VisitMeet/visitmeet/wiki' target="_blank">
+            Wiki
+          </a>
+          <br>
+          <br>
+        </p>
+      </div>
+    </div>
+    <!-- h3 class="text-center">We currently offer these products ..</h3 -->
+    <!-- # powered by google script at page bottom -->
+    <!-- div id="map" style='width: 100%; height: 500px;'></div -->
+    </div>
+    <div class="github">
+      <br>
+      <br>
+      <br>
+      <br> Are you not a programmer yet wonder what the codes look like ??
+      <br> Codes shown in this Repository are the codes creating this site
+      <br>
+      <a class="btn btn-primary btn-medium" href="http://www.github.com/bishisht/visitmeet" role="button">
+        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+        Our Open Source Code Repository at Github
+      </a>
+      <br> Programmers are invited to help build our sites and so enjoy the benefits
+      <br> We are building two sites; VisitMeet.com & .org are Ruby on Rails apps
+      <br> VisitMeet.net will empower world useable money on VisitMeet.com & .org 
+      <br> Our .net site is being created with Node.js, Yeoman, Gulp and friends
+      <br> Follow our Repository, watch our progress, contribute as you can see to do
+      <br> Thank You
+      <br>
+    </div>
+    <!--  MODAL START -->
+    <div class="modal fade useable-definition" tabindex="-1" role="dialog" aria-labelledby="myMediumModalLabel">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <p>
+            &nbsp; <strong>Definition of Useable, also Usable:</strong>
+            <br> &nbsp;&nbsp; able or fit to be used
+            <br>
+            <br> &nbsp; <strong>Synonyms:</strong>
+            <br> &nbsp;&nbsp; Fit for use, ready for use, able to be used, at someone's disposal, disposable;
+            <br> &nbsp;&nbsp; working, in working order, functioning, functional, serviceable, operational,
+            <br> &nbsp;&nbsp; up and running, accessible.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--  MODAL END -->

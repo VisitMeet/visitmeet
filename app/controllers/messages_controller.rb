@@ -1,5 +1,9 @@
-# Controller for messages. 
-# Messages belong to conversations. 
+# frozen_string_literal: true
+# code: app/controllers/messages_controller.rb
+# test: spec/controllers/messages_controller_spec.rb
+#
+# Controller for messages
+# Messages belong to conversations
 class MessagesController < ApplicationController
   before_action :set_conversation
 

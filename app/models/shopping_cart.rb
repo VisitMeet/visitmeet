@@ -1,4 +1,7 @@
-# Shopping Cart model.
+# frozen_string_literal: true
+# code: app/models/shopping_cart.rb
+# test: spec/models/shopping_cart_spec.rb
+# Shopping Cart model
 class ShoppingCart < ActiveRecord::Base
   acts_as_shopping_cart
 

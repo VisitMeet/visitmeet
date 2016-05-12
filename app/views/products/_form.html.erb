@@ -1,51 +1,57 @@
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
-
-<% content_for :head do %>
-  <% javascript_include_tag 'http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false'%>
-  <% javascript_include_tag '/vendor/assets/javascripts/jquery.geocomplete.js'%>
-<% end %>
-<%= simple_form_for @product, :html => {:multipart => true } do |p| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@product.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @produt.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= p.input :title %>
-  </p>
-  <p>
-    <%= p.input :description %>
-  </p>
-  <p>
-    <%= p.input :price %>
-  </p>
-
-  <p>
-    <%= p.input :location %>
-  </p>
-  <p>
-    <label class="string required control-label" for="product_title"><abbr title="required">*</abbr> Image</label>
-    <br> <%= p.file_field :image %>
-  </p>
-    <label class="string required control-label" for="product_title"><abbr title="required">*</abbr> Category</label>
-  <p class="form-group string product_category">
-      <%= p.collection_select(:category_id, Category.all, :id, :name) %>
-  </p>
-  <%= p.button :submit, class: "btn btn-primary" %>
-<% end %>
-
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3'>
+    <% content_for :head do %>
+      <% javascript_include_tag 'http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false' %>
+      <% javascript_include_tag '/vendor/assets/javascripts/jquery.geocomplete.js' %>
+    <% end %>
+    <%= simple_form_for @product, html: { multipart: true } do |p| %>
+      <% if @product.errors.any? %>
+        <div id='error_explanation'>
+          <h2>
+            <%= pluralize(@product.errors.count, 'error') %>
+            prohibited this article from being saved:
+          </h2>
+          <ul>
+            <% @produt.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <p>
+        <%= p.input :title %>
+      </p>
+      <p>
+        <%= p.input :description %>
+      </p>
+      <p>
+        <%= p.input :price %>
+      </p>
+      <p>
+        <%= p.input :location %>
+      </p>
+      <p>
+        <label class='string required control-label' for='product_title'>
+          <abbr title='required'>*</abbr>
+           Image
+        </label>
+        <br>
+          <%= p.file_field :image %>
+      </p>
+      <p>
+        <label class='string required control-label' for='product_title'>
+          <abbr title='required'>*</abbr>
+           Category
+        </label>
+      </p>
+      <p class='form-group string product_category'>
+        <%= p.collection_select(:category_id, Category.all, :id, :name) %>
+      </p>
+        <%= p.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
 </div>
-</div>
-<script type="text/javascript">
-  $("#product_location").geocomplete();
+<script type='text/javascript'>
+  $('#product_location').geocomplete();
 
 </script>

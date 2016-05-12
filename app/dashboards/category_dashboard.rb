@@ -1,6 +1,8 @@
 # frozen_string_literal: true
-# app/controllers/dashboards/category_dashboard.rb
+# code: app/controllers/dashboards/category_dashboard.rb
+# test: to be written
 require 'administrate/base_dashboard'
+# admin administers categories
 class CategoryDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.

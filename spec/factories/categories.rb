@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+# code: spec/factories/categories.rb
+# test: spec/models/categories_spec.rb
+#
 # == Schema Information
 #
 # Table name: categories
@@ -10,6 +13,6 @@
 #
 FactoryGirl.define do
   factory :category do
-    name 'MyString'
+    name 'Foods'
   end
 end

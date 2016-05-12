@@ -34,6 +34,8 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
+  # Generate digests for assets URLs. This is planned for deprecation.
+  # ref : http://guides.rubyonrails.org/asset_pipeline.html
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
@@ -103,4 +105,12 @@ Rails.application.configure do
     # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
     bucket: 'visitmeet'
   }
+
+  # see : config/exception_notification.yml
+  # ref : http://edgeguides.rubyonrails.org/4_2_release_notes.html
+  # Introduced Rails::Application.config_for to load a configuration
+  #  for the current environment.
+  Rails.application.configure do
+    config.middleware.use ExceptionNotifier, config_for(:exception_notification)
+  end
 end
