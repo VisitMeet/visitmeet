@@ -31,6 +31,7 @@ db/*.sqlite3
 .redcar/
 .sass-cache
 /config/config.yml
+/config/local_env.yml
 /coverage.data
 /coverage/
 /db/*.javadb/

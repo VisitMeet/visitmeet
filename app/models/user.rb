@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :invitable, :database_authenticatable, :registerable,
+  devise :invitable, :confirmable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:github]
 
@@ -81,8 +81,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  # def mailboxer_email(object) : bishisht updated to * : 20100608
-  # https://github.com/VisitMeet/visitmeet/commit/c2763ec442bbc06b7254de72f9c9d4359e490e3d
   def mailboxer_email(*)
     nil
   end

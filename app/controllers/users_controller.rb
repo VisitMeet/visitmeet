@@ -125,6 +125,7 @@
 class UsersController < ApplicationController
   include ActionController::Helpers
   before_action :authenticate_user!, only: [:profile]
+  respond_to :json, :html
 
   def profile
     @user = current_user

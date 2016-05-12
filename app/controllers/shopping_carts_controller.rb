@@ -5,6 +5,7 @@
 # See FAILING TESTS NOTE: spec/controllers/users_controller.rb
 # the above note concerns the NoMethodError: undefined method `authenticate!' for nil:NilClass
 #
+# Shopping Carts controller
 class ShoppingCartsController < ApplicationController
   before_action :extract_shopping_cart
 

@@ -3,26 +3,29 @@
     <div class="col-md-12">
       <h1 class="lead text-center well"><%= current_user.email %>'s Profile</h1>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
+          <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
+		  <h3 class="text-center">
+		    Full Name:
+			<br>
+			<%= best_in_place @user, :name %>
+		  </h3>
+	      <h1 class="lead text-center well"><%= current_user.email.capitalize %>'s Profile</h1>
         </div>
         <div class="col-md-7">
           <div class="jumbotron well">
-	        <h2>
-              Hello, world!
-            </h2>
+		    <h4>Bio:</h4>
             <p>
-              <%= current_user.profile %>
-              <!-- .bio is failing with no method error -->
-              <!-- % = current_user.profile.bio % -->
-			</p>
-			<p>
-			  <a href="https://github.com/bishishtbhatta/visitmeet">Our Code Repository</a>
-			</p>
-            <p>
-			  <a class="btn btn-primary btn-large" href="#">Learn more</a>
-			</p>
-		  </div>
-        </div>
+			  <%= best_in_place @user, :bio, as: :textarea %>
+ 			</p>
+          </div>
+          <p>
+		    <a href="https://github.com/bishishtbhatta/visitmeet">Our Code Repository</a>
+		  </p>
+          <p>
+		    <a class="btn btn-primary btn-large" href="#">Learn more</a>
+		  </p>
+		</div>
       </div>
     </div>
   </div>

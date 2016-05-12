@@ -9,6 +9,7 @@
 # incoming web requests to your application and eventually respond
 # with a rendered view.
 #
+# Conversations Controller
 class ConversationsController < ApplicationController
   # get conversations for the current user
   def index

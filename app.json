@@ -2,8 +2,9 @@
   "name": "First use of a variable acts as a comment",
   "name": "Visitmeet",
   "description": "http://stackoverflow.com/questions/244777/can-i-use-comments-inside-a-json-file"
-  "description": "Inviting the world to come together, to visit, to meet, and so much more",
-  "logo": "/assets/images/favicon.jp",
+  "description": "Travel cheaply, visit, meet, exchange, and so much more",
+  "logo": "/assets/images/favicon.jpg and remember, first use of variable acts as a comment",
+  "logo": "https://avatars3.githubusercontent.com/u/788200",
   "repository": "https://github.com/bishishtbhatta/visitmeet",
   "keywords": [
     "Guides",
@@ -17,29 +18,31 @@
     "Services",
     "Exchanges",
     "Offers",
-    "Acceptances"
+    "Acceptances",
+    "Trades",
+    "Cheap Travel",
+    "Develop Poor Country"
   ],
   "scripts": {"postdeploy": "bundle exec rake db:migrate; bundle exec rake db:seed"},
   "env": {
-    "MANDRILL_USERNAME": "needs to be changes to sendmail account ? and DNS changed"
-    "MANDRILL_USERNAME": {
-      "description": "Your Mandrill address for sending mail.",
-      "value": "user@example.com",
+    "SENDGRID_SMTP_USERNAME": {
+      "description": "Your SENDGRID_SMTP_USERNAME for sending mail.",
+      "value": ENV['SENDGRID_SMTP_USERNAME'],
       "required": false
     },
-    "MANDRILL_APIKEY": {
-      "description": "Your Mandrill API key for sending mail.",
-      "value": "changeme",
+    "SENDGRID_SMTP_PASSWORD": {
+      "description": "Your SENDGRID_SMTP_PASSWORD for sending mail.",
+      "value": ENV['SENDGRID_SMTP_PASSWORD'],
       "required": false
     },
     "ADMIN_EMAIL": {
       "description": "The administrator's email address for signing in.",
-      "value": "user@example.com",
+      "value": ENV['ADMIN_EMAIL'],
       "required": true
     },
     "ADMIN_PASSWORD": {
       "description": "The administrator's password for signing in.",
-      "value": "changeme",
+      "value": ENV['ADMIN_PASSWORD'],
       "required": true
     },
     "DOMAIN_NAME": {
