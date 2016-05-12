@@ -9,7 +9,7 @@ class CreateMentions < ActiveRecord::Migration
       t.datetime :created_at
     end
 
-    add_index :mentions, ["mentioner_id", "mentioner_type"],   :name => "fk_mentions"
-    add_index :mentions, ["mentionable_id", "mentionable_type"], :name => "fk_mentionables"
+    add_index :mentions, ['mentioner_id', 'mentioner_type'],   :name => 'fk_mentions'
+    add_index :mentions, ['mentionable_id', 'mentionable_type'], :name => 'fk_mentionables'
   end
 end

@@ -15,7 +15,7 @@ Rails:
   Enabled: true
 
 Metrics/LineLength:
-  Max: 120
+  Max: 300
 
 Style/Encoding:
   Enabled: true

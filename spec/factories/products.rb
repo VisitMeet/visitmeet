@@ -26,7 +26,7 @@ FactoryGirl.define do
     price 1900
     category 3
     latitude 44.05396
-    longitude (-123.09273)
+    longitude(-123.09273)
     location ''
   end
 end
