@@ -2,15 +2,16 @@
 # code: app/models/product.rb
 # test: spec/models/product_spec.rb
 #
-# Migrations involved : last confirmed accurate : 20160417 kathyonu
+# Migrations involved : last confirmed accurate : 20160423 ko
 #
 # db/migrate/20160118081841_create_products.rb
 # db/migrate/20160203171325_add_categories_to_product.rb
 # db/migrate/20160204160517_add_latitude_longitude_location_to_products.rb
 # db/migrate/20160304162257_add_category_id_to_products.rb
+# db/migrate/20160304162459_create_categories.rb
 # db/migrate/20160304163929_remove_category_from_products.rb
 #
-# == Schema Information
+# == Schema Information : last confirmed accurate : 20160424 -ko
 #
 # Table name: products
 #
@@ -29,7 +30,7 @@
 #  image       :string
 #  image_file_name :string
 #  image_content_type :string
-#  image_full_size :integer
+#  image_file_size :integer
 #  image_updated_at :datetime
 #
 #  index on category_id, name: "index_products_on_category_id", using: :btree
@@ -40,7 +41,6 @@
 # add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
 # add_index "products", ["user_id"], name: "index_products_on_user_id", using: :btree
 #
-# TODO: 20160406 : further test product&category&category_id&name relationships
 include Warden::Test::Helpers
 Warden.test_mode!
 
@@ -78,8 +78,10 @@ RSpec.describe Product, type: :model, js: true do
   end
 
   it 'requires a category' do
+    pending 'the test passes in reverse of what it should be'
     expect(FactoryGirl.build(:product, category: '')).to be_valid
     # TODO: 20160406 : is schema change required ?
+    # TODO: 20160422 : schema still not changed
     # original test calls for invalid result, unenforced by schema.rb
     # expect(FactoryGirl.build(:product, category: '')).to be_invalid
   end

@@ -1,5 +1,10 @@
 # frozen_string_literal: true
-# app/controllers/admin/application_controller.rb
+# code: app/controllers/admin/application_controller.rb
+# test: spec/controllers/admin/application_controller_spec.rb
+#
+# See FAILING TESTS NOTE: spec/controllers/users_controller.rb
+# the above note concerns the NoMethodError: undefined method `authenticate!' for nil:NilClass
+#
 # All Administrate controllers inherit from this `Admin::ApplicationController`,
 # making it the ideal place to put authentication logic or other before_filters.
 #
@@ -18,27 +23,29 @@
 # This means any of your tests that hit .js URLs will now
 # fail CSRF protection unless they use xhr. Upgrade your tests
 # to be explicit about expecting XmlHttpRequests. Instead of
-# `post :create, format: :js`, switch to the explicit 
+# `post :create, format: :js`, switch to the explicit
 # `xhr :post, :create, format: :js`
 #
 module Admin
   # administer admins, products, users
   class ApplicationController < Administrate::ApplicationController
     include ActionController::Helpers
-    # commented out the before_action as it exists elsewhere as needed : 20160412ko
-    before_action :authenticate_admin!, except: ['/pages#about'] # note can be removed
+    # this line is here for testing purposes, thank you -ko
+    # http_basic_authenticate_with name: ENV.fetch("ADMIN_NAME"), password: ENV.fetch("ADMIN_PASSWORD")
+    # TODO: if we add pages, this next line will become unwieldy
+    before_action :authenticate_admin!, except: ['/pages#about']
     before_action :update_sanitized_params, if: :devise_controller?
     protect_from_forgery with: :exception
 
     # def authenticate_admin
-    # # TODO: Add authentication logic here.
-    # # see admin_controller? below
+    #  redirect_to '/', alert: 'Not authorized.' unless current_user && access_whitelist
     # end
 
-    # reference for next three methods
-    # also see admin_controller? method in app/controllers/application_controller.rb
+    # reference for the admin_controller? method : ????
+    # also see admin_controller? method in app/controllers/application_controller.rb : not there
+    # something may not be correct here. TODO: needs more tests : up for grabs : 20160430 -ko
     def admin_controller?
-      !devise_controller? and request.path =~ /^\/admin/
+      !devise_controller? && request.path =~ /^\/admin/
     end
     helper_method :admin_controller?
 
@@ -48,6 +55,10 @@ module Admin
       params[:per_page] || 20
     end
 
+    # Bishisht, these next three methods might not need to be here, 
+    # and or may be incorrect and need to be tweaked. I cannot say
+    # these methodes are tested : compare the four methods in this file:
+    # app/helpers/admin/application_helper.rb
     def resource_name
       :user
     end
@@ -107,6 +118,10 @@ module Admin
     end
 
     private
+
+    def access_whitelist
+      current_user.try(:admin?) || current_user.try(:door_super?)
+    end
 
     def update_sanitized_params
       devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:email, :password, :remember_me) }

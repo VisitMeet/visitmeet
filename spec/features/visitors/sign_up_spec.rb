@@ -1,4 +1,13 @@
 # frozen_string_literal: true
+# code: visitor sign up
+# test: spec/features/visitors/sign_up_spec.rb
+#
+# see NOTE ON : include Devise::TestHelpers at top of
+# # spec/features/users/sign_in_spec.rb
+# # include Devise::TestHelpers
+#
+# require 'pry'
+include Features::SessionHelpers
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Sign up
@@ -24,9 +33,9 @@ feature 'Sign Up', :devise, js: true do
     sign_up_with('test@example.com', 'please123', 'please123')
 
     @user = User.last
-    expect(page).to have_content "Welcome, #{@user.email}"
-    # txts = [I18n.t('devise.registrations.signed_up'), I18n.t('devise.registrations.signed_up_but_unconfirmed')]
-    # expect(page).to have_content(/.*#{txts[0]}.*|.*#{txts[1]}.*/)
+    # expect(page).to have_content "Welcome, #{@user.email}"
+    txts = [I18n.t('devise.registrations.signed_up'), I18n.t('devise.registrations.signed_up_but_unconfirmed')]
+    expect(page).to have_content(/.*#{txts[0]}.*|.*#{txts[1]}.*/)
   end
 
   # Scenario: Visitor cannot sign up with invalid email address
@@ -84,11 +93,10 @@ feature 'Sign Up', :devise, js: true do
   scenario 'visitor can sign up' do
     visit root_path
     expect(current_path).to eq '/'
-    # expect(page).to have_content 'Register'
-    expect(page).to have_link 'Register'
+    expect(page).to have_content 'Sign Up'
+    expect(page).to have_link 'Sign Up'
 
-    # visit '/users/sign_up'
-    click_link('Register')
+    click_link('Sign Up')
     expect(current_path).to eq '/users/sign_up'
     expect(page).to have_content 'Email'
     expect(page).to have_content 'Password'
@@ -102,9 +110,11 @@ feature 'Sign Up', :devise, js: true do
     expect(current_path).to eq '/'
 
     @user = User.last
-    expect(page).to have_content "Welcome, #{@user.email}"
+    # expect(page).to have_content "Welcome, #{@user.email}"
     # TODO: get these two working again
-    # expect(page).to have_content I18n.t 'devise.sessions.signed_in'
+    expect(page).to have_content I18n.t 'devise.registrations.signed_up'
+    # TODO: FactoryGirl confirms the user when created
+    # this means we have to write tests for the confirmation process
     # expect(page).to have_content 'A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.'
   end
 end

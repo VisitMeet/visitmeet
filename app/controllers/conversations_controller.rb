@@ -1,3 +1,14 @@
+# frozen_string_literal: true
+# code: app/controllers/conversations_controller.rb
+# test: spec/controllers/conversations_controller_spec.rb
+#
+# See FAILING TESTS NOTE: spec/controllers/users_controller_spec.rb
+#
+# These are Functional Tests for Rail Controllers testing the
+# various actions of a single controller. Controllers handle the
+# incoming web requests to your application and eventually respond
+# with a rendered view.
+#
 class ConversationsController < ApplicationController
   # get conversations for the current user
   def index
@@ -26,7 +37,7 @@ class ConversationsController < ApplicationController
 
   def create
     recipient = User.find(params[:user_id])
-    receipt = current_user.send_message(recipient, params[:body], params[:subject] )
+    receipt = current_user.send_message(recipient, params[:body], params[:subject])
     redirect_to conversations_path(receipt.conversation)
   end
 end

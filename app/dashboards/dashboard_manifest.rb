@@ -7,6 +7,9 @@ class DashboardManifest
   # These are all of the rails models that we found in your database
   # at the time you installed Administrate.
   #
+  # Bishisht, note above, and the addition of models since then.
+  # Do additional models now need to be added to the DASHBOARDS list below ?
+  #
   # To show or hide dashboards, add or remove the model name from this list.
   # Dashboards returned from this method must be Rails models for Administrate
   # to work correctly.

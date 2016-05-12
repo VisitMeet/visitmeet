@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "VisitMeet" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Visit &amp; Meet Your World Neighbors" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true, debug: true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': true, debug: true %>
+    <!-- % = javascript_include_tag 'https://js.stripe.com/v2/' % -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -23,6 +25,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <%= csrf_meta_tags %>
     <%= yield(:head) %>

@@ -2,7 +2,6 @@
 # app/controllers/socializations_controller.rb
 class SocializationsController < ApplicationController
   include ActionController::Helpers
-
   before_action :load_socializable
 
   def follow

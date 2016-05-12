@@ -33,6 +33,11 @@
 							Add to wishlist
 						</button>
 					</div>
+					<% if user_signed_in? %>
+                      <% if current_user.role? == 'admin' %>
+                        <%= link_to 'Edit', edit_product_path(@product) %> &#124;
+                      <% end %>
+                    <% end %>
 <%= link_to 'Back to Product page', products_path, 'data-no-turbolink': true, class: 'btn btn-primary' %>
 				</div>
 			</div>

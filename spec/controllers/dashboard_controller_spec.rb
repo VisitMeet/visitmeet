@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# spec/controllers/dashboard_controller_spec.rb
-# run command : git diff spec/controllers/dashboard_controller_spec.rb
+# code: app/controller/dashboard_controller_spec.rb
+# test: spec/controllers/dashboard_controller_spec.rb
+# note: be aware there are no dashboard routes, paths etc.
 include Warden::Test::Helpers
 Warden.test_mode!
 
@@ -14,6 +15,7 @@ RSpec.configure do
       @user = FactoryGirl.build(:user, email: 'dashboard@example.com')
       @user.role = 'admin'
       @user.save!
+      login_as @user
     end
 
     after(:each) do
@@ -22,20 +24,13 @@ RSpec.configure do
 
     it 'has the ADMIN constants' do
       pending 'need to learn how to initialize and test constants'
+      expect(@user.persisted?).to eq true
       # expect(DASHBOARDS).to be_an_array
       # expect(DASHBOARDS[:users]).to exist
       # expect(DASHBOARDS[:products]).to exist
       # expect(DASHBOARDS[:categories]).to exist
       # expect(ROOT_DASHBOARD).to be_an_array
       # expect(DASHBOARDS.first).to eq ROOT_DASHBOARD
-    end
-
-    it 'allows admin entrance to admin dasboard' do
-      expect(@user.role).to eq 'admin'
-      # get :admin
-      # need to learn how to initialize and test constants
-      # expect(ROOT_DASHBOARD = DASHBOARDS.first).to be true
-      # expect(current_url).to eq 'http://visitmeet.com/admin'
     end
   end
 end

@@ -1,23 +1,24 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <%= link_to "VisitMeet", root_path, class: "navbar-brand" %>
+<nav class='navbar navbar-inverse'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <%= link_to 'VisitMeet', root_path, class: 'navbar-brand' %>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <li><%= link_to "Products", products_path %></li>
-        <li><%= link_to "Team", visitors_team_url %></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-        <li><%= link_to "Messages", conversations_path %></li>
-        <li><%= link_to "Profile", users_profile_path %></li>
-        <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+    <ul class='nav navbar-nav'>
+      <li><%= link_to 'Products', products_path %></li>
+      <li><%= link_to 'Team', visitors_team_url %></li>
+    </ul>
+    <ul class='nav navbar-nav navbar-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to 'Messages', conversations_path %></li>
+        <li><%= link_to 'Profile', users_profile_path %></li>
+        <li><%= link_to 'Account Settings', edit_user_registration_path %></li>
         <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-        <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to('Login', new_user_session_path) %></li>
-        <% end %>
-      </ul>
-    </div>
-  </nav>
+      <% else %>
+        <li><%= link_to 'About', page_path('about') %></li>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+        <li><%= link_to 'Sign in with Github', user_omniauth_authorize_path(:github) %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

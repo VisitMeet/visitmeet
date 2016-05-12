@@ -12,13 +12,18 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  #
   # ALL GET REQUESTS HERE
-  get 'profile/index'
-  get 'users/profile'
-  get 'visitors/index'
-  get 'visitors/team'
+  # ref : http://edgeguides.rubyonrails.org/4_2_release_notes.html
+  get 'profile/index' # , controller: :profile, action: :index
+  get 'users/profile' # , controller: :users, action: :profile
+  get 'visitors/index', controller: :visitors, action: :index
+  get 'visitors/team', controller: :visitors, action: :team
   get 'pages/about' => 'high_voltage/pages#show', id: 'about'
   # get '/about' => 'high_voltage/pages#show', id: 'about'
+
+  # get '/login/oauth/authorize' # , controller: Users::OmniauthCallbacksController, action: :github
+  get '/login/oauth/authorize' # , controller: OmniauthCallbacksController, action: :github
 
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
@@ -28,21 +33,20 @@ Rails.application.routes.draw do
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
 
-  # ALL RESOURCE ROUTES HERE
-  resources :shopping_cart
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' },
+                     path_names: { sign_in: 'login', sign_out: 'logout' }
+
+  # ALL RESOURCE ROUTES HERE, below devise_for
+  resources :shopping_carts
+  resources :users
   resources :products
   resources :conversations do
     resources :messages
   end
 
-  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' },
-                     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-
   root to: 'welcome#index'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
+  # STOP REMOVING THIS, needed for rake-rails-update purposes, thank you.
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

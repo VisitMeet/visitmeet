@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+# code: config/initializers/wrap_parameters.rb
+# test: to be determined if needed at all
+#
 # Be sure to restart your server when you modify this file.
 
 # This file contains settings for ActionController::ParamsWrapper which

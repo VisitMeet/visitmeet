@@ -2,7 +2,7 @@
 # code: app/models/product.rb
 # tests: spec/models/product_spec.rb
 #
-# Migrations 
+# Migrations
 #
 # db/migrate/20160115121043_devise_create_users.rb
 # db/migrate/20160115121047_add_name_to_users.rb

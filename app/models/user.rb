@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 # code : app/models/user.rb
 # test : spec/models/user_spec.rb
-# schema data last verified accurate 2016041 kathyonu
+# schema data last verified accurate 20160424 -ko
 #
 # == Schema Information
 #
@@ -36,11 +36,19 @@
 #  invitations_count      :integer          default(0)
 #  provider               :string
 #  uid                    :string
+#
 class User < ActiveRecord::Base
   has_many :products, dependent: :destroy
   has_one :profile, dependent: :destroy
   enum role: [:admin, :user, :guide, :traveller]
   after_initialize :set_default_role, if: :new_record?
+
+  # ref : https://github.com/intridea/omniauth/wiki/FAQ
+  # User.connection
+  # skip_before_filter :verify_authenticity_token, only: :create
+  # causes error
+  # `method_missing': undefined method `skip_before_filter' for User \
+  # # (call 'User.connection' to establish a connection):Class (NoMethodError)
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -60,16 +68,22 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.info.email
-      # ref for change : http://www.rubydoc.info/github/plataformatec/devise/Devise.friendly_token
-      user.password = Devise.friendly_token(length = 20)
+      #
+      # ref for change :
+      # http://www.rubydoc.info/github/plataformatec/devise/Devise.friendly_token
+      length = 20
+      user.password = Devise.friendly_token(length)
       # user.password = Devise.friendly_token[0, 20]
+      #
       user.name = auth.info.name # user model has name
       # user.image = auth.info.image # users have no image.
       # # note.to.self : users rotating 'profile image' provided by ??
     end
   end
 
-  def mailboxer_email(object)
+  # def mailboxer_email(object) : bishisht updated to * : 20100608
+  # https://github.com/VisitMeet/visitmeet/commit/c2763ec442bbc06b7254de72f9c9d4359e490e3d
+  def mailboxer_email(*)
     nil
   end
 end

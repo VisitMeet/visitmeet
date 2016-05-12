@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 # code: app/controllers/application_controller.rb
 # test: spec/controllers/application_controller_spec.rb
+#
+# See FAILING TESTS NOTE: spec/controllers/users_controller_spec.rb
+#
 # These are Functional Tests for Rail Controllers testing the
 # various actions of a single controller. Controllers handle the
 # incoming web requests to your application and eventually respond
@@ -19,11 +22,12 @@
 # # This means any of your tests that hit .js URLs will now
 # # fail CSRF protection unless they use xhr. Upgrade your tests
 # # to be explicit about expecting XmlHttpRequests. Instead of
-# # `post :create, format: :js`, switch to the explicit 
+# # `post :create, format: :js`, switch to the explicit
 # # `xhr :post, :create, format: :js`
 #
 class ApplicationController < ActionController::Base
   include ActionController::Helpers
+  respond_to :json, :html
 
   # Set the language.
   before_action :set_locale

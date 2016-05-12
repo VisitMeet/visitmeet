@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-# spec/factories/categories.rb
+# code: spec/factories/categories.rb
+# test: spec/models/categories_spec.rb
 #
 # == Schema Information
 #

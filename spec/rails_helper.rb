@@ -108,6 +108,9 @@ RSpec.configure do |config|
   # ref: http://codecrate.com/2014/11/rspec-controllers-best-practices.html
   config.render_views
 
-  # config.assets.precompile += %w( geocomplete.js )
   # config.assets.precompile += %w( jquery.geocomplete.js )
+
+  # Translations test setup
+  # https://robots.thoughtbot.com/better-tests-through-internationalization
+  config.include AbstractController::Translation
 end

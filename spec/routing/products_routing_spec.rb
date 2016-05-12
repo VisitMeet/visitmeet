@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 # code: config/routes.rb
 # test: spec/routing/products_routing_spec.rb
-require 'pry'
 RSpec.configure do
-  include Devise::TestHelpers
-  include Features::SessionHelpers
   include Warden::Test::Helpers
 end
 Warden.test_mode!
+
 # Feature: Products routing
 #   As an administrator
 #   I want to test products and product routings
@@ -42,26 +40,19 @@ describe ProductsController, type: :routing do
       expect(page.current_path).to eq(product_path(product.id))
     end
 
-    it 'routes to products#index' do
-      expect(get('products#index')).to route_to('products#index')
+    it 'routes to admin/products#index' do
+      expect(get('admin/products#index')).to route_to('admin/products#index')
     end
 
     it 'routes to DashboardManifest::ROOT_DASHBOARD, action: :index admin_products/show/#index' do
-      user = FactoryGirl.create(:user, email: 'dashboard@example.com')
+      user = FactoryGirl.build(:user, email: 'dashboard@example.com')
       user.role = 'admin'
       user.save!
       expect(User.last.persisted?).to be true
       expect(User.first).not_to eq nil
       expect(User.first.role).to eq 'admin'
       expect(User.last).to eq User.first
-
-      get '/admin/users'
-      # visit admin_users_path # fails with nil
-      expect(current_path).to eq '/admin/users'
-      expect(page).to have_content 'dashboard@example.com'
-      # expect(page).to have_current_path(admin_users_path)
-      # expect(get(admin_users_path)).to route_to(controller: 'admin/users', action: 'index')
-      # expect(get(admin_products_path)).to route_to(controller: 'admin/products', action: 'index')
+      expect(get(admin_products_path)).to route_to(controller: 'admin/products', action: 'index')
     end
   end
 end

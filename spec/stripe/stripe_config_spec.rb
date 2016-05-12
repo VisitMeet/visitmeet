@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# code: to be listed when stripe is installed
+# test: spec/stripe/strpe_config_spec.rb
 describe 'Config Variables' do
   describe 'STRIPE_API_KEY' do
     # this tests env variables against config/secrets.yml which reads from your env variables $ env

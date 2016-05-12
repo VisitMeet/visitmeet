@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# spec/features/visitors/navigation_spec.rb
-require 'pry'
+# code: app/views/layouts/_navigation.html.erb
+# test: spec/features/visitors/navigation_spec.rb
+#
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Navigation links
@@ -39,7 +40,7 @@ feature 'Navigation links', :devise, js: true do
 
   scenario 'view navigation links on home page' do
     visit root_path
-    expect(current_path).to eq '/users/login'
+    expect(current_path).to eq '/'
     # expect(current_path).to eq '/welcome/index'
     expect(page).to have_link 'Login'
     within '.jumbotron h2 b' do
@@ -53,7 +54,6 @@ feature 'Navigation links', :devise, js: true do
   scenario 'users login page does not display Login link' do
     visit new_user_session_path
     expect(current_path).to eq '/users/login'
-    save_and_open_page
     expect(page).to have_link 'Sign up'
     expect(page).to have_link 'Login'
     expect(page).to have_content 'Login'

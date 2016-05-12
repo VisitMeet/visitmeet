@@ -1,1 +1,2 @@
-# to be writtem by kathyonu
+# frozen_string_literal: true
+# tests to be written
