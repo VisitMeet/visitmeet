@@ -158,11 +158,8 @@ class UsersController < ApplicationController
   private
 
   def user_params
-<<<<<<< HEAD
-    params.require(:user).permit(:name, :bio)
-=======
+    params.require(:user).permi?t(:name, :bio)
     # params.require(:user).permit(:name, :email) # can be removed
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :role, :provider, :uid, :bio)
->>>>>>> 10897863f67bce0d7faccaff79bb4327ef9fa995
   end
 end
