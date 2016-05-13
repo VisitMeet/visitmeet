@@ -111,6 +111,6 @@ Rails.application.configure do
   # Introduced Rails::Application.config_for to load a configuration
   #  for the current environment.
   # Rails.application.configure do
-  config.middleware.use ExceptionNotifier, config_for(:exception_notification)
+  # config.middleware.use ExceptionNotifier, config_for(:exception_notification)
   # end
 end
