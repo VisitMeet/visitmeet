@@ -7,8 +7,8 @@ Devise.setup do |config|
   # repair is to first set the key in local and heroku envrionments, then
   # change the `config.secret_key` line to this: New Note 20160419 : WAIT ..
   # config.secret_key = ENV['SECRET_KEY'] WAIT: SEE scope on LINE 35 config.omniauth
-  # config.secret_key = ENV['SECRET_KEY']
-  config.secret_key = '52dac4f72ad586f5ad66c3eb6b3456c1dbb6c597e3781c16613af1f386bfe4b1245a7583886675681c8ff9225bad2435998b6daa0acd655647afe43e7dd71bca'
+  config.secret_key = ENV['SECRET_KEY']
+  # config.secret_key = '52dac4f72ad586f5ad66c3eb6b3456c1dbb6c597e3781c16613af1f386bfe4b1245a7583886675681c8ff9225bad2435998b6daa0acd655647afe43e7dd71bca'
   config.mailer_sender = 'Bishisht Bhatta <bhattabishisht@gmail.com>'
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]
