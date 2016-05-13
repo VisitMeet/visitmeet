@@ -38,6 +38,11 @@ module Visitmeet
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    # precompile the assets.
+    # this line addeed by bishisht.
+    config.assets.precompile += %w(.jpg)
+
+
     config.encoding = 'utf-8'
 
     # Version of your assets, change this if you want to expire all your assets
