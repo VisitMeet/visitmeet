@@ -1,0 +1,2262 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+/* line 77, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+/* line 98, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 110, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 136, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 154, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 170, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 174, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 185, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 193, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 204, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 229, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 252, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 290, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+/* line 356, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 367, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 376, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 387, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 396, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 405, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 416, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 421, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+td,
+th {
+  padding: 0;
+}
+
+/* line 4, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/**
+ * selectize.css (v0.12.1)
+ * Copyright (c) 2013–2015 Brian Reavis & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ */
+/* line 17, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {
+  visibility: visible !important;
+  background: #f2f2f2 !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border: 0 none !important;
+  -webkit-box-shadow: inset 0 0 12px 4px #ffffff;
+  box-shadow: inset 0 0 12px 4px #ffffff;
+}
+
+/* line 25, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
+  content: '!';
+  visibility: hidden;
+}
+
+/* line 29, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-drag_drop .ui-sortable-helper {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* line 33, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown-header {
+  position: relative;
+  padding: 5px 8px;
+  border-bottom: 1px solid #d0d0d0;
+  background: #f8f8f8;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 42, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown-header-close {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  color: #303030;
+  opacity: 0.4;
+  margin-top: -12px;
+  line-height: 20px;
+  font-size: 20px !important;
+}
+
+/* line 52, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown-header-close:hover {
+  color: #000000;
+}
+
+/* line 55, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown.plugin-optgroup_columns .optgroup {
+  border-right: 1px solid #f2f2f2;
+  border-top: 0 none;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 63, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown.plugin-optgroup_columns .optgroup:last-child {
+  border-right: 0 none;
+}
+
+/* line 66, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown.plugin-optgroup_columns .optgroup:before {
+  display: none;
+}
+
+/* line 69, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown.plugin-optgroup_columns .optgroup-header {
+  border-top: 0 none;
+}
+
+/* line 72, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-remove_button [data-value] {
+  position: relative;
+  padding-right: 24px !important;
+}
+
+/* line 76, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-remove_button [data-value] .remove {
+  z-index: 1;
+  /* fixes ie bug (see #392) */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 17px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: inherit;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 2px 0 0 0;
+  border-left: 1px solid #d0d0d0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 100, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-remove_button [data-value] .remove:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* line 103, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-remove_button [data-value].active .remove {
+  border-left-color: #cacaca;
+}
+
+/* line 106, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-remove_button .disabled [data-value] .remove:hover {
+  background: none;
+}
+
+/* line 109, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.plugin-remove_button .disabled [data-value] .remove {
+  border-left-color: #ffffff;
+}
+
+/* line 112, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control {
+  position: relative;
+}
+
+/* line 115, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  color: #303030;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-font-smoothing: inherit;
+}
+
+/* line 124, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+  background: #ffffff;
+  cursor: text;
+  display: inline-block;
+}
+
+/* line 130, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input {
+  border: 1px solid #d0d0d0;
+  padding: 8px 8px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 147, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.multi .selectize-input.has-items {
+  padding: 6px 8px 3px;
+}
+
+/* line 150, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input.full {
+  background-color: #ffffff;
+}
+
+/* line 153, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input.disabled,
+.selectize-input.disabled * {
+  cursor: default !important;
+}
+
+/* line 157, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input.focus {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* line 161, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input.dropdown-active {
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 166, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input > * {
+  vertical-align: baseline;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 173, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.multi .selectize-input > div {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 2px 6px;
+  background: #f2f2f2;
+  color: #303030;
+  border: 0 solid #d0d0d0;
+}
+
+/* line 181, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.multi .selectize-input > div.active {
+  background: #e8e8e8;
+  color: #303030;
+  border: 0 solid #cacaca;
+}
+
+/* line 186, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.multi .selectize-input.disabled > div,
+.selectize-control.multi .selectize-input.disabled > div.active {
+  color: #7d7d7d;
+  background: #ffffff;
+  border: 0 solid #ffffff;
+}
+
+/* line 192, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input > input {
+  display: inline-block !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  margin: 0 2px 0 0 !important;
+  text-indent: 0 !important;
+  border: 0 none !important;
+  background: none !important;
+  line-height: inherit !important;
+  -webkit-user-select: auto !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* line 207, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input > input::-ms-clear {
+  display: none;
+}
+
+/* line 210, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input > input:focus {
+  outline: none !important;
+}
+
+/* line 213, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input::after {
+  content: ' ';
+  display: block;
+  clear: left;
+}
+
+/* line 218, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-input.dropdown-active::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: #f0f0f0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 228, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown {
+  position: absolute;
+  z-index: 10;
+  border: 1px solid #d0d0d0;
+  background: #ffffff;
+  margin: -1px 0 0 0;
+  border-top: 0 none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 244, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown [data-selectable] {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* line 248, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown [data-selectable] .highlight {
+  background: rgba(125, 168, 208, 0.2);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* line 254, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown [data-selectable],
+.selectize-dropdown .optgroup-header {
+  padding: 5px 8px;
+}
+
+/* line 258, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+  border-top: 0 none;
+}
+
+/* line 261, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown .optgroup-header {
+  color: #303030;
+  background: #ffffff;
+  cursor: default;
+}
+
+/* line 266, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown .active {
+  background-color: #f5fafd;
+  color: #495c68;
+}
+
+/* line 270, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown .active.create {
+  color: #495c68;
+}
+
+/* line 273, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown .create {
+  color: rgba(48, 48, 48, 0.5);
+}
+
+/* line 276, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-dropdown-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px;
+}
+
+/* line 281, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.single .selectize-input,
+.selectize-control.single .selectize-input input {
+  cursor: pointer;
+}
+
+/* line 285, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.single .selectize-input.input-active,
+.selectize-control.single .selectize-input.input-active input {
+  cursor: text;
+}
+
+/* line 289, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.single .selectize-input:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #808080 transparent transparent transparent;
+}
+
+/* line 302, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.single .selectize-input.dropdown-active:after {
+  margin-top: -4px;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #808080 transparent;
+}
+
+/* line 307, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.rtl.single .selectize-input:after {
+  left: 15px;
+  right: auto;
+}
+
+/* line 311, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control.rtl .selectize-input > input {
+  margin: 0 4px 0 -2px !important;
+}
+
+/* line 314, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/selectize-rails-0.12.1/vendor/assets/stylesheets/selectize.css */
+.selectize-control .selectize-input.disabled {
+  opacity: 0.5;
+  background-color: #fafafa;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("/assets/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("/assets/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/assets/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+/* line 25, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 37, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-calendar:before {
+  content: "\e109";
+}
+
+/* line 38, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-chevron-down:before {
+  content: "\e114";
+}
+
+/* line 39, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-chevron-left:before {
+  content: "\e079";
+}
+
+/* line 40, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}
+
+/* line 41, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-chevron-up:before {
+  content: "\e113";
+}
+
+/* line 42, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-remove:before {
+  content: "\e014";
+}
+
+/* line 43, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-screenshot:before {
+  content: "\e087";
+}
+
+/* line 44, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-time:before {
+  content: "\e023";
+}
+
+/* line 45, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_glyphicons.scss */
+.glyphicon-trash:before {
+  content: "\e020";
+}
+
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_tables.scss */
+.table-condensed > thead > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > th,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > th,
+.table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+
+/* line 10, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_component-animations.scss */
+.collapse {
+  display: none;
+}
+/* line 13, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_component-animations.scss */
+.collapse.in {
+  display: block;
+}
+
+/* line 18, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_component-animations.scss */
+tr.collapse.in {
+  display: table-row;
+}
+
+/* line 20, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_component-animations.scss */
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+/* line 22, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_component-animations.scss */
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .35s ease;
+}
+
+/* line 6, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+/* line 29, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+/* line 35, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+/* line 40, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+
+/* line 53, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+
+/* line 63, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #428bca;
+}
+
+/* line 78, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  color: #777777;
+}
+
+/* line 86, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+
+/* line 97, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker/_dropdowns.scss */
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* line 16, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.pull-right {
+  float: right !important;
+}
+
+/*!
+ * Datetimepicker for Bootstrap 3
+ * version : 4.15.35
+ * https://github.com/Eonasdan/bootstrap-datetimepicker/
+ */
+/* line 26, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget {
+  list-style: none;
+}
+
+/* line 29, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  margin: 2px 0;
+  padding: 4px;
+  width: 19em;
+}
+
+@media (min-width: 768px) {
+  /* line 35, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+  .bootstrap-datetimepicker-widget.dropdown-menu.timepicker-sbs {
+    width: 38em;
+  }
+}
+@media (min-width: 992px) {
+  /* line 40, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+  .bootstrap-datetimepicker-widget.dropdown-menu.timepicker-sbs {
+    width: 38em;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 45, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+  .bootstrap-datetimepicker-widget.dropdown-menu.timepicker-sbs {
+    width: 38em;
+  }
+}
+/* line 49, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu:before,
+.bootstrap-datetimepicker-widget.dropdown-menu:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+}
+
+/* line 55, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #cccccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  top: -7px;
+  left: 7px;
+}
+
+/* line 63, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  top: -6px;
+  left: 8px;
+}
+
+/* line 70, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu.top:before {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #cccccc;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  bottom: -7px;
+  left: 6px;
+}
+
+/* line 78, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu.top:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
+  bottom: -6px;
+  left: 7px;
+}
+
+/* line 85, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu.pull-right:before {
+  left: auto;
+  right: 6px;
+}
+
+/* line 89, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.dropdown-menu.pull-right:after {
+  left: auto;
+  right: 7px;
+}
+
+/* line 93, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .list-unstyled {
+  margin: 0;
+}
+
+/* line 96, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget a[data-action] {
+  padding: 6px 0;
+}
+
+/* line 99, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget a[data-action]:active {
+  box-shadow: none;
+}
+
+/* line 102, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .timepicker-hour,
+.bootstrap-datetimepicker-widget .timepicker-minute,
+.bootstrap-datetimepicker-widget .timepicker-second {
+  width: 54px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* line 110, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget button[data-action] {
+  padding: 6px;
+}
+
+/* line 113, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="incrementHours"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Increment Hours";
+}
+
+/* line 124, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="incrementMinutes"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Increment Minutes";
+}
+
+/* line 135, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="decrementHours"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Decrement Hours";
+}
+
+/* line 146, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="decrementMinutes"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Decrement Minutes";
+}
+
+/* line 157, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="showHours"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Show Hours";
+}
+
+/* line 168, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="showMinutes"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Show Minutes";
+}
+
+/* line 179, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="togglePeriod"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Toggle AM/PM";
+}
+
+/* line 190, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="clear"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Clear the picker";
+}
+
+/* line 201, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .btn[data-action="today"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Set the date to today";
+}
+
+/* line 212, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .picker-switch {
+  text-align: center;
+}
+
+/* line 215, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .picker-switch::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Toggle Date and Time Screens";
+}
+
+/* line 226, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .picker-switch td {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: auto;
+  line-height: inherit;
+}
+
+/* line 233, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .picker-switch td span {
+  line-height: 2.5;
+  height: 2.5em;
+  width: 100%;
+}
+
+/* line 238, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table {
+  width: 100%;
+  margin: 0;
+}
+
+/* line 242, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td,
+.bootstrap-datetimepicker-widget table th {
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* line 247, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table th {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+/* line 252, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table th.picker-switch {
+  width: 145px;
+}
+
+/* line 255, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table th.disabled,
+.bootstrap-datetimepicker-widget table th.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+/* line 261, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table th.prev::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Previous Month";
+}
+
+/* line 272, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table th.next::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Next Month";
+}
+
+/* line 283, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table thead tr:first-child th {
+  cursor: pointer;
+}
+
+/* line 286, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+  background: #eeeeee;
+}
+
+/* line 289, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td {
+  height: 54px;
+  line-height: 54px;
+  white-space: normal;
+  width: 54px;
+}
+
+/* line 295, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.cw {
+  font-size: .8em;
+  height: 20px;
+  line-height: 20px;
+  color: #777777;
+}
+
+/* line 301, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.day {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+/* line 306, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.day:hover,
+.bootstrap-datetimepicker-widget table td.hour:hover,
+.bootstrap-datetimepicker-widget table td.minute:hover,
+.bootstrap-datetimepicker-widget table td.second:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+/* line 313, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.old,
+.bootstrap-datetimepicker-widget table td.new {
+  color: #777777;
+}
+
+/* line 317, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.today {
+  position: relative;
+}
+
+/* line 320, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.today:before {
+  content: '';
+  display: inline-block;
+  border: solid transparent;
+  border-width: 0 0 7px 7px;
+  border-bottom-color: #337ab7;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+/* line 331, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background-color: #337ab7;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 337, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.active.today:before {
+  border-bottom-color: #fff;
+}
+
+/* line 340, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td.disabled,
+.bootstrap-datetimepicker-widget table td.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+/* line 346, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td span {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  line-height: 54px;
+  margin: 2px 1.5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* line 355, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td span:hover {
+  background: #eeeeee;
+}
+
+/* line 358, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td span.active {
+  background-color: #337ab7;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 363, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td span.old {
+  color: #777777;
+}
+
+/* line 366, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget table td span.disabled,
+.bootstrap-datetimepicker-widget table td span.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+/* line 372, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.usetwentyfour td.hour {
+  height: 27px;
+  line-height: 27px;
+}
+
+/* line 376, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget.wider {
+  width: 21em;
+}
+
+/* line 379, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.bootstrap-datetimepicker-widget .datepicker-decades .decade {
+  line-height: 1.8em !important;
+}
+
+/* line 382, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.input-group.date .input-group-addon {
+  cursor: pointer;
+}
+
+/* line 385, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/datetime_picker_rails-0.0.7/app/assets/stylesheets/datetime_picker.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Bitters 0.10.0
+ * http://bitters.bourbon.io
+ * Copyright 2013–2014 thoughtbot, inc.
+ * MIT License */
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/extends/_button.scss */
+button,
+input[type="submit"],
+.button {
+  -webkit-font-smoothing: antialiased;
+  background-color: #2a94d6;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  transition: background-color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 14, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/extends/_button.scss */
+button:hover,
+input[type="submit"]:hover,
+.button:hover {
+  background-color: #2685c1;
+  color: white;
+}
+/* line 19, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/extends/_button.scss */
+button:disabled,
+input[type="submit"]:disabled,
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #293f54;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 21, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+h1 {
+  font-size: 2.25em;
+}
+
+/* line 25, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 29, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 33, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 37, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 41, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 45, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 49, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+a {
+  color: #2a94d6;
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+/* line 54, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+a:hover {
+  color: #2685c1;
+}
+
+/* line 59, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #dfe0e1;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 67, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 73, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+blockquote {
+  border-left: 2px solid #dfe0e1;
+  color: #426687;
+  margin: 1.5em 0;
+  padding-left: 0.75em;
+}
+
+/* line 80, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+cite {
+  color: #537faa;
+  font-style: italic;
+}
+/* line 84, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_typography.scss */
+cite:before {
+  content: "\2014 \00A0";
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+fieldset {
+  background: #f9fafa;
+  border: 1px solid #dfe0e1;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em;
+}
+
+/* line 8, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+}
+
+/* line 16, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em;
+}
+/* line 20, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+label.required:after {
+  content: "*";
+}
+/* line 24, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 29, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+textarea,
+[type="color"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"],
+select {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #dfe0e1;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color;
+  width: 100%;
+}
+/* line 44, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+textarea:hover,
+[type="color"]:hover, [type="date"]:hover, [type="datetime"]:hover, [type="datetime-local"]:hover, [type="email"]:hover, [type="month"]:hover, [type="number"]:hover, [type="password"]:hover, [type="search"]:hover, [type="tel"]:hover, [type="text"]:hover, [type="time"]:hover, [type="url"]:hover, [type="week"]:hover,
+select:hover {
+  border-color: #c5c7c8;
+}
+/* line 48, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+textarea:focus,
+[type="color"]:focus, [type="date"]:focus, [type="datetime"]:focus, [type="datetime-local"]:focus, [type="email"]:focus, [type="month"]:focus, [type="number"]:focus, [type="password"]:focus, [type="search"]:focus, [type="tel"]:focus, [type="text"]:focus, [type="time"]:focus, [type="url"]:focus, [type="week"]:focus,
+select:focus {
+  border-color: #2a94d6;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(37, 133, 193, 0.7);
+  outline: none;
+}
+
+/* line 55, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 59, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+input[type="search"] {
+  appearance: none;
+}
+
+/* line 63, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 69, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 74, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_forms.scss */
+select {
+  appearance: none;
+  background: url(/assets/administrate/dropdown.svg) no-repeat 97% 50%/10px;
+  margin-bottom: 1.5em;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_tables.scss */
+table {
+  border-collapse: separate;
+  width: 100%;
+}
+
+/* line 6, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_tables.scss */
+th,
+td {
+  padding: 0.75em;
+  vertical-align: middle;
+}
+
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_tables.scss */
+th {
+  border-bottom: 1px solid #cfd8dc;
+  padding-top: 0;
+  text-align: left;
+}
+
+/* line 18, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_tables.scss */
+td {
+  border-bottom: 1px solid #dfe0e1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_lists.scss */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 8, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_lists.scss */
+dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+
+/* line 17, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_lists.scss */
+dd {
+  margin: 0;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/base/_buttons.scss */
+button,
+input[type="submit"],
+.button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/_layout.scss */
+html,
+body,
+.main {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* line 8, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/_layout.scss */
+body {
+  background-color: #f6f7f7;
+}
+
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/_layout.scss */
+.main {
+  align-items: stretch;
+  display: flex;
+  margin: 0 auto;
+  max-width: 100em;
+}
+/* line 20, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.main::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 20, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/_layout.scss */
+.content {
+  padding: 1.5em;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_attributes.scss */
+.attribute-label {
+  color: #7b808c;
+  font-size: 0.875em;
+  font-weight: 400;
+  letter-spacing: 0.0357em;
+  position: relative;
+  text-transform: uppercase;
+  float: left;
+  display: block;
+  margin-right: 2.74613572%;
+  width: 14.37822023%;
+  margin-top: 0;
+  text-align: right;
+  clear: left;
+}
+/* line 89, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.attribute-label:last-child {
+  margin-right: 0;
+}
+
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_attributes.scss */
+.preserve-whitespace {
+  white-space: pre;
+  word-wrap: break-word;
+}
+
+/* line 14, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_attributes.scss */
+.attribute-data {
+  float: left;
+  display: block;
+  margin-right: 2.74613572%;
+  width: 82.87564405%;
+  margin-right: 0;
+  margin-bottom: 1.5em;
+}
+/* line 89, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.attribute-data:last-child {
+  margin-right: 0;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label {
+  color: #7b808c;
+  font-size: 0.875em;
+  font-weight: 400;
+  letter-spacing: 0.0357em;
+  position: relative;
+  text-transform: uppercase;
+}
+/* line 4, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label a {
+  width: 100%;
+  color: inherit;
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 11, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label--asc, .cell-label--desc {
+  font-weight: bold;
+}
+/* line 16, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label__sort-indicator {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+}
+/* line 23, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label__sort-indicator--desc {
+  transform: rotate(180deg);
+}
+/* line 27, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label__sort-indicator svg {
+  height: 100%;
+  width: 1em;
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  fill: #7b808c;
+}
+/* line 36, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label:hover a {
+  color: #2a94d6;
+}
+/* line 40, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-label:hover svg {
+  fill: #2a94d6;
+  transform: rotate(180deg);
+}
+
+/* line 47, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_cells.scss */
+.cell-data--number,
+.cell-label--number {
+  text-align: right;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_container.scss */
+.container {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(41, 63, 84, 0.24), 0 2px 6px rgba(41, 63, 84, 0.12);
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_date_time_picker.scss */
+.form-field {
+  position: relative;
+}
+
+/* line 2, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--alert {
+  background-color: #f0cd66;
+  border-radius: 3px;
+  color: #211903;
+  margin-bottom: 1.5em;
+  padding: 0.75em;
+}
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--alert a {
+  color: black;
+}
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--alert a:focus, .flash--alert a:hover {
+  color: black;
+}
+
+/* line 2, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--error {
+  background-color: #c77067;
+  border-radius: 3px;
+  color: black;
+  margin-bottom: 1.5em;
+  padding: 0.75em;
+}
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--error a {
+  color: black;
+}
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--error a:focus, .flash--error a:hover {
+  color: black;
+}
+
+/* line 2, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--notice {
+  background-color: #d5eaf7;
+  border-radius: 3px;
+  color: #195981;
+  margin-bottom: 1.5em;
+  padding: 0.75em;
+}
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--notice a {
+  color: #113c56;
+}
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--notice a:focus, .flash--notice a:hover {
+  color: #000101;
+}
+
+/* line 2, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--success {
+  background-color: #4ab471;
+  border-radius: 3px;
+  color: black;
+  margin-bottom: 1.5em;
+  padding: 0.75em;
+}
+/* line 9, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--success a {
+  color: black;
+}
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_flashes.scss */
+.flash--success a:focus, .flash--success a:hover {
+  color: black;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_form.scss */
+.form-actions {
+  margin-left: 17.12435595%;
+}
+
+/* line 5, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_form.scss */
+.form-field {
+  width: 100%;
+  align-items: baseline;
+  width: 100%;
+}
+/* line 20, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/bourbon-4.2.7/app/assets/stylesheets/addons/_clearfix.scss */
+.form-field::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 11, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_form.scss */
+.form-field label {
+  color: #7b808c;
+  font-size: 0.875em;
+  font-weight: 400;
+  letter-spacing: 0.0357em;
+  position: relative;
+  text-transform: uppercase;
+  float: left;
+  display: block;
+  margin-right: 2.74613572%;
+  width: 14.37822023%;
+  padding: 0.5em 0;
+  text-align: right;
+}
+/* line 89, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.form-field label:last-child {
+  margin-right: 0;
+}
+/* line 18, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_form.scss */
+.form-field [type="color"], .form-field [type="date"], .form-field [type="datetime"], .form-field [type="datetime-local"], .form-field [type="email"], .form-field [type="month"], .form-field [type="number"], .form-field [type="password"], .form-field [type="search"], .form-field [type="tel"], .form-field [type="text"], .form-field [type="time"], .form-field [type="url"], .form-field [type="week"],
+.form-field select,
+.form-field textarea,
+.form-field .selectize-control {
+  background-color: #fff;
+  margin-bottom: 1.5em;
+}
+/* line 26, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_form.scss */
+.form-field input,
+.form-field select,
+.form-field .selectize-control {
+  float: left;
+  display: block;
+  margin-right: 2.74613572%;
+  width: 31.50257619%;
+}
+/* line 89, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.form-field input:last-child,
+.form-field select:last-child,
+.form-field .selectize-control:last-child {
+  margin-right: 0;
+}
+/* line 32, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_form.scss */
+.form-field textarea {
+  float: left;
+  display: block;
+  margin-right: 2.74613572%;
+  width: 48.62693214%;
+}
+/* line 89, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+.form-field textarea:last-child {
+  margin-right: 0;
+}
+/* line 36, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_form.scss */
+.form-field [type="checkbox"],
+.form-field [type="radio"] {
+  margin: 0.75em 0 2em;
+  width: auto;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_header.scss */
+.header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+/* line 7, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_header.scss */
+.header-heading {
+  margin-top: 0;
+}
+/* line 11, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_header.scss */
+.header-actions {
+  margin-left: 1.5em;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_pagination.scss */
+.pagination {
+  margin: 1.5em 0;
+  text-align: center;
+}
+/* line 5, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_pagination.scss */
+.pagination .first,
+.pagination .prev,
+.pagination .page,
+.pagination .next,
+.pagination .last {
+  margin: 0.75em;
+}
+/* line 13, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_pagination.scss */
+.pagination .current {
+  font-weight: bold;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search {
+  align-items: center;
+  border-bottom: 1px solid #dfe0e1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 1.5em;
+  position: relative;
+  width: 100%;
+}
+
+/* line 13, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__icon svg {
+  height: 1em;
+  width: 1em;
+  fill: #7b808c;
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 20, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__icon--active svg {
+  fill: #2a94d6;
+}
+
+/* line 26, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__input {
+  appearance: none;
+  border: none;
+  box-shadow: none;
+  flex-grow: 1;
+  margin: 0;
+  padding: 1.125em 0.75em;
+}
+/* line 34, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__input:focus {
+  box-shadow: none;
+}
+
+/* line 39, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__hint {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  color: #7b808c;
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 45, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__hint svg {
+  height: 100%;
+  width: 100%;
+}
+/* line 49, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__hint path,
+.search__hint rect {
+  fill: #2a94d6;
+}
+/* line 54, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_search.scss */
+.search__hint--active {
+  opacity: 1;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_sidebar.scss */
+.sidebar {
+  flex: 0 0 auto;
+  max-width: 12em;
+  overflow-y: auto;
+  padding: 0 1.5em;
+}
+/* line 7, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_sidebar.scss */
+.sidebar__link {
+  color: #293f54;
+  display: block;
+  padding-top: 1.5em;
+  transition: color 0.05s linear;
+}
+/* line 13, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_sidebar.scss */
+.sidebar__link:last-child {
+  padding-bottom: 1.5em;
+}
+/* line 17, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_sidebar.scss */
+.sidebar__link--active {
+  color: #2a94d6;
+  font-weight: 900;
+}
+/* line 22, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_sidebar.scss */
+.sidebar__link:hover {
+  color: #2a94d6;
+}
+
+/* line 1, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_table.scss */
+.table__row {
+  background-color: #fff;
+  border-left: 2px solid transparent;
+  transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 6, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_table.scss */
+.table__row:hover {
+  background-color: #f6f7f7;
+  border-left-color: #2a94d6;
+  cursor: pointer;
+}
+/* line 12, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_table.scss */
+.table__row img {
+  max-height: 2em;
+}
+
+/* line 17, /home/bishisht/.rvm/gems/ruby-2.3.0@Rails4.2_visitmeet/bundler/gems/administrate-b7c78ed53c62/app/assets/stylesheets/administrate/components/_table.scss */
+.table__action--destroy {
+  color: #c77067;
+}
