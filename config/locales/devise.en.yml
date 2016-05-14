@@ -3,28 +3,28 @@
 en:
   devise:
     confirmations:
-      confirmed: "Your email address has been successfully confirmed."
+      confirmed: "Your account has been successfully confirmed. You can now login to VisitMeet."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
       already_authenticated: "You are already signed in."
-      inactive: "Your account is not activated yet."
+      inactive: "Your account is not activated yet. Please activate your account first."
       invalid: "Invalid %{authentication_keys} or password."
-      locked: "Your account is locked."
-      last_attempt: "You have one more attempt before your account is locked."
+      locked: "Your account is locked. Please contact VisitMeet team."
+      last_attempt: "You have one more attempt before your account is locked. Sorry."
       not_found_in_database: "Invalid %{authentication_keys} or password."
-      timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your email address before continuing."
+      timeout: "Sorry, dear user. Your session expired. Please sign in again to continue."
+      unauthenticated: "Dear user, You need to sign in or sign up before continuing."
+      unconfirmed: "Dear user. You have to confirm your email address before continuing on VisitMeet."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "Instructions on how to confirm your account."
       reset_password_instructions:
         subject: "Reset password instructions"
       unlock_instructions:
         subject: "Unlock instructions"
       password_change:
-        subject: "Password Changed"
+        subject: "Your Password have been changed."
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -43,9 +43,9 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Your account has been updated successfully."
     sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
-      already_signed_out: "Signed out successfully."
+      signed_in: "Welcome. You are now signed in."
+      signed_out: "Come back soon! You are now signed out successfully."
+      already_signed_out: "Already signed out successfully."
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
