@@ -2,3 +2,5 @@
 --format documentation
 --require spec_helper
 --require rails_helper
+--format html
+--out rspec_results.html
