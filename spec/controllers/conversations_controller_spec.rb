@@ -66,5 +66,15 @@ describe ConversationsController, :devise, js: true do
       # #                           | DELETE |  /conversations/:id(.:format)                  | conversations#destroy
       #
     end
+
+    context 'user have no existing conversation with another user' do
+      it 'can create new conversation' do
+      end
+    end
+
+    context 'user already have a conversation with another user' do
+      it 'add new conversation to message' do
+      end
+    end
   end
 end
