@@ -33,10 +33,10 @@ module ApplicationHelper
   # TODO: these methods needs to be tested : 20160425
   def resource_name
     @resource_name ||= if admin_controller?
-      :admin_user
-    else
-      :user
-    end
+                         :admin_user
+                       else
+                         :user
+                       end
   end
 
   def resource

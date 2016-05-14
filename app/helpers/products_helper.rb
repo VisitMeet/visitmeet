@@ -17,6 +17,6 @@
 #  longitude   :float
 #  location    :string
 #  category_id :integer
-#
+# Product helpers here.
 module ProductsHelper
 end

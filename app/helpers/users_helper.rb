@@ -33,6 +33,6 @@
 #  provider               :string
 #  uid                    :string
 #
-
+# Helpers for User Controller/View
 module UsersHelper
 end

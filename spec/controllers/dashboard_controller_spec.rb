@@ -32,5 +32,9 @@ RSpec.configure do
       # expect(ROOT_DASHBOARD).to be_an_array
       # expect(DASHBOARDS.first).to eq ROOT_DASHBOARD
     end
+
+    it 'shows the different models' do
+      pending 'its essentially a crud for models.'
+    end
   end
 end
