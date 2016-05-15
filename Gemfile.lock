@@ -145,6 +145,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.0.1)
     devise_invitable (1.6.0)
       actionmailer (>= 3.2.6)
       devise (>= 3.2.0)
@@ -426,6 +427,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_cleaner
   devise
+  devise-i18n
   devise_invitable
   factory_girl_rails
   faker
@@ -467,5 +469,8 @@ DEPENDENCIES
   underscore-rails
   web-console (~> 2.0)
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.11.2
+   1.12.3

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
+ruby '2.3.1'
 gem 'rails', "4.2.6"
 gem 'bcrypt' # http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html'
 gem 'jbuilder', "~> 2.3", ">= 2.3.1" # Create JSON structures via a Builder-style DSL
@@ -69,6 +69,7 @@ gem 'annotate'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise_invitable'
+gem 'devise-i18n'
 gem 'figaro'
 gem 'high_voltage'
 # gem 'omniauth-github'
