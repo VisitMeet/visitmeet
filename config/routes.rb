@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
 
   # ALL RESOURCE ROUTES HERE
-  resources :shopping_cart
+  resources :shopping_carts
   resources :products
   resources :conversations do
     resources :messages
