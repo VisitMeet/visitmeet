@@ -44,7 +44,7 @@
                     <%= link_to 'Show Details', product_path(product) %>
                   </div>
                   <div class="col-xs-12 col-md-6">
-                    <%= link_to 'Add to cart', shopping_carts_path(product_id: product.id), class: "btn btn-success" %>
+                    <%= link_to 'Add to cart', shopping_carts_path(product_id: product.id), method: :post, class: "btn btn-success" %>
                   </div>
                 </div>
               </div>
