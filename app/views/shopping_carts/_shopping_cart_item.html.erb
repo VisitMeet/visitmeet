@@ -1,6 +1,25 @@
-<div>
+<div class="row product-row">
   <% if shopping_cart_item.item %>
-    <div><%= shopping_cart_item.item.title %></div>
-    <div><%= shopping_cart_item.item.price %></div>
- <% end %>
-</div>
+
+		<!-- Products-->
+		<div class="col-xs-12 col-sm-7">
+			<div class="media">
+				<a class="pull-left" href="#"><img class="img-responsive" src="https://cdn.awardchoice.com/assets/ac/RC/SM/WyBwviPGnlXgJLFReMcE.jpg"></a>
+				<div class="media-body">
+					<h4 class="media-heading"><%= shopping_cart_item.item.title %></h4>
+					<p class="text-muted">18 inch ringed potato shape freshwater pearl necklace has secure lobster claw.  Matching 7 inch stretch bracelet and fish hook style drop earrings  complete the set.  Rhodium finish.  ANC331</p>
+				</div>
+			</div>		
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<b>Quanity:</b> 2
+          <br>
+			<b>Total:</b> <%= shopping_cart_item.item.price %>
+		</div>
+		<div class="col-xs-12 col-sm-2">
+			<div class="btn-group" role="group" aria-label="..." style="margin-top:10px;">
+				<button type="button" class="btn btn-default btn-danger"><span class="fa fa-close"></span>&nbsp;Remove</button>
+			</div>
+		</div>
+	<% end %>
+	</div>

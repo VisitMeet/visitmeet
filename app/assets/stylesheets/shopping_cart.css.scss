@@ -1,0 +1,98 @@
+/* CSS used here will be applied after bootstrap.css *//* CSS used here will be applied after bootstrap.css */
+.menu
+{
+  background-color:#274A77;
+  margin-right:-22px;
+  height:50px;
+  padding-top:3px
+}
+.header
+{
+  margin-left:0px;
+  margin-right:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.navbar
+{
+  display:block;
+
+  
+}
+
+.product-list {
+    margin-top: 25px;
+}
+
+ .product-list .product {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    min-height: 300px;
+}
+  .product-list .product .product-info {
+    min-height: 220px;
+}
+.product-info button
+{
+  border:0;
+  background:none;
+}
+.navbar-nav>li>a 
+{
+  color:#fff;
+  margin-top:-2px;
+  margin-bottom:0px;
+  padding-bottom:14px;
+  padding-top:14px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus
+{
+  background-color:#FFFFFF;
+  color:#274A77;
+  font-weight:bold;
+}
+.navbar-default .navbar-nav>li>a
+{
+  color:#FFF;
+}
+.navbar-toggle, .navbar-toggle:hover
+{
+  margin-right:35px;
+
+  
+}
+.navbar-default .navbar-toggle,.navbar-default .navbar-toggle:hover
+{
+    background:none;
+  border:0px;
+}
+.navbar-default .navbar-toggle .icon-bar
+{
+  background-color:#FFF;
+}
+.navbar-default .navbar-toggle .icon-bar:hover
+{
+ background-color:#CCC;
+  border-bottom:1px solid #FFF;
+}
+@media(max-width:991px){
+.categories-menu
+{
+  border-top:solid 1px #EEE;
+  margin-bottom:10px;
+    padding:10px;
+    padding-right:14px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+}
+
+.product-row
+{
+  border-bottom:2px dashed #DEDEDE;padding-bottom:10px;
+  padding-top:10px;
+}
