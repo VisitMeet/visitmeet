@@ -81,6 +81,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  # method found in config/initializers/mailboxer.rb
+  # config.email_method = :mailboxer_email
   def mailboxer_email(*)
     nil
   end
