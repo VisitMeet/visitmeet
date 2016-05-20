@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 # code: config/initializers/mailboxer.rb
 # test: spec/config/ : assigned kathyonu : 20160416
+# refs: mailboxer gem
 Mailboxer.setup do |config|
   # Configures if your application uses or not email sending for Notifications and Messages
   config.uses_emails = true
@@ -10,6 +11,7 @@ Mailboxer.setup do |config|
   config.default_from = 'no-reply@mailboxer.com'
 
   # Configures the methods needed by mailboxer
+  # Used in app/models/user.rb
   config.email_method = :mailboxer_email
   config.name_method = :name
 
