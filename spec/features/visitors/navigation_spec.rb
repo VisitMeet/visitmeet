@@ -2,6 +2,7 @@
 # code: app/views/layouts/_navigation.html.erb
 # test: spec/features/visitors/navigation_spec.rb
 #
+require 'pry'
 include Warden::Test::Helpers
 Warden.test_mode!
 # Feature: Navigation links
@@ -35,7 +36,7 @@ feature 'Navigation links', :devise, js: true do
     expect(page).to have_content 'Copyright © VisitMeet 2016'
 
     click_on 'Login'
-    expect(current_path).to eq '/users/login'
+    expect(current_path).to eq '/users/sign_up'
   end
 
   scenario 'view navigation links on home page' do
@@ -61,5 +62,19 @@ feature 'Navigation links', :devise, js: true do
     expect(page).to have_link 'Team'
     expect(page).to have_link 'Products'
     expect(page).to have_link 'VisitMeet'
+  end
+
+  # TERMINAL Warning : DEPRECATION WARNING:
+  # [Devise] user_omniauth_authorize_path(:github) is deprecated
+  # # and it will be removed from Devise 4.2.
+  # # Please use user_github_omniauth_authorize_path instead.
+  scenario 'app is using user_github_omniauth_authorize_path method' do
+    a = File.readlines('app/views/layouts/_navigation.html.erb')
+    expect(a.class).to eq Array
+    b = a.to_s
+    c = b.gsub(/\\n/, ' ')
+    d = c.gsub(/\\/, ' ') # DO NOT DO WHAT RUBOCOP SAYS TO DO on this line : 20160520 -ko
+    expect(d).to_not match(/user_omniauth_authorize_path/)
+    expect(d).to match(/user_github_omniauth_authorize_path/)
   end
 end
