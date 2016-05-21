@@ -13,7 +13,6 @@
 // Sprockets concatenates all JavaScript files into this application.js file
 // Sprockets concatenates all CSS files into one master application.css file
 //
-//= require gmaps/google
 //= require jquery
 //= require best_in_place
 //= require jquery-ui
@@ -21,6 +20,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require jquery.geocomplete
+//= require gmaps/google
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
