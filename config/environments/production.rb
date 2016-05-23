@@ -98,12 +98,21 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # config.paperclip_defaults = {
+  #   storage: :s3,
+  #   # TODO: explanation of below : reference for below ?
+  #   # HOW TO determine WHEN it is unnecessary ? -kathyonu
+  #   # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+  #   bucket: 'visitmeet'
+  # }
+
   config.paperclip_defaults = {
     storage: :s3,
-    # TODO: explanation of below : reference for below ?
-    # HOW TO determine WHEN it is unnecessary ? -kathyonu
-    # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
-    bucket: 'visitmeet'
+    s3_credentials: {
+      bucket: 'visitmeet',
+      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_ID']
+    }
   }
 
   # see : config/exception_notification.yml
