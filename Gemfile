@@ -85,7 +85,11 @@ gem 'gmaps4rails'         # Add google maps.
 gem 'underscore-rails'
 gem 'paperclip'
 # code: http://docs.aws.amazon.com/sdkforruby/api/index.html
-gem 'aws-sdk', "~> 2.2", ">= 2.2.31"
+# gem 'aws-sdk', "~> 2.2", ">= 2.2.31"
+# http://ruby.awsblog.com/post/TxFKSK2QJE6RPZ/Upcoming-Stable-Release-of-AWS-SDK-for-Ruby-Version-2
+# Check the above blog link before changing the aws-sdk versioning.
+gem 'aws-sdk', '< 2.0'
+
 # gem 'mailboxer', "~> 0.13.0" # per notes below, this should be source
 gem 'mailboxer', github: 'mailboxer/mailboxer'
 # change ref: https://rubygems.org/gems/mailboxer/versions/0.13.0
