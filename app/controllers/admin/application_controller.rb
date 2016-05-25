@@ -41,6 +41,14 @@ module Admin
     #  redirect_to '/', alert: 'Not authorized.' unless current_user && access_whitelist
     # end
 
+
+    # authenticate_admin defined below as per the problem occured in heroku during login.
+    # this solution is taken from : https://github.com/thoughtbot/administrate/issues/286
+
+    def authenticate_admin
+      redirect_to '/', alert: 'Not authorized.' unless current_user && access_whitelist
+    end
+
     # reference for the admin_controller? method : ????
     # also see admin_controller? method in app/controllers/application_controller.rb : not there
     # something may not be correct here. TODO: needs more tests : up for grabs : 20160430 -ko
