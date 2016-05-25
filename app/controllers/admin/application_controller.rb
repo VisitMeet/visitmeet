@@ -33,7 +33,11 @@ module Admin
     # this line is here for testing purposes, thank you -ko
     # http_basic_authenticate_with name: ENV.fetch("ADMIN_NAME"), password: ENV.fetch("ADMIN_PASSWORD")
     # TODO: if we add pages, this next line will become unwieldy
-    before_action :authenticate_admin!, except: ['/pages#about']
+    # NOTE FROM BISHISHT:
+    # why do we have ! behind authenticate_admin????
+    # before_action :authenticate_admin!, except: ['/pages#about']
+
+    before_action :authenticate_admin, except: ['/pages#about']
     before_action :update_sanitized_params, if: :devise_controller?
     protect_from_forgery with: :exception
 
