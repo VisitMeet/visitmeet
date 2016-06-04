@@ -8,7 +8,7 @@
 # test: spec/routing/products_routing_spec.rb
 # test: spec/routing/users_routing_spec.rb
 # test: spec/routing/visitors_routing_spec.rb
-#
+
 Rails.application.routes.draw do
   # devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' },
                      # controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   # get '/about' => 'high_voltage/pages#show', id: 'about'
 
   # get '/login/oauth/authorize' # , controller: Users::OmniauthCallbacksController, action: :github
-  get '/login/oauth/authorize' # , controller: OmniauthCallbacksController, action: :github
+  # get '/login/oauth/authorize' # , controller: OmniauthCallbacksController, action: :github
 
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
