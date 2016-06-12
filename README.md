@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/VisitMeet/visitmeet.png?label=ready&title=Ready)](https://waffle.io/VisitMeet/visitmeet)
 Visitmeet
 ================
 
