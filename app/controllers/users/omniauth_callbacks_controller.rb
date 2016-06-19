@@ -35,6 +35,24 @@ module Users
       end
     end
 
+    def twitter
+      # Implement this in model : see ref above
+      user = User.from_omniauth(request.env['omniauth.auth'])
+
+      if user.persisted?
+        # reference regarding `:event => :authentication` option
+        # http://stackoverflow.com/questions/9221390/what-does-event-authentication-do/13389324#13389324
+        sign_in_and_redirect users_profile_path # , :event => :authentication # this will throw if @user is not activated
+        # set_flash_message(:notice, :success, :kind => 'Github') if is_navigational_format? # reference source code
+        flash[:notice] = 'User signed in using Twitter' # not reference source code
+        redirect_to products_path
+      else
+        session['devise.twitter_data'] = request.env['omniauth.auth']
+        flash[:notice] = 'Complete the sign up using the form below.'
+        redirect_to new_user_registration_url
+      end
+    end
+
     def failure
       redirect_to root_path
     end
