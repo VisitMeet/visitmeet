@@ -106,4 +106,5 @@ gem 'responders', "~> 2.1", ">= 2.1.2"
 gem 'best_in_place', '~> 3.0.1'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 # # ---- END ----
