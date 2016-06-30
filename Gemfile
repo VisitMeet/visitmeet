@@ -107,4 +107,6 @@ gem 'best_in_place', '~> 3.0.1'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+gem 'rack-mini-profiler'
+
 # # ---- END ----
