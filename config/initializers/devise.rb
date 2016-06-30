@@ -33,7 +33,7 @@ Devise.setup do |config|
   # config.omniauth :github, "APP_ID", "APP_SECRET" : template
   # next line is for when we take the respository private for SSL cert requirements
   # config.omniauth :github, ENV['OMNIAUTH_APP_ID'], ENV['OMNIAUTH_APP_SECRET'], scope: 'user,public_repo'
-  config.omniauth :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  config.omniauth :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], :scope => 'user,public_repo'
   config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET']
 
   # 20160419 : Regarding above omniauth line
