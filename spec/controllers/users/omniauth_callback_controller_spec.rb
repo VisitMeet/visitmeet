@@ -41,25 +41,93 @@ Warden.test_mode!
 
 # describe OmniauthCallbackController, type: :controller, js: true do
 # describe Users::OmniauthCallbackController, type: :controller, js: true do
-describe UsersController, type: :controller, js: true do
-  describe 'User github login' do
-    #
-    # $ rake routes shows :
-    # #                Prefix |  Verb   | URI Pattern                            | Controller#Action
-    # user_omniauth_authorize  GET|POST | /users/auth/:provider(.:format)        | users/omniauth_callbacks#passthru {:provider=>/github/}
-    # user_omniauth_callback   GET|POST | /users/auth/:action/callback(.:format) | users/omniauth_callbacks#(?-mix:github)
-    #
-    # user_omniauth_authorize  GET|POST
-    # #                        /users/auth/:provider(.:format)
-    # # #                      /users/omniauth_callbacks#passthru {:provider=>/github/}
-    #
-    # user_omniauth_callback   GET|POST
-    # #                        /users/auth/:action/callback(.:format)
-    # # #                      /users/omniauth_callbacks#(?-mix:github)
-    #
-    it 'routes to user#omniauth_callbacks' do
-      pending 'this test needs work and controller needs more tests'
-      expect(get('users#omniauth_callbacks#passthru')).to route_to('/users/omniauth_callbacks') # line not done
+# describe UsersController, type: :controller, js: true do
+#   describe 'User github login' do
+#     #
+#     # $ rake routes shows :
+#     # #                Prefix |  Verb   | URI Pattern                            | Controller#Action
+#     # user_omniauth_authorize  GET|POST | /users/auth/:provider(.:format)        | users/omniauth_callbacks#passthru {:provider=>/github/}
+#     # user_omniauth_callback   GET|POST | /users/auth/:action/callback(.:format) | users/omniauth_callbacks#(?-mix:github)
+#     #
+#     # user_omniauth_authorize  GET|POST
+#     # #                        /users/auth/:provider(.:format)
+#     # # #                      /users/omniauth_callbacks#passthru {:provider=>/github/}
+#     #
+#     # user_omniauth_callback   GET|POST
+#     # #                        /users/auth/:action/callback(.:format)
+#     # # #                      /users/omniauth_callbacks#(?-mix:github)
+#     #
+#     it 'routes to user#omniauth_callbacks' do
+#       pending 'this test needs work and controller needs more tests'
+#       expect(get('users#omniauth_callbacks#passthru')).to route_to('/users/omniauth_callbacks') # line not done
+#     end
+
+#     it ""
+#   end
+# end
+
+
+
+require 'spec_helper'
+
+describe OmniauthCallbacksController, "github callback" do
+    describe 'Github signup' do
+    context 'When Github authentication fails' do
+      it 'should render a failure message' do
+        @request.env["devise.mapping"] = Devise.mappings[:user]
+        get :failure
+        expect(flash[:alert]).to eq 'Authentication failed.'
+        expect(response).to redirect_to root_path
+      end
+    end
+
+
+    context 'After signing up with Github' do
+      it 'should create user'
+    end
+
+    context 'after signout' do
+    end
+
+    context 'should be able to sign in again' do
+      it "should flash notice \"Thanks for logging in with Default\n"
+    end
+
+    context 'username not entered ' do
+      it 'should not create a user'
+      it 'should show a message'
+    end
+
+# note by bishisht
+# it 'should show a message' is repeated. how can we go dry here??
+
+    context 'email not entered' do
+      it 'should not create a user' 
+      it 'should show a message'
+
+    end
+  end
+
+
+  context 'an existing user created with standard signup (e.g. has password)' do
+    it 'should create a user with blank provider and uid' do
+      # expect(normal_user.provider).to eq(nil)
+      # expect(normal_user.uid).to eq(nil)
+    end
+
+    context 'tries to log in with a Github account having the same email address' do
+      it 'should tell the user to login to his/her existing account, and link the account on the profile page' 
+    end
+
+    context 'signs in' do
+      context 'and goes to profile page' do
+        context 'and clicks on the Link to Github button' do
+          end
+
+          it 'should update existing user provider and uid' 
+          end
+        end
+      end
     end
   end
 end
