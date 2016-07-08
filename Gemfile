@@ -108,5 +108,5 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'rack-mini-profiler'
-
+gem "chromedriver-helper"
 # # ---- END ----
