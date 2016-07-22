@@ -17,10 +17,10 @@
 //= require best_in_place
 //= require jquery-ui
 //= require best_in_place.jquery-ui
+//= require gmaps/google
 //= require jquery_ujs
 //= require underscore
 //= require jquery.geocomplete
-//= require gmaps/google
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
