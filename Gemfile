@@ -82,7 +82,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'socialization'
 gem 'geocoder'
-gem 'gmaps4rails'         # Add google maps.
+gem 'gmaps4rails', git: 'git@github.com:fiedl/Google-Maps-for-Rails.git'         # Add google maps.
 gem 'underscore-rails'
 gem 'paperclip'
 # code: http://docs.aws.amazon.com/sdkforruby/api/index.html
