@@ -14,7 +14,7 @@
 #
 # require 'pry'
 RSpec.configure do
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
   include Features::SessionHelpers
   include Warden::Test::Helpers
 end
