@@ -81,13 +81,15 @@ class User < ActiveRecord::Base
   #   end
   # end
 
-    def self.from_omniauth(auth)
-    self.where(auth.slice(:provider, :uid).to_hash).first_or_create({
-      provider: auth[:provider],
-      uid: auth[:uid],
-      username: auth[:info][:name],
-      email: auth[:info][:email]
-    })
+  def self.from_omniauth(auth)
+		create! do |user|
+			user.provider = auth['provider']
+			user.uid = auth['uid']
+			if auth['info']
+				user.name = auth['info']['name'] || " "
+				user.email = auth['info']['email'] || " "
+			end
+		end
   end
 
   def mailboxer_email(*)
