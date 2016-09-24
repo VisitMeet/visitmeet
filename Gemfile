@@ -16,9 +16,8 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'web-console', '~> 2.0'
   gem 'guard-rubocop'
-
-
 end
+
 group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails' # creates test data
@@ -28,8 +27,8 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'rspec-rails' # installs RSpec gems with support for Rails : Launchy requires this
   gem 'rubocop', require: false # http://www.rubydoc.info/gems/rubocop/0.36.0#Installation
-
 end
+
 group :test do
   gem 'capybara' # test web pages
   gem 'capybara-screenshot'
@@ -37,6 +36,7 @@ group :test do
   gem 'selenium-webdriver' # set `js: true` for any test(s) encountering javascript handling
   gem 'simplecov', require: false # see instructions at top of spec/spec_helper.rb
 end
+
 group :production do
   gem 'rails_12factor'
 end
@@ -84,7 +84,7 @@ gem 'socialization'
 gem 'geocoder'
 gem 'gmaps4rails'         # Add google maps.
 gem 'underscore-rails'
-gem 'paperclip'
+gem 'paperclip', '< 5'
 # code: http://docs.aws.amazon.com/sdkforruby/api/index.html
 # gem 'aws-sdk', "~> 2.2", ">= 2.2.31"
 # http://ruby.awsblog.com/post/TxFKSK2QJE6RPZ/Upcoming-Stable-Release-of-AWS-SDK-for-Ruby-Version-2
