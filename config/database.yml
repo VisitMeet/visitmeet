@@ -3,8 +3,8 @@ development:
   host: localhost
   encoding: 
   database: visitmeet_development
-  # username: postgres
-  # password: nepal
+  username: postgres
+  password: kathmandu143. 
   pool: 5
   # puma changes
   # encoding: unicode 
@@ -16,8 +16,8 @@ test:
   host: localhost
   encoding: utf8
   database: visitmeet_test
-  # username: postgres
-  # password: nepal
+  username: postgres
+  password: kathmandu143. 
   pool: 5
   # puma changes
   # encoding: unicode 
