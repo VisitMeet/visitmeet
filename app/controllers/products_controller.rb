@@ -43,7 +43,7 @@
 #
 class ProductsController < ApplicationController
   include ActionController::Helpers
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :index, :show]
 
   def index
     @products = Product.all

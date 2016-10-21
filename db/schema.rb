@@ -118,11 +118,10 @@ ActiveRecord::Schema.define(version: 20160619154322) do
     t.integer  "user_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.integer  "category_id"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "location"
-    t.integer  "category"
+    t.integer  "category_id"
     t.string   "image"
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -130,7 +129,6 @@ ActiveRecord::Schema.define(version: 20160619154322) do
     t.datetime "image_updated_at"
   end
 
-  add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
   add_index "products", ["user_id"], name: "index_products_on_user_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
@@ -194,8 +192,6 @@ ActiveRecord::Schema.define(version: 20160619154322) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
-    t.string   "provider"
-    t.string   "uid"
     t.text     "bio"
   end
 

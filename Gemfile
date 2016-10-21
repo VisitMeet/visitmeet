@@ -7,6 +7,7 @@ gem 'sass-rails', "~> 5.0", ">= 5.0.4" # Sass adapter for the Rails asset pipeli
 gem 'coffee-rails', "~> 4.1.0"
 gem 'uglifier', "~> 2.7", ">= 2.7.2" # minifies JavaScript files by wrapping UglifyJS to be accessible in Ruby
 gem 'turbolinks' # caution : this causes difficulties / failures in some situations
+
 group :development do
   gem 'better_errors'
   gem 'hub', require: nil
@@ -60,7 +61,7 @@ end
 #  Upgrade to: `>= 0.1.5`
 # Note: 20160508 I see this github/repo was restored in master so I test it again:
 # gem 'administrate', ">= 0.1.5" : this source has no vulnerability
-gem 'administrate', github: 'mariochavez/administrate', branch: 'remove-inline_svg'
+# gem 'administrate', github: 'mariochavez/administrate', branch: 'remove-inline_svg'
 # 20160512 : this source from mario has a vulnerability : this is our Gemfile.lock results:
 # https://isitvulnerable.com/
 # https://isitvulnerable.com/results/69eea7d03bd7d259033ad780e6473fe4
@@ -73,8 +74,8 @@ gem 'devise-i18n'
 gem 'figaro'
 gem 'high_voltage'
 # gem 'omniauth-github'
-gem 'omniauth-github', github: 'intridea/omniauth-github'
-gem 'omniauth-twitter'
+# gem 'omniauth-github', github: 'intridea/omniauth-github'
+# gem 'omniauth-twitter'
 gem 'pg'
 gem 'puma'
 gem 'pundit'
@@ -110,4 +111,6 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'rack-mini-profiler'
 gem "chromedriver-helper"
 gem "bourbon"
+gem "stripe"
+gem "rails_admin"
 # # ---- END ----

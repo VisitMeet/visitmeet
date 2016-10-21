@@ -53,43 +53,14 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, omniauth_providers: [:github, :twitter]
+         :recoverable, :rememberable, :trackable, :validatable
+
 
   # User can send message to each other.
   acts_as_messageable
 
   def set_default_role
     self.role ||= :user
-  end
-
-  # def self.from_omniauth(auth)
-  #   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-  #     user.provider = auth.provider
-  #     user.uid = auth.uid
-  #     user.email = auth.info.email
-  #     #
-  #     # ref for change :
-  #     # http://www.rubydoc.info/github/plataformatec/devise/Devise.friendly_token
-  #     length = 20
-  #     user.password = Devise.friendly_token(length)
-  #     # user.password = Devise.friendly_token[0, 20]
-  #     #
-  #     user.name = auth.info.name # user model has name
-  #     # user.image = auth.info.image # users have no image.
-  #     # # note.to.self : users rotating 'profile image' provided by ??
-  #   end
-  # end
-
-  def self.from_omniauth(auth)
-		create! do |user|
-			user.provider = auth['provider']
-			user.uid = auth['uid']
-			if auth['info']
-				user.name = auth['info']['name'] || " "
-				user.email = auth['info']['email'] || " "
-			end
-		end
   end
 
   def mailboxer_email(*)
