@@ -113,4 +113,5 @@ gem "chromedriver-helper"
 gem "bourbon"
 gem "stripe"
 gem "rails_admin"
+gem "spork"
 # # ---- END ----
