@@ -19,7 +19,7 @@
 	<div class="col-xs-12">
 			<div class="btn-group pull-right" role="group" aria-label="..." style="margin-top:10px;">
 				<%= link_to 'Back to Products', products_path, class: "btn btn-default btn-info" %>
-        <script src="https://checkout.stripe.com/checkout.js" class="btn-default btn-success stripe-button"
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
           data-amount= "<%= @shopping_cart.total*100 %>"
