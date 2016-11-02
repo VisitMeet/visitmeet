@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 # code: app/controllers/application_controller.rb
 # test: spec/controllers_application_controller_spec.rb
-include Warden::Test::Helpers
+# include Warden::Test::Helpers
+include Devise::Test::ControllerHelpers
+
 Warden.test_mode!
 describe ApplicationController do
   after(:each) do

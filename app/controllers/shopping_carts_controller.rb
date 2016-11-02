@@ -18,6 +18,18 @@ class ShoppingCartsController < ApplicationController
     redirect_to shopping_cart_path(@shopping_cart)
   end
 
+  def checkout
+    @@customer = Stripe::Customer.create email: stripe_params["stripeEmail"],
+                                         card: stripe_params["stripeToken"]
+
+    Stripe::Charge.create customer: @@customer,
+                          amount: (@shopping_cart.total * 100).round,
+                          description: "Item bought",
+                          currency: 'usd'
+    redirect_to products_path
+    flash[:notice] = "Succefully made payment."
+  end
+
   def show
   end
 
@@ -27,5 +39,9 @@ class ShoppingCartsController < ApplicationController
     shopping_cart_id = session[:shopping_cart_id]
     @shopping_cart = session[:shopping_cart_id] ? ShoppingCart.find(shopping_cart_id) : ShoppingCart.create
     session[:shopping_cart_id] = @shopping_cart.id
+  end
+
+  def stripe_params
+    params.permit :stripeEmail, :stripeToken
   end
 end

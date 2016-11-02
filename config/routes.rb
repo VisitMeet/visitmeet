@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   # get '/about' => 'high_voltage/pages#show', id: 'about'
 
 
+  post 'shopping_carts/checkout'
+
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }
 
   # ALL RESOURCE ROUTES HERE, below devise_for
