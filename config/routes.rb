@@ -10,6 +10,7 @@
 # test: spec/routing/visitors_routing_spec.rb
 
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' },
                      # controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   # The priority is based upon order of creation: first created -> highest priority.
@@ -24,19 +25,10 @@ Rails.application.routes.draw do
   get 'pages/about' => 'high_voltage/pages#show', id: 'about'
   # get '/about' => 'high_voltage/pages#show', id: 'about'
 
-  # get '/login/oauth/authorize' # , controller: Users::OmniauthCallbacksController, action: :github
-  # get '/login/oauth/authorize' # , controller: OmniauthCallbacksController, action: :github
 
-  namespace :admin do
-    DashboardManifest::DASHBOARDS.each do |dashboard_resource|
-      resources dashboard_resource
-    end
+  post 'shopping_carts/checkout'
 
-    root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
-  end
-
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' },
-                     path_names: { sign_in: 'login', sign_out: 'logout' }
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }
 
   # ALL RESOURCE ROUTES HERE, below devise_for
   resources :shopping_carts
