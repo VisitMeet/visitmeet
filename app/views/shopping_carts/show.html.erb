@@ -3,33 +3,34 @@
   <hr>
 
     <%= render :partial => 'shopping_cart_item', :collection => @shopping_cart.shopping_cart_items %>
+<%= form_tag shopping_carts_checkout_path do %>
 
-  <div class="row" style="text-align:center;margin-top:15px;">
-		<b>Subtotal:</b> <%= number_to_currency @shopping_cart.subtotal %>
-	</div>
+  <div>
+    <div class="row" style="text-align:center;margin-top:15px;">
+  		<b>Subtotal:</b> <%= number_to_currency @shopping_cart.subtotal %>
+  	</div>
 
-	<div class="row" style="text-align:center;margin-top:15px;">
-		<b>Taxes:</b> <%= number_to_currency @shopping_cart.taxes %><br>
-	</div>
+  	<div class="row" style="text-align:center;margin-top:15px;">
+  		<b>Taxes:</b> <%= number_to_currency @shopping_cart.taxes %><br>
+  	</div>
 
-	<div class="row" style="text-align:center;margin-top:15px;">
-		<b>Total :</b> <%= number_to_currency @shopping_cart.total %>
-	</div>
+  	<div class="row" style="text-align:center;margin-top:15px;">
+  		<b>Total :</b> <%= number_to_currency @shopping_cart.total %>
+  	</div>
 
-	<div class="col-xs-12">
-			<div class="btn-group pull-right" role="group" aria-label="..." style="margin-top:10px;">
-				<%= link_to 'Back to Products', products_path, class: "btn btn-default btn-info" %>
+  	<div class="col-xs-12">
+  			<div class="btn-group pull-right" role="group" aria-label="..." style="margin-top:10px;">
+  				<%= link_to 'Back to Products', products_path, class: "btn btn-default btn-info" %>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="A month's subscription"
+            data-amount= (@shopping_cart.total * 100)
+            data-locale="auto"></script>
 
+  			</div>
+  		</div>
 
-
-          <!--
-        <button type="button" class="btn btn-default btn-success">
-          <span class="fa fa-shopping-cart"></span>
-          &nbsp;Checkout
-        </button> -->
-			</div>
-		</div>
-
+  </div>
+<% end %>
 </div>
-
 <!-- http://www.bootply.com/UMqX9kYebg -->

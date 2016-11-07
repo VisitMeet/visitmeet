@@ -24,10 +24,10 @@ class ShoppingCartsController < ApplicationController
 
     Stripe::Charge.create customer: @@customer,
                           amount: (@shopping_cart.total * 100).round,
-                          description: "Item bought",
+                          description: "Bought by: " + current_user.email,
                           currency: 'usd'
     redirect_to products_path
-    flash[:notice] = "Succefully made payment."
+    flash[:notice] = "Succefully made payment of $" + @shopping_cart.total.to_s
   end
 
   def show
