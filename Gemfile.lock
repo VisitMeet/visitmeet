@@ -146,6 +146,8 @@ GEM
       thor (~> 0.14)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
+    foreigner (1.7.4)
+      activerecord (>= 3.0.0)
     formatador (0.2.5)
     geocoder (1.4.4)
     globalid (0.4.0)
@@ -205,9 +207,10 @@ GEM
     lumberjack (1.0.12)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
-    mailboxer (0.14.0)
+    mailboxer (0.13.0)
       carrierwave (>= 0.5.8)
-      rails (>= 4.2.0)
+      foreigner (>= 0.9.1)
+      rails (>= 3.2.0)
     method_source (0.9.0)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -443,7 +446,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   launchy (~> 2.4, >= 2.4.3)
-  mailboxer
+  mailboxer (~> 0.13.0)
   paperclip (< 5)
   pg
   pry-rails
@@ -474,5 +477,8 @@ DEPENDENCIES
   underscore-rails
   web-console (~> 2.0)
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.15.4
+   1.16.0

@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.1'
 gem 'rails', "4.2.6"
 gem 'bcrypt' # http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html'
 gem 'jbuilder', "~> 2.3", ">= 2.3.1" # Create JSON structures via a Builder-style DSL
@@ -92,7 +93,7 @@ gem 'paperclip', '< 5'
 gem 'aws-sdk', '< 2.0'
 
 # gem 'mailboxer', "~> 0.13.0" # per notes below, this should be source
-gem 'mailboxer'
+gem 'mailboxer', "~> 0.13.0" # per notes below, this should be source
 # change ref: https://rubygems.org/gems/mailboxer/versions/0.13.0
 # code: mailboxer : http://www.rubydoc.info/gems/mailboxer/0.13.0
 # another change ref from above on this page :
